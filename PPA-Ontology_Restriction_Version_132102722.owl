@@ -1,0 +1,782 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <Prefix name="" IRI="http://umaine.edu/Privacy/core/v1#"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
+    <Prefix name="Privacy" IRI="http://umaine.edu/Privacy/core/v1#"/>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ActivityData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:AnonymousProcessedData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:AsymmetricEncryptionMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:BiomentricData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:BiometricAuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:CCPAFirstPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:CCPAThirdPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataProvider"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataSafeGuardMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStorageDurationPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStorageErasurePractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStorageLocationPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStoragePrivacyPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataStorageRectificationPractice"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DataSubject"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DefiniteDurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:DemographicData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:EncryptionMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:FirstPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:GDPRFirstPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:GDPRThirdPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:GeneticData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:HealthData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:HealthPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:HumanitarianPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:IdentityData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:JournalisricPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:JudicialPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:LegalAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:LegalPerson"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:MarketingPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Minor"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Organization"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PasswordbasedAuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Person"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PersonalFinancialData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PrivacyPolicy"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PrivacyRegulation"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ProcessedData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ProfilingPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PseudonymousProcessedData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:PublicInterestPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ResearchPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ResponseType"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:SecurityMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:SecurityPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:SocialAgent"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:SpatialEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:StatisticPurpose"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:StatisticalProcessedData"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:StorageEntity"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:SymmetricEncryptionMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:ThirdPartyDataRecipient"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:TokenbasedAuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="Privacy:TwoFactorAuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:actsOn"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:allows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:appliesTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:disallows"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAccessToErasedData"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAuthenticationMechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDatPractice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDurationPractice"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasEncryptionTechnique"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPolicy"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPurpose"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseDelay"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseType"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasSecurityMechanism"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageEntity"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageLocation"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:legalPersonOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty abbreviatedIRI="Privacy:plays"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:hours"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:minutes"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:months"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:seconds"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:weeks"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty abbreviatedIRI="time:years"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </Declaration>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ActivityData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:AnonymousProcessedData"/>
+        <Class abbreviatedIRI="Privacy:ProcessedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:AsymmetricEncryptionMechanism"/>
+        <Class abbreviatedIRI="Privacy:EncryptionMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:DataSafeGuardMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:BiomentricData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:BiometricAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:CCPAFirstPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:FirstPartyDataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:CCPAThirdPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:ThirdPartyDataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Data"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataProvider"/>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataRecipient"/>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataSafeGuardMechanism"/>
+        <Class abbreviatedIRI="Privacy:SecurityMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStorageDurationPractice"/>
+        <Class abbreviatedIRI="Privacy:DataStoragePrivacyPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStorageErasurePractice"/>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStorageLocationPractice"/>
+        <Class abbreviatedIRI="Privacy:DataStoragePrivacyPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+        <Class abbreviatedIRI="Privacy:DataStoragePrivacyPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStoragePrivacyPractice"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataStorageRectificationPractice"/>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DataSubject"/>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DefiniteDurationDescription"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:DemographicData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:EncryptionMechanism"/>
+        <Class abbreviatedIRI="Privacy:DataSafeGuardMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:FirstPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:DataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:GDPRFirstPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:FirstPartyDataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:GDPRThirdPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:ThirdPartyDataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:GeneticData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:HealthData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:HealthPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:HumanitarianPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IdentityData"/>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="time:hours"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="time:minutes"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="time:seconds"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="time:weeks"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:IndefiniteDurationDescription"/>
+        <DataHasValue>
+            <DataProperty abbreviatedIRI="time:years"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">0</Literal>
+        </DataHasValue>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:JournalisricPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:JudicialPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:LegalAgent"/>
+        <Class abbreviatedIRI="Privacy:SocialAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:LegalPerson"/>
+        <Class abbreviatedIRI="Privacy:LegalAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:MarketingPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Minor"/>
+        <Class abbreviatedIRI="Privacy:LegalPerson"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Minor"/>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Organization"/>
+        <Class abbreviatedIRI="Privacy:LegalAgent"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PasswordbasedAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Person"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PersonalData"/>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PersonalFinancialData"/>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PrivacyPolicy"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PrivacyRegulation"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ProcessedData"/>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ProfilingPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PseudonymousProcessedData"/>
+        <Class abbreviatedIRI="Privacy:ProcessedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:PublicInterestPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ResearchPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ResponseType"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:Role"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:SecurityMechanism"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:SecurityPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:SocialAgent"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:SpatialEntity"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:StatisticPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:StatisticalProcessedData"/>
+        <Class abbreviatedIRI="Privacy:ProcessedData"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:StorageEntity"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:SymmetricEncryptionMechanism"/>
+        <Class abbreviatedIRI="Privacy:EncryptionMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:ThirdPartyDataRecipient"/>
+        <Class abbreviatedIRI="Privacy:DataRecipient"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:TokenbasedAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="Privacy:TwoFactorAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+        <Class abbreviatedIRI="Privacy:Entity"/>
+    </SubClassOf>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:actsOn"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:allows"/>
+        <Class abbreviatedIRI="Privacy:PrivacyRegulation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:appliesTo"/>
+        <Class abbreviatedIRI="Privacy:SecurityMechanism"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:disallows"/>
+        <Class abbreviatedIRI="Privacy:PrivacyRegulation"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAccessToErasedData"/>
+        <Class abbreviatedIRI="Privacy:DataStorageErasurePractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDatPractice"/>
+        <Class abbreviatedIRI="Privacy:PrivacyPolicy"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDurationPractice"/>
+        <Class abbreviatedIRI="Privacy:DataStorageDurationPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasEncryptionTechnique"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPolicy"/>
+        <Class abbreviatedIRI="Privacy:Organization"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPurpose"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseDelay"/>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseType"/>
+        <Class abbreviatedIRI="Privacy:DataStorageModificationPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasSecurityMechanism"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageEntity"/>
+        <Class abbreviatedIRI="Privacy:DataStorageErasurePractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageLocation"/>
+        <Class abbreviatedIRI="Privacy:DataStorageErasurePractice"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:legalPersonOf"/>
+        <Class abbreviatedIRI="Privacy:LegalPerson"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty abbreviatedIRI="Privacy:plays"/>
+        <Class abbreviatedIRI="Privacy:SocialAgent"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:actsOn"/>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:allows"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:appliesTo"/>
+        <Class abbreviatedIRI="Privacy:Data"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:disallows"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAccessToErasedData"/>
+        <Class abbreviatedIRI="Privacy:LegalAgent"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasAuthenticationMechanism"/>
+        <Class abbreviatedIRI="Privacy:AuthenticationMechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDatPractice"/>
+        <Class abbreviatedIRI="Privacy:DataPractice"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasDurationPractice"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasEncryptionTechnique"/>
+        <Class abbreviatedIRI="Privacy:EncryptionMechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPolicy"/>
+        <Class abbreviatedIRI="Privacy:PrivacyPolicy"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasPurpose"/>
+        <Class abbreviatedIRI="Privacy:Purpose"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseDelay"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasResponseType"/>
+        <Class abbreviatedIRI="Privacy:ResponseType"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasSecurityMechanism"/>
+        <Class abbreviatedIRI="Privacy:SecurityMechanism"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageEntity"/>
+        <Class abbreviatedIRI="Privacy:StorageEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:hasStorageLocation"/>
+        <Class abbreviatedIRI="Privacy:SpatialEntity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:legalPersonOf"/>
+        <Class abbreviatedIRI="Privacy:Person"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty abbreviatedIRI="Privacy:plays"/>
+        <Class abbreviatedIRI="Privacy:Role"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:hours"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:minutes"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:months"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:seconds"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:weeks"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty abbreviatedIRI="time:years"/>
+        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:hours"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:minutes"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:months"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:seconds"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:weeks"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty abbreviatedIRI="time:years"/>
+        <Datatype abbreviatedIRI="xsd:decimal"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
