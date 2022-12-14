@@ -1,2 +1,2 @@
-# PPA-Ontology
-Privacy Policy Analysis Ontology to Analyze the Depth of the Data Practices Defined in the Privacy Policy Text.
+# OPPO: An Ontology for Describing the Fine-Grained Data Practices in Privacy Policies of Online Social Networks
+
