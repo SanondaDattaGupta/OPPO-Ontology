@@ -1,0 +1,839 @@
+@prefix : <http://umaine.edu/Privacy/core/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix Privacy: <http://umaine.edu/Privacy/core/v1#> .
+@base <http://umaine.edu/Privacy/core/v1#> .
+
+<http://umaine.edu/Privacy/core/v1#> rdf:type owl:Ontology ;
+                                      owl:imports <http://www.w3.org/2006/time> .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://umaine.edu/Privacy/core/v1#actsIn
+Privacy:actsIn rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain Privacy:SocialAgent ;
+               rdfs:range Privacy:Role ;
+               rdfs:label "acts in" .
+
+
+###  http://umaine.edu/Privacy/core/v1#actsOn
+Privacy:actsOn rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain Privacy:DataPractice ;
+               rdfs:range Privacy:Data ;
+               rdfs:label "acts on" .
+
+
+###  http://umaine.edu/Privacy/core/v1#allows
+Privacy:allows rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain Privacy:PrivacyRegulation ;
+               rdfs:range Privacy:DataPractice ;
+               rdfs:label "allows"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#appliesTo
+Privacy:appliesTo rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain Privacy:SecurityMechanism ;
+                  rdfs:range Privacy:Data ;
+                  rdfs:label "applies to" .
+
+
+###  http://umaine.edu/Privacy/core/v1#disallows
+Privacy:disallows rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain Privacy:PrivacyRegulation ;
+                  rdfs:range Privacy:DataPractice ;
+                  rdfs:label "disallows"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasAccessToErasedData
+Privacy:hasAccessToErasedData rdf:type owl:ObjectProperty ,
+                                       owl:AsymmetricProperty ;
+                              rdfs:domain Privacy:LegalAgent ;
+                              rdfs:range Privacy:DataStorageErasurePractice ;
+                              rdfs:label "has access to erased data" .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasAuthenticationMechanism
+Privacy:hasAuthenticationMechanism rdf:type owl:ObjectProperty ,
+                                            owl:AsymmetricProperty ;
+                                   rdfs:domain Privacy:DataPractice ;
+                                   rdfs:range Privacy:AuthenticationMechanism ;
+                                   rdfs:label "has authentication mechanism" .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasBiometricbasedAuthenticationMechanism
+Privacy:hasBiometricbasedAuthenticationMechanism rdf:type owl:ObjectProperty ,
+                                                          owl:AsymmetricProperty ;
+                                                 rdfs:domain Privacy:DataPractice ;
+                                                 rdfs:range Privacy:BiometricbasedAuthenticationMechanism ;
+                                                 rdfs:label "has biometric-based authentication mechanism" .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasDatPractice
+Privacy:hasDatPractice rdf:type owl:ObjectProperty ,
+                                owl:AsymmetricProperty ;
+                       rdfs:domain Privacy:PrivacyPolicy ;
+                       rdfs:range Privacy:DataPractice ;
+                       rdfs:label "has data practice" .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasDurationPractice
+Privacy:hasDurationPractice rdf:type owl:ObjectProperty ,
+                                     owl:AsymmetricProperty ;
+                            rdfs:domain Privacy:DataStorageDurationPractice ;
+                            rdfs:range time:GeneralDurationDescription ;
+                            rdfs:label "has duration practice" .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasEncryptionTechnique
+Privacy:hasEncryptionTechnique rdf:type owl:ObjectProperty ,
+                                        owl:AsymmetricProperty ;
+                               rdfs:domain Privacy:DataPractice ;
+                               rdfs:range Privacy:EncryptionMechanism ;
+                               rdfs:label "has encryption technique"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasPasswordbasedAuthenticationMechanism
+Privacy:hasPasswordbasedAuthenticationMechanism rdf:type owl:ObjectProperty ,
+                                                         owl:AsymmetricProperty ;
+                                                rdfs:domain Privacy:DataPractice ;
+                                                rdfs:range Privacy:PasswordbasedAuthenticationMechanism ;
+                                                rdfs:label "has password-based authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasPolicy
+Privacy:hasPolicy rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain Privacy:Organization ;
+                  rdfs:range Privacy:PrivacyPolicy ;
+                  rdfs:label "has policy"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasPurpose
+Privacy:hasPurpose rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ;
+                   rdfs:domain Privacy:DataPractice ;
+                   rdfs:range Privacy:Purpose ;
+                   rdfs:label "has purpose"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasResponseDelay
+Privacy:hasResponseDelay rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ;
+                         rdfs:domain Privacy:DataStorageModificationPractice ;
+                         rdfs:range time:GeneralDurationDescription ;
+                         rdfs:label "has response delay"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasResponseType
+Privacy:hasResponseType rdf:type owl:ObjectProperty ,
+                                 owl:AsymmetricProperty ;
+                        rdfs:domain Privacy:DataStorageModificationPractice ;
+                        rdfs:range Privacy:ResponseType ;
+                        rdfs:label "has response type"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasSecurityMechanism
+Privacy:hasSecurityMechanism rdf:type owl:ObjectProperty ,
+                                      owl:AsymmetricProperty ;
+                             rdfs:domain Privacy:DataPractice ;
+                             rdfs:range Privacy:SecurityMechanism ;
+                             rdfs:label "has security mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasStorageEntity
+Privacy:hasStorageEntity rdf:type owl:ObjectProperty ,
+                                  owl:AsymmetricProperty ;
+                         rdfs:domain Privacy:DataStorageErasurePractice ;
+                         rdfs:range Privacy:StorageEntity ;
+                         rdfs:label "has storage entity"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasStorageLocation
+Privacy:hasStorageLocation rdf:type owl:ObjectProperty ,
+                                    owl:AsymmetricProperty ;
+                           rdfs:domain Privacy:DataStorageErasurePractice ;
+                           rdfs:range Privacy:SpatialEntity ;
+                           rdfs:label "has storage location"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasTokenbasedAuthenticationMechanism
+Privacy:hasTokenbasedAuthenticationMechanism rdf:type owl:ObjectProperty ,
+                                                      owl:AsymmetricProperty ;
+                                             rdfs:domain Privacy:DataPractice ;
+                                             rdfs:range Privacy:TokenbasedAuthenticationMechanism ;
+                                             rdfs:label "has token-based authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#hasTwoFactorAuthenticationMechanism
+Privacy:hasTwoFactorAuthenticationMechanism rdf:type owl:ObjectProperty ,
+                                                     owl:AsymmetricProperty ;
+                                            rdfs:domain Privacy:DataPractice ;
+                                            rdfs:range Privacy:TwoFactorAuthenticationMechanism ;
+                                            rdfs:label "has two factor authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#isAbout
+Privacy:isAbout rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ;
+                rdfs:domain Privacy:Data ;
+                rdfs:range Privacy:DataSubject ;
+                rdfs:label "isAbout"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#isProvidedBy
+Privacy:isProvidedBy rdf:type owl:ObjectProperty ,
+                              owl:AsymmetricProperty ;
+                     rdfs:domain Privacy:Data ;
+                     rdfs:range Privacy:DataProvider ;
+                     rdfs:label "isProvidedBy"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#isRecipientOf
+Privacy:isRecipientOf rdf:type owl:ObjectProperty ;
+                      rdfs:domain Privacy:DataRecipient ;
+                      rdfs:range Privacy:Data ;
+                      rdfs:label "isRecipientOf"@en .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.w3.org/2006/time#hours
+time:hours rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#minutes
+time:minutes rdf:type owl:DatatypeProperty ;
+             rdfs:domain time:GeneralDurationDescription ;
+             rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#months
+time:months rdf:type owl:DatatypeProperty ;
+            rdfs:domain time:GeneralDurationDescription ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#seconds
+time:seconds rdf:type owl:DatatypeProperty ;
+             rdfs:domain time:GeneralDurationDescription ;
+             rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#weeks
+time:weeks rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#years
+time:years rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://umaine.edu/Privacy/core/v1#ActivityData
+Privacy:ActivityData rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:PersonalData ;
+                     rdfs:label "Activity data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#AnonymousProcessedData
+Privacy:AnonymousProcessedData rdf:type owl:Class ;
+                               rdfs:subClassOf Privacy:ProcessedData ;
+                               rdfs:label "Anonymous processed data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#AsymmetricEncryptionMechanism
+Privacy:AsymmetricEncryptionMechanism rdf:type owl:Class ;
+                                      rdfs:subClassOf Privacy:EncryptionMechanism ;
+                                      owl:disjointWith Privacy:SymmetricEncryptionMechanism ;
+                                      rdfs:label "Asymmetric encryption mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#AuthenticationMechanism
+Privacy:AuthenticationMechanism rdf:type owl:Class ;
+                                rdfs:subClassOf Privacy:DataSafeGuardMechanism ;
+                                rdfs:label "Authentication mechanism"@en ;
+                                skos:definition "Authentication mechanism means ways to access collected data in an authorized manner."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#BiomentricData
+Privacy:BiomentricData rdf:type owl:Class ;
+                       rdfs:subClassOf Privacy:PersonalData ;
+                       rdfs:label "Biometric data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#BiometricbasedAuthenticationMechanism
+Privacy:BiometricbasedAuthenticationMechanism rdf:type owl:Class ;
+                                              rdfs:subClassOf Privacy:OneFactorAuthenticationMechanism ;
+                                              rdfs:label "Biometric-based authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#CCPAFirstPartyDataRecipient
+Privacy:CCPAFirstPartyDataRecipient rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:FirstPartyDataRecipient ;
+                                    rdfs:label "CCPA first party data recipient" ;
+                                    skos:definition "According to the privacy regulation CCPA, a first party data recipient is any organization or entity that directly collects data from the data subject." .
+
+
+###  http://umaine.edu/Privacy/core/v1#CCPAThirdPartyDataRecipient
+Privacy:CCPAThirdPartyDataRecipient rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:ThirdPartyDataRecipient ;
+                                    rdfs:label "CCPA third party data recipient" ;
+                                    skos:definition "According to the privacy regulation CCPA, a third party can be any one (individual, organization, entity) except the service provider who directly collects personal information from the data subject." .
+
+
+###  http://umaine.edu/Privacy/core/v1#Data
+Privacy:Data rdf:type owl:Class ;
+             rdfs:subClassOf Privacy:Entity ;
+             rdfs:label "Data"@en ;
+             skos:definition "Data is any piece of information that can directly or indirectly identify an individual."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataPractice
+Privacy:DataPractice rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:Entity ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:actsOn ;
+                                       owl:someValuesFrom Privacy:Data
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasAuthenticationMechanism ;
+                                       owl:someValuesFrom Privacy:AuthenticationMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasBiometricbasedAuthenticationMechanism ;
+                                       owl:someValuesFrom Privacy:BiometricbasedAuthenticationMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasEncryptionTechnique ;
+                                       owl:someValuesFrom Privacy:EncryptionMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasPasswordbasedAuthenticationMechanism ;
+                                       owl:someValuesFrom Privacy:PasswordbasedAuthenticationMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasPurpose ;
+                                       owl:someValuesFrom Privacy:Purpose
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasSecurityMechanism ;
+                                       owl:someValuesFrom Privacy:SecurityMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasTokenbasedAuthenticationMechanism ;
+                                       owl:someValuesFrom Privacy:TokenbasedAuthenticationMechanism
+                                     ] ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasTwoFactorAuthenticationMechanism ;
+                                       owl:someValuesFrom Privacy:TwoFactorAuthenticationMechanism
+                                     ] ;
+                     rdfs:label "Data practice"@en ;
+                     skos:definition "The process an organization follows to collect, process, share, or store the personal data."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataProvider
+Privacy:DataProvider rdf:type owl:Class ;
+                     owl:equivalentClass Privacy:DataSubject ;
+                     rdfs:subClassOf Privacy:Role ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:isProvidedBy ;
+                                       owl:someValuesFrom Privacy:Data
+                                     ] ;
+                     rdfs:label "Data provider"@en ;
+                     skos:definition "Data provider defines as organizations or individuals which provide data to another organization(s) or individual(s)."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataRecipient
+Privacy:DataRecipient rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Role ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty Privacy:isRecipientOf ;
+                                        owl:someValuesFrom Privacy:Data
+                                      ] ;
+                      rdfs:label "Data recipient" ;
+                      skos:definition "Data provider can be any organization or individual who provides data to the organization." .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataSafeGuardMechanism
+Privacy:DataSafeGuardMechanism rdf:type owl:Class ;
+                               rdfs:subClassOf Privacy:SecurityMechanism ;
+                               rdfs:label "Data safe guard mechanism"@en ;
+                               skos:definition "Data safe guard mechanism may include any mechanism such as mechanisms to provide access to the collected data to the authorized  user, or encryption mechanism- a process of storing information in a code format."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStorageDurationPractice
+Privacy:DataStorageDurationPractice rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:DataStoragePrivacyPractice ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty Privacy:hasDurationPractice ;
+                                                      owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                      owl:onClass time:GeneralDurationDescription
+                                                    ] ;
+                                    rdfs:label "Data storage duration practice"@en ;
+                                    skos:definition "The data practices that discusses about the duration of the storage of personal data."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStorageErasurePractice
+Privacy:DataStorageErasurePractice rdf:type owl:Class ;
+                                   rdfs:subClassOf Privacy:DataStorageModificationPractice ;
+                                   rdfs:label "Data storage erasure practice"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStorageLocationPractice
+Privacy:DataStorageLocationPractice rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:DataStoragePrivacyPractice ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty Privacy:hasStorageEntity ;
+                                                      owl:someValuesFrom Privacy:StorageEntity
+                                                    ] ,
+                                                    [ rdf:type owl:Restriction ;
+                                                      owl:onProperty Privacy:hasStorageLocation ;
+                                                      owl:someValuesFrom Privacy:SpatialEntity
+                                                    ] ;
+                                    rdfs:label "Data storage location practice"@en ;
+                                    skos:definition "The data practices that discuss where and how the collected data is stored."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStorageModificationPractice
+Privacy:DataStorageModificationPractice rdf:type owl:Class ;
+                                        rdfs:subClassOf Privacy:DataStoragePrivacyPractice ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty Privacy:hasResponseType ;
+                                                          owl:someValuesFrom Privacy:ResponseType
+                                                        ] ,
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty Privacy:hasResponseDelay ;
+                                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                          owl:onClass time:GeneralDurationDescription
+                                                        ] ;
+                                        rdfs:label "Data storage modification practice"@en ;
+                                        skos:definition "The data practices that discuss how the data subject can modify (rectify/erase) the stored data."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStoragePrivacyPractice
+Privacy:DataStoragePrivacyPractice rdf:type owl:Class ;
+                                   rdfs:subClassOf Privacy:DataPractice ;
+                                   rdfs:label "Data storage practice."@en ;
+                                   skos:definition "Data practices that discusses about the storage of the collected data."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataStorageRectificationPractice
+Privacy:DataStorageRectificationPractice rdf:type owl:Class ;
+                                         rdfs:subClassOf Privacy:DataStorageModificationPractice ;
+                                         rdfs:label "Data storage rectification practice"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DataSubject
+Privacy:DataSubject rdf:type owl:Class ;
+                    rdfs:subClassOf Privacy:Role ;
+                    rdfs:label "Data subject"@en ;
+                    skos:definition "Data subject is defined as an individual from which an organization or OSN may collect data. In other word, Data subject is an individual who can identified directly or indirectly by the collected data. Note that a data subject can also be a data provider."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DefiniteDurationDescription
+Privacy:DefiniteDurationDescription rdf:type owl:Class ;
+                                    owl:equivalentClass [ rdf:type owl:Class ;
+                                                          owl:complementOf Privacy:IndefiniteDurationDescription
+                                                        ] ;
+                                    rdfs:subClassOf time:GeneralDurationDescription ;
+                                    rdfs:label "Definite duration description"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#DemographicData
+Privacy:DemographicData rdf:type owl:Class ;
+                        rdfs:subClassOf Privacy:PersonalData ;
+                        rdfs:label "Demographic data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#EncryptionMechanism
+Privacy:EncryptionMechanism rdf:type owl:Class ;
+                            rdfs:subClassOf Privacy:DataSafeGuardMechanism ;
+                            rdfs:label "Encryption mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#Entity
+Privacy:Entity rdf:type owl:Class ;
+               rdfs:label "Entity"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#FirstPartyDataRecipient
+Privacy:FirstPartyDataRecipient rdf:type owl:Class ;
+                                rdfs:subClassOf Privacy:DataRecipient ;
+                                owl:disjointWith Privacy:ThirdPartyDataRecipient ;
+                                rdfs:label "First party data recipient" ;
+                                skos:definition "If any data recipient isRecipientOf the data directly from a data subject, the data reipient is known as first party data recipient." .
+
+
+###  http://umaine.edu/Privacy/core/v1#GDPRFirstPartyDataRecipient
+Privacy:GDPRFirstPartyDataRecipient rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:FirstPartyDataRecipient ;
+                                    rdfs:label "GDPR first party data recipient" ;
+                                    skos:definition "GDPR first party data recipient are those first party data recipients whom the data subject directly provides their data and the data subject has the option to choose - opt out- so that the first party data recipient will not sell the collected data." .
+
+
+###  http://umaine.edu/Privacy/core/v1#GDPRThirdPartyDataRecipient
+Privacy:GDPRThirdPartyDataRecipient rdf:type owl:Class ;
+                                    rdfs:subClassOf Privacy:ThirdPartyDataRecipient ;
+                                    rdfs:label "GDPR third party data recipient" ;
+                                    skos:definition "According to the privacy regulation GDPR, the third party data recipient is defined as follows: a natural or legal person, public authority, agency or body other than the data subject or first party data recipient and who are authorised to process personal data about the data subject." .
+
+
+###  http://umaine.edu/Privacy/core/v1#GeneticData
+Privacy:GeneticData rdf:type owl:Class ;
+                    rdfs:subClassOf Privacy:PersonalData ;
+                    rdfs:label "Genetic data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#HealthData
+Privacy:HealthData rdf:type owl:Class ;
+                   rdfs:subClassOf Privacy:PersonalData ;
+                   rdfs:label "Health data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#HealthPurpose
+Privacy:HealthPurpose rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Purpose ;
+                      rdfs:label "Health purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#HumanitarianPurpose
+Privacy:HumanitarianPurpose rdf:type owl:Class ;
+                            rdfs:subClassOf Privacy:Purpose ;
+                            rdfs:label "Humanitarian purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#IdentityData
+Privacy:IdentityData rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:PersonalData ;
+                     rdfs:label "Identity data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#IndefiniteDurationDescription
+Privacy:IndefiniteDurationDescription rdf:type owl:Class ;
+                                      rdfs:subClassOf time:GeneralDurationDescription ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty time:hours ;
+                                                        owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty time:minutes ;
+                                                        owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty time:seconds ;
+                                                        owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty time:weeks ;
+                                                        owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                      ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty time:years ;
+                                                        owl:maxCardinality "0"^^xsd:nonNegativeInteger
+                                                      ] ;
+                                      rdfs:label "Indefinite duration description"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#JournalisricPurpose
+Privacy:JournalisricPurpose rdf:type owl:Class ;
+                            rdfs:subClassOf Privacy:Purpose ;
+                            rdfs:label "Journalistic purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#JudicialPurpose
+Privacy:JudicialPurpose rdf:type owl:Class ;
+                        rdfs:subClassOf Privacy:Purpose ;
+                        rdfs:label "Judicial purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#LegalAgent
+Privacy:LegalAgent rdf:type owl:Class ;
+                   rdfs:subClassOf Privacy:SocialAgent ;
+                   rdfs:label "Legal agent"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#LegalPerson
+Privacy:LegalPerson rdf:type owl:Class ;
+                    rdfs:subClassOf Privacy:LegalAgent ;
+                    rdfs:label "Legal person"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#MarketingPurpose
+Privacy:MarketingPurpose rdf:type owl:Class ;
+                         rdfs:subClassOf Privacy:Purpose ;
+                         rdfs:label "Marketing purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#Minor
+Privacy:Minor rdf:type owl:Class ;
+              rdfs:subClassOf Privacy:DataSubject ;
+              rdfs:label "Minor" ;
+              skos:definition "According to privacy regulations, if any data subject is below a certain age limit (defined by the regulation), is considered as Minor and the organizations are reuiqred to follow special rules to process the data collected from Minor." .
+
+
+###  http://umaine.edu/Privacy/core/v1#OneFactorAuthenticationMechanism
+Privacy:OneFactorAuthenticationMechanism rdf:type owl:Class ;
+                                         rdfs:subClassOf Privacy:AuthenticationMechanism ;
+                                         rdfs:label "One factor authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#Organization
+Privacy:Organization rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:LegalAgent ,
+                                     [ rdf:type owl:Restriction ;
+                                       owl:onProperty Privacy:hasPolicy ;
+                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                       owl:onClass Privacy:PrivacyPolicy
+                                     ] ;
+                     rdfs:label "Organization"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PasswordbasedAuthenticationMechanism
+Privacy:PasswordbasedAuthenticationMechanism rdf:type owl:Class ;
+                                             rdfs:subClassOf Privacy:OneFactorAuthenticationMechanism ;
+                                             rdfs:label "Password-based authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PersonalData
+Privacy:PersonalData rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:Data ;
+                     owl:disjointWith Privacy:ProcessedData ;
+                     rdfs:label "Personal data"@en ;
+                     skos:definition "Personal data is any piece of information that are raw and can be used to directly identify an individual. We defined seven categories of personal data and assigned them as sub classes of the personal data class."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PersonalFinancialData
+Privacy:PersonalFinancialData rdf:type owl:Class ;
+                              rdfs:subClassOf Privacy:PersonalData ;
+                              owl:disjointWith Privacy:ProcessedData ;
+                              rdfs:label "Financial data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PrivacyPolicy
+Privacy:PrivacyPolicy rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Entity ,
+                                      [ rdf:type owl:Restriction ;
+                                        owl:onProperty Privacy:hasDatPractice ;
+                                        owl:someValuesFrom Privacy:DataPractice
+                                      ] ;
+                      rdfs:label "Privacy policy" ;
+                      skos:definition "A privacy policy is a legal contract between an organization and a privacy regulation that disclose the data practices of an organization in an attempt to comply with an specific privacy regulation."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PrivacyRegulation
+Privacy:PrivacyRegulation rdf:type owl:Class ;
+                          rdfs:subClassOf Privacy:Entity ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty Privacy:allows ;
+                                            owl:someValuesFrom Privacy:DataPractice
+                                          ] ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty Privacy:disallows ;
+                                            owl:someValuesFrom Privacy:DataPractice
+                                          ] ;
+                          rdfs:label "Privacy regulation"@en ;
+                          skos:definition "A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#ProcessedData
+Privacy:ProcessedData rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Data ;
+                      rdfs:label "Processed data"@en ;
+                      skos:definition "Processed data is any piece of information that have been processed using different mechanism such as anonymous or pseuonymous so that the data cannot be used to directly identify an individual."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#ProfilingPurpose
+Privacy:ProfilingPurpose rdf:type owl:Class ;
+                         rdfs:subClassOf Privacy:Purpose ;
+                         rdfs:label "Profiling purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#PseudonymousProcessedData
+Privacy:PseudonymousProcessedData rdf:type owl:Class ;
+                                  rdfs:subClassOf Privacy:ProcessedData ;
+                                  rdfs:label "Pseudonymous processed data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#PublicInterestPurpose
+Privacy:PublicInterestPurpose rdf:type owl:Class ;
+                              rdfs:subClassOf Privacy:Purpose ;
+                              rdfs:label "Public interest purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#Purpose
+Privacy:Purpose rdf:type owl:Class ;
+                rdfs:subClassOf Privacy:Entity ;
+                owl:disjointWith Privacy:Role ;
+                rdfs:label "Purpose" ;
+                skos:definition "An organization may collect and process users' personal information for several purposes such as health or marketting purpose. We reuse the purposes introduced by the PrOnto ontology and assigned them as the sub-classes for the purpose class." .
+
+
+###  http://umaine.edu/Privacy/core/v1#ResearchPurpose
+Privacy:ResearchPurpose rdf:type owl:Class ;
+                        rdfs:subClassOf Privacy:Purpose ;
+                        rdfs:label "Research purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#ResponseType
+Privacy:ResponseType rdf:type owl:Class ;
+                     rdfs:subClassOf Privacy:Entity ;
+                     rdfs:label "Response type" ;
+                     skos:definition "An organization is required to response to any request placed by the data subject either by phone, mail, privacy policy, or electronic email." .
+
+
+###  http://umaine.edu/Privacy/core/v1#Role
+Privacy:Role rdf:type owl:Class ;
+             rdfs:subClassOf Privacy:Entity ;
+             rdfs:label "Role" ;
+             skos:definition "According to the privacy regulations such as GDPR or CCPA, the processing or collection of personal data vary based on different roles such as data provider and data recipient." .
+
+
+###  http://umaine.edu/Privacy/core/v1#SecurityMechanism
+Privacy:SecurityMechanism rdf:type owl:Class ;
+                          rdfs:subClassOf Privacy:Entity ,
+                                          [ rdf:type owl:Restriction ;
+                                            owl:onProperty Privacy:appliesTo ;
+                                            owl:someValuesFrom Privacy:Data
+                                          ] ;
+                          rdfs:label "Security mechanism"@en ;
+                          skos:definition "According to the privacy regulations organization are required to mainatin proper security to protect the collected data-- often referred as  data safe guard mechanism."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#SecurityPurpose
+Privacy:SecurityPurpose rdf:type owl:Class ;
+                        rdfs:subClassOf Privacy:Purpose ;
+                        rdfs:label "Security purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#SocialAgent
+Privacy:SocialAgent rdf:type owl:Class ;
+                    rdfs:subClassOf Privacy:Entity ,
+                                    [ rdf:type owl:Restriction ;
+                                      owl:onProperty Privacy:actsIn ;
+                                      owl:someValuesFrom Privacy:Role
+                                    ] ;
+                    rdfs:label "Social agent"@en ;
+                    skos:definition "An agentive physical object which is capable of actis as a social individual."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#SpatialEntity
+Privacy:SpatialEntity rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Entity ;
+                      owl:disjointWith Privacy:StorageEntity ;
+                      rdfs:label "Spatial entity"@en ;
+                      skos:definition "Spatial location of storing personal data, such as Netharland, Finland."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#StatisticPurpose
+Privacy:StatisticPurpose rdf:type owl:Class ;
+                         rdfs:subClassOf Privacy:Purpose ;
+                         rdfs:label "Statistic purpose" .
+
+
+###  http://umaine.edu/Privacy/core/v1#StatisticalProcessedData
+Privacy:StatisticalProcessedData rdf:type owl:Class ;
+                                 rdfs:subClassOf Privacy:ProcessedData ;
+                                 rdfs:label "Statistical processed data"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#StorageEntity
+Privacy:StorageEntity rdf:type owl:Class ;
+                      rdfs:subClassOf Privacy:Entity ;
+                      rdfs:label "Storage entity"@en ;
+                      skos:definition "Storage types of storing personal data, such as data center or on device."@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#SymmetricEncryptionMechanism
+Privacy:SymmetricEncryptionMechanism rdf:type owl:Class ;
+                                     rdfs:subClassOf Privacy:EncryptionMechanism ;
+                                     rdfs:label "Symmetric encryption mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#ThirdPartyDataRecipient
+Privacy:ThirdPartyDataRecipient rdf:type owl:Class ;
+                                rdfs:subClassOf Privacy:DataRecipient ;
+                                rdfs:label "Third party data recipient" ;
+                                skos:definition "If any first party data recipient shares their collected data to another organization or entity, the second organziation or entity is knows as third party data recipient. It is to be noted that, a third party data recipient can be another organization or company with whom the first party data recipient is affilianted, or any governmental organization." .
+
+
+###  http://umaine.edu/Privacy/core/v1#TokenbasedAuthenticationMechanism
+Privacy:TokenbasedAuthenticationMechanism rdf:type owl:Class ;
+                                          rdfs:subClassOf Privacy:OneFactorAuthenticationMechanism ;
+                                          rdfs:label "Token-based authentication mechanism"@en .
+
+
+###  http://umaine.edu/Privacy/core/v1#TwoFactorAuthenticationMechanism
+Privacy:TwoFactorAuthenticationMechanism rdf:type owl:Class ;
+                                         rdfs:subClassOf Privacy:AuthenticationMechanism ;
+                                         rdfs:label "Two factor authentication mechanism"@en .
+
+
+#################################################################
+#    General axioms
+#################################################################
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( Privacy:ActivityData
+                Privacy:BiomentricData
+                Privacy:DemographicData
+                Privacy:GeneticData
+                Privacy:HealthData
+                Privacy:IdentityData
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( Privacy:AnonymousProcessedData
+                Privacy:PseudonymousProcessedData
+                Privacy:StatisticalProcessedData
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( Privacy:BiometricbasedAuthenticationMechanism
+                Privacy:PasswordbasedAuthenticationMechanism
+                Privacy:TokenbasedAuthenticationMechanism
+              )
+] .
+
+
+[ rdf:type owl:AllDisjointClasses ;
+  owl:members ( Privacy:HealthPurpose
+                Privacy:HumanitarianPurpose
+                Privacy:JournalisricPurpose
+                Privacy:JudicialPurpose
+                Privacy:MarketingPurpose
+                Privacy:ProfilingPurpose
+                Privacy:ResearchPurpose
+                Privacy:SecurityPurpose
+                Privacy:StatisticPurpose
+              )
+] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
