@@ -1,0 +1,718 @@
+Prefix(:=<http://umaine.edu/Privacy/core/v1#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+Prefix(skos:=<http://www.w3.org/2004/02/skos/core#>)
+Prefix(time:=<http://www.w3.org/2006/time#>)
+Prefix(terms:=<http://purl.org/dc/terms/>)
+Prefix(Privacy:=<http://umaine.edu/Privacy/core/v1#>)
+
+
+Ontology(<http://umaine.edu/Privacy/core/v1#>
+Import(<http://www.w3.org/2006/time>)
+
+Declaration(Class(Privacy:ActivityData))
+Declaration(Class(Privacy:AnonymousProcessedData))
+Declaration(Class(Privacy:AsymmetricEncryptionMechanism))
+Declaration(Class(Privacy:AuthenticationMechanism))
+Declaration(Class(Privacy:BiomentricData))
+Declaration(Class(Privacy:BiometricbasedAuthenticationMechanism))
+Declaration(Class(Privacy:CCPAFirstPartyDataRecipient))
+Declaration(Class(Privacy:CCPAThirdPartyDataRecipient))
+Declaration(Class(Privacy:Data))
+Declaration(Class(Privacy:DataPractice))
+Declaration(Class(Privacy:DataProvider))
+Declaration(Class(Privacy:DataRecipient))
+Declaration(Class(Privacy:DataSafeGuardMechanism))
+Declaration(Class(Privacy:DataStorageDurationPractice))
+Declaration(Class(Privacy:DataStorageErasurePractice))
+Declaration(Class(Privacy:DataStorageLocationPractice))
+Declaration(Class(Privacy:DataStorageModificationPractice))
+Declaration(Class(Privacy:DataStoragePrivacyPractice))
+Declaration(Class(Privacy:DataStorageRectificationPractice))
+Declaration(Class(Privacy:DataSubject))
+Declaration(Class(Privacy:DefiniteDurationDescription))
+Declaration(Class(Privacy:DemographicData))
+Declaration(Class(Privacy:EncryptionMechanism))
+Declaration(Class(Privacy:Entity))
+Declaration(Class(Privacy:FirstPartyDataRecipient))
+Declaration(Class(Privacy:GDPRFirstPartyDataRecipient))
+Declaration(Class(Privacy:GDPRThirdPartyDataRecipient))
+Declaration(Class(Privacy:GeneticData))
+Declaration(Class(Privacy:HealthData))
+Declaration(Class(Privacy:HealthPurpose))
+Declaration(Class(Privacy:HumanitarianPurpose))
+Declaration(Class(Privacy:IdentityData))
+Declaration(Class(Privacy:IndefiniteDurationDescription))
+Declaration(Class(Privacy:JournalisricPurpose))
+Declaration(Class(Privacy:JudicialPurpose))
+Declaration(Class(Privacy:LegalAgent))
+Declaration(Class(Privacy:LegalPerson))
+Declaration(Class(Privacy:MarketingPurpose))
+Declaration(Class(Privacy:Minor))
+Declaration(Class(Privacy:OneFactorAuthenticationMechanism))
+Declaration(Class(Privacy:Organization))
+Declaration(Class(Privacy:PasswordbasedAuthenticationMechanism))
+Declaration(Class(Privacy:PersonalData))
+Declaration(Class(Privacy:PersonalFinancialData))
+Declaration(Class(Privacy:PrivacyPolicy))
+Declaration(Class(Privacy:PrivacyRegulation))
+Declaration(Class(Privacy:ProcessedData))
+Declaration(Class(Privacy:ProfilingPurpose))
+Declaration(Class(Privacy:PseudonymousProcessedData))
+Declaration(Class(Privacy:PublicInterestPurpose))
+Declaration(Class(Privacy:Purpose))
+Declaration(Class(Privacy:ResearchPurpose))
+Declaration(Class(Privacy:ResponseType))
+Declaration(Class(Privacy:Role))
+Declaration(Class(Privacy:SecurityMechanism))
+Declaration(Class(Privacy:SecurityPurpose))
+Declaration(Class(Privacy:SocialAgent))
+Declaration(Class(Privacy:SpatialEntity))
+Declaration(Class(Privacy:StatisticPurpose))
+Declaration(Class(Privacy:StatisticalProcessedData))
+Declaration(Class(Privacy:StorageEntity))
+Declaration(Class(Privacy:SymmetricEncryptionMechanism))
+Declaration(Class(Privacy:ThirdPartyDataRecipient))
+Declaration(Class(Privacy:TokenbasedAuthenticationMechanism))
+Declaration(Class(Privacy:TwoFactorAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:actsIn))
+Declaration(ObjectProperty(Privacy:actsOn))
+Declaration(ObjectProperty(Privacy:allows))
+Declaration(ObjectProperty(Privacy:appliesTo))
+Declaration(ObjectProperty(Privacy:disallows))
+Declaration(ObjectProperty(Privacy:hasAccessToErasedData))
+Declaration(ObjectProperty(Privacy:hasAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:hasBiometricbasedAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:hasDatPractice))
+Declaration(ObjectProperty(Privacy:hasDurationPractice))
+Declaration(ObjectProperty(Privacy:hasEncryptionTechnique))
+Declaration(ObjectProperty(Privacy:hasPasswordbasedAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:hasPolicy))
+Declaration(ObjectProperty(Privacy:hasPurpose))
+Declaration(ObjectProperty(Privacy:hasResponseDelay))
+Declaration(ObjectProperty(Privacy:hasResponseType))
+Declaration(ObjectProperty(Privacy:hasSecurityMechanism))
+Declaration(ObjectProperty(Privacy:hasStorageEntity))
+Declaration(ObjectProperty(Privacy:hasStorageLocation))
+Declaration(ObjectProperty(Privacy:hasTokenbasedAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:hasTwoFactorAuthenticationMechanism))
+Declaration(ObjectProperty(Privacy:isAbout))
+Declaration(ObjectProperty(Privacy:isProvidedBy))
+Declaration(ObjectProperty(Privacy:isRecipientOf))
+Declaration(DataProperty(time:hours))
+Declaration(DataProperty(time:minutes))
+Declaration(DataProperty(time:months))
+Declaration(DataProperty(time:seconds))
+Declaration(DataProperty(time:weeks))
+Declaration(DataProperty(time:years))
+Declaration(AnnotationProperty(skos:definition))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: Privacy:actsIn (acts in)
+
+AnnotationAssertion(rdfs:label Privacy:actsIn "acts in")
+AsymmetricObjectProperty(Privacy:actsIn)
+ObjectPropertyDomain(Privacy:actsIn Privacy:SocialAgent)
+ObjectPropertyRange(Privacy:actsIn Privacy:Role)
+
+# Object Property: Privacy:actsOn (acts on)
+
+AnnotationAssertion(rdfs:label Privacy:actsOn "acts on")
+AsymmetricObjectProperty(Privacy:actsOn)
+ObjectPropertyDomain(Privacy:actsOn Privacy:DataPractice)
+ObjectPropertyRange(Privacy:actsOn Privacy:Data)
+
+# Object Property: Privacy:allows (allows)
+
+AnnotationAssertion(rdfs:label Privacy:allows "allows"@en)
+AsymmetricObjectProperty(Privacy:allows)
+ObjectPropertyDomain(Privacy:allows Privacy:PrivacyRegulation)
+ObjectPropertyRange(Privacy:allows Privacy:DataPractice)
+
+# Object Property: Privacy:appliesTo (applies to)
+
+AnnotationAssertion(rdfs:label Privacy:appliesTo "applies to")
+AsymmetricObjectProperty(Privacy:appliesTo)
+ObjectPropertyDomain(Privacy:appliesTo Privacy:SecurityMechanism)
+ObjectPropertyRange(Privacy:appliesTo Privacy:Data)
+
+# Object Property: Privacy:disallows (disallows)
+
+AnnotationAssertion(rdfs:label Privacy:disallows "disallows"@en)
+AsymmetricObjectProperty(Privacy:disallows)
+ObjectPropertyDomain(Privacy:disallows Privacy:PrivacyRegulation)
+ObjectPropertyRange(Privacy:disallows Privacy:DataPractice)
+
+# Object Property: Privacy:hasAccessToErasedData (has access to erased data)
+
+AnnotationAssertion(rdfs:label Privacy:hasAccessToErasedData "has access to erased data")
+AsymmetricObjectProperty(Privacy:hasAccessToErasedData)
+ObjectPropertyDomain(Privacy:hasAccessToErasedData Privacy:LegalAgent)
+ObjectPropertyRange(Privacy:hasAccessToErasedData Privacy:DataStorageErasurePractice)
+
+# Object Property: Privacy:hasAuthenticationMechanism (has authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasAuthenticationMechanism "has authentication mechanism")
+AsymmetricObjectProperty(Privacy:hasAuthenticationMechanism)
+ObjectPropertyDomain(Privacy:hasAuthenticationMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasAuthenticationMechanism Privacy:AuthenticationMechanism)
+
+# Object Property: Privacy:hasBiometricbasedAuthenticationMechanism (has biometric-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasBiometricbasedAuthenticationMechanism "has biometric-based authentication mechanism")
+AsymmetricObjectProperty(Privacy:hasBiometricbasedAuthenticationMechanism)
+ObjectPropertyDomain(Privacy:hasBiometricbasedAuthenticationMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasBiometricbasedAuthenticationMechanism Privacy:BiometricbasedAuthenticationMechanism)
+
+# Object Property: Privacy:hasDatPractice (has data practice)
+
+AnnotationAssertion(rdfs:label Privacy:hasDatPractice "has data practice")
+AsymmetricObjectProperty(Privacy:hasDatPractice)
+ObjectPropertyDomain(Privacy:hasDatPractice Privacy:PrivacyPolicy)
+ObjectPropertyRange(Privacy:hasDatPractice Privacy:DataPractice)
+
+# Object Property: Privacy:hasDurationPractice (has duration practice)
+
+AnnotationAssertion(rdfs:label Privacy:hasDurationPractice "has duration practice")
+AsymmetricObjectProperty(Privacy:hasDurationPractice)
+ObjectPropertyDomain(Privacy:hasDurationPractice Privacy:DataStorageDurationPractice)
+ObjectPropertyRange(Privacy:hasDurationPractice time:GeneralDurationDescription)
+
+# Object Property: Privacy:hasEncryptionTechnique (has encryption technique)
+
+AnnotationAssertion(rdfs:label Privacy:hasEncryptionTechnique "has encryption technique"@en)
+AsymmetricObjectProperty(Privacy:hasEncryptionTechnique)
+ObjectPropertyDomain(Privacy:hasEncryptionTechnique Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasEncryptionTechnique Privacy:EncryptionMechanism)
+
+# Object Property: Privacy:hasPasswordbasedAuthenticationMechanism (has password-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasPasswordbasedAuthenticationMechanism "has password-based authentication mechanism"@en)
+AsymmetricObjectProperty(Privacy:hasPasswordbasedAuthenticationMechanism)
+ObjectPropertyDomain(Privacy:hasPasswordbasedAuthenticationMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasPasswordbasedAuthenticationMechanism Privacy:PasswordbasedAuthenticationMechanism)
+
+# Object Property: Privacy:hasPolicy (has policy)
+
+AnnotationAssertion(rdfs:label Privacy:hasPolicy "has policy"@en)
+AsymmetricObjectProperty(Privacy:hasPolicy)
+ObjectPropertyDomain(Privacy:hasPolicy Privacy:Organization)
+ObjectPropertyRange(Privacy:hasPolicy Privacy:PrivacyPolicy)
+
+# Object Property: Privacy:hasPurpose (has purpose)
+
+AnnotationAssertion(rdfs:label Privacy:hasPurpose "has purpose"@en)
+AsymmetricObjectProperty(Privacy:hasPurpose)
+ObjectPropertyDomain(Privacy:hasPurpose Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasPurpose Privacy:Purpose)
+
+# Object Property: Privacy:hasResponseDelay (has response delay)
+
+AnnotationAssertion(rdfs:label Privacy:hasResponseDelay "has response delay"@en)
+AsymmetricObjectProperty(Privacy:hasResponseDelay)
+ObjectPropertyDomain(Privacy:hasResponseDelay Privacy:DataStorageModificationPractice)
+ObjectPropertyRange(Privacy:hasResponseDelay time:GeneralDurationDescription)
+
+# Object Property: Privacy:hasResponseType (has response type)
+
+AnnotationAssertion(rdfs:label Privacy:hasResponseType "has response type"@en)
+AsymmetricObjectProperty(Privacy:hasResponseType)
+ObjectPropertyDomain(Privacy:hasResponseType Privacy:DataStorageModificationPractice)
+ObjectPropertyRange(Privacy:hasResponseType Privacy:ResponseType)
+
+# Object Property: Privacy:hasSecurityMechanism (has security mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasSecurityMechanism "has security mechanism"@en)
+AsymmetricObjectProperty(Privacy:hasSecurityMechanism)
+ObjectPropertyDomain(Privacy:hasSecurityMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasSecurityMechanism Privacy:SecurityMechanism)
+
+# Object Property: Privacy:hasStorageEntity (has storage entity)
+
+AnnotationAssertion(rdfs:label Privacy:hasStorageEntity "has storage entity"@en)
+AsymmetricObjectProperty(Privacy:hasStorageEntity)
+ObjectPropertyDomain(Privacy:hasStorageEntity Privacy:DataStorageErasurePractice)
+ObjectPropertyRange(Privacy:hasStorageEntity Privacy:StorageEntity)
+
+# Object Property: Privacy:hasStorageLocation (has storage location)
+
+AnnotationAssertion(rdfs:label Privacy:hasStorageLocation "has storage location"@en)
+AsymmetricObjectProperty(Privacy:hasStorageLocation)
+ObjectPropertyDomain(Privacy:hasStorageLocation Privacy:DataStorageErasurePractice)
+ObjectPropertyRange(Privacy:hasStorageLocation Privacy:SpatialEntity)
+
+# Object Property: Privacy:hasTokenbasedAuthenticationMechanism (has token-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasTokenbasedAuthenticationMechanism "has token-based authentication mechanism"@en)
+AsymmetricObjectProperty(Privacy:hasTokenbasedAuthenticationMechanism)
+ObjectPropertyDomain(Privacy:hasTokenbasedAuthenticationMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasTokenbasedAuthenticationMechanism Privacy:TokenbasedAuthenticationMechanism)
+
+# Object Property: Privacy:hasTwoFactorAuthenticationMechanism (has two factor authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:hasTwoFactorAuthenticationMechanism "has two factor authentication mechanism"@en)
+AsymmetricObjectProperty(Privacy:hasTwoFactorAuthenticationMechanism)
+ObjectPropertyDomain(Privacy:hasTwoFactorAuthenticationMechanism Privacy:DataPractice)
+ObjectPropertyRange(Privacy:hasTwoFactorAuthenticationMechanism Privacy:TwoFactorAuthenticationMechanism)
+
+# Object Property: Privacy:isAbout (isAbout)
+
+AnnotationAssertion(rdfs:label Privacy:isAbout "isAbout"@en)
+AsymmetricObjectProperty(Privacy:isAbout)
+ObjectPropertyDomain(Privacy:isAbout Privacy:Data)
+ObjectPropertyRange(Privacy:isAbout Privacy:DataSubject)
+
+# Object Property: Privacy:isProvidedBy (isProvidedBy)
+
+AnnotationAssertion(rdfs:label Privacy:isProvidedBy "isProvidedBy"@en)
+AsymmetricObjectProperty(Privacy:isProvidedBy)
+ObjectPropertyDomain(Privacy:isProvidedBy Privacy:Data)
+ObjectPropertyRange(Privacy:isProvidedBy Privacy:DataProvider)
+
+# Object Property: Privacy:isRecipientOf (isRecipientOf)
+
+AnnotationAssertion(rdfs:label Privacy:isRecipientOf "isRecipientOf"@en)
+ObjectPropertyDomain(Privacy:isRecipientOf Privacy:DataRecipient)
+ObjectPropertyRange(Privacy:isRecipientOf Privacy:Data)
+
+
+############################
+#   Data Properties
+############################
+
+# Data Property: time:hours (duración en horas)
+
+DataPropertyDomain(time:hours time:GeneralDurationDescription)
+DataPropertyRange(time:hours xsd:decimal)
+
+# Data Property: time:minutes (minutes)
+
+DataPropertyDomain(time:minutes time:GeneralDurationDescription)
+DataPropertyRange(time:minutes xsd:decimal)
+
+# Data Property: time:months (duración en meses)
+
+DataPropertyDomain(time:months time:GeneralDurationDescription)
+DataPropertyRange(time:months xsd:decimal)
+
+# Data Property: time:seconds (duración en segundos)
+
+DataPropertyDomain(time:seconds time:GeneralDurationDescription)
+DataPropertyRange(time:seconds xsd:decimal)
+
+# Data Property: time:weeks (weeks duration)
+
+DataPropertyDomain(time:weeks time:GeneralDurationDescription)
+DataPropertyRange(time:weeks xsd:decimal)
+
+# Data Property: time:years (years duration)
+
+DataPropertyDomain(time:years time:GeneralDurationDescription)
+DataPropertyRange(time:years xsd:decimal)
+
+
+
+############################
+#   Classes
+############################
+
+# Class: Privacy:ActivityData (Activity data)
+
+AnnotationAssertion(rdfs:label Privacy:ActivityData "Activity data"@en)
+SubClassOf(Privacy:ActivityData Privacy:PersonalData)
+
+# Class: Privacy:AnonymousProcessedData (Anonymous processed data)
+
+AnnotationAssertion(rdfs:label Privacy:AnonymousProcessedData "Anonymous processed data"@en)
+SubClassOf(Privacy:AnonymousProcessedData Privacy:ProcessedData)
+
+# Class: Privacy:AsymmetricEncryptionMechanism (Asymmetric encryption mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:AsymmetricEncryptionMechanism "Asymmetric encryption mechanism"@en)
+SubClassOf(Privacy:AsymmetricEncryptionMechanism Privacy:EncryptionMechanism)
+DisjointClasses(Privacy:AsymmetricEncryptionMechanism Privacy:SymmetricEncryptionMechanism)
+
+# Class: Privacy:AuthenticationMechanism (Authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:AuthenticationMechanism "Authentication mechanism"@en)
+AnnotationAssertion(skos:definition Privacy:AuthenticationMechanism "Authentication mechanism means ways to access collected data in an authorized manner."@en)
+SubClassOf(Privacy:AuthenticationMechanism Privacy:DataSafeGuardMechanism)
+
+# Class: Privacy:BiomentricData (Biometric data)
+
+AnnotationAssertion(rdfs:label Privacy:BiomentricData "Biometric data"@en)
+SubClassOf(Privacy:BiomentricData Privacy:PersonalData)
+
+# Class: Privacy:BiometricbasedAuthenticationMechanism (Biometric-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:BiometricbasedAuthenticationMechanism "Biometric-based authentication mechanism"@en)
+SubClassOf(Privacy:BiometricbasedAuthenticationMechanism Privacy:OneFactorAuthenticationMechanism)
+
+# Class: Privacy:CCPAFirstPartyDataRecipient (CCPA first party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:CCPAFirstPartyDataRecipient "CCPA first party data recipient")
+AnnotationAssertion(skos:definition Privacy:CCPAFirstPartyDataRecipient "According to the privacy regulation CCPA, a first party data recipient is any organization or entity that directly collects data from the data subject.")
+SubClassOf(Privacy:CCPAFirstPartyDataRecipient Privacy:FirstPartyDataRecipient)
+
+# Class: Privacy:CCPAThirdPartyDataRecipient (CCPA third party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:CCPAThirdPartyDataRecipient "CCPA third party data recipient")
+AnnotationAssertion(skos:definition Privacy:CCPAThirdPartyDataRecipient "According to the privacy regulation CCPA, a third party can be any one (individual, organization, entity) except the service provider who directly collects personal information from the data subject.")
+SubClassOf(Privacy:CCPAThirdPartyDataRecipient Privacy:ThirdPartyDataRecipient)
+
+# Class: Privacy:Data (Data)
+
+AnnotationAssertion(rdfs:label Privacy:Data "Data"@en)
+AnnotationAssertion(skos:definition Privacy:Data "Data is any piece of information that can directly or indirectly identify an individual."@en)
+SubClassOf(Privacy:Data Privacy:Entity)
+
+# Class: Privacy:DataPractice (Data practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataPractice "Data practice"@en)
+AnnotationAssertion(skos:definition Privacy:DataPractice "The process an organization follows to collect, process, share, or store the personal data."@en)
+SubClassOf(Privacy:DataPractice Privacy:Entity)
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:actsOn Privacy:Data))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasAuthenticationMechanism Privacy:AuthenticationMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasBiometricbasedAuthenticationMechanism Privacy:BiometricbasedAuthenticationMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasEncryptionTechnique Privacy:EncryptionMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasPasswordbasedAuthenticationMechanism Privacy:PasswordbasedAuthenticationMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasPurpose Privacy:Purpose))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasSecurityMechanism Privacy:SecurityMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasTokenbasedAuthenticationMechanism Privacy:TokenbasedAuthenticationMechanism))
+SubClassOf(Privacy:DataPractice ObjectSomeValuesFrom(Privacy:hasTwoFactorAuthenticationMechanism Privacy:TwoFactorAuthenticationMechanism))
+
+# Class: Privacy:DataProvider (Data provider)
+
+AnnotationAssertion(rdfs:label Privacy:DataProvider "Data provider"@en)
+AnnotationAssertion(skos:definition Privacy:DataProvider "Data provider defines as organizations or individuals which provide data to another organization(s) or individual(s)."@en)
+EquivalentClasses(Privacy:DataProvider Privacy:DataSubject)
+SubClassOf(Privacy:DataProvider Privacy:Role)
+SubClassOf(Privacy:DataProvider ObjectSomeValuesFrom(Privacy:isProvidedBy Privacy:Data))
+
+# Class: Privacy:DataRecipient (Data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:DataRecipient "Data recipient")
+AnnotationAssertion(skos:definition Privacy:DataRecipient "Data provider can be any organization or individual who provides data to the organization.")
+SubClassOf(Privacy:DataRecipient Privacy:Role)
+SubClassOf(Privacy:DataRecipient ObjectSomeValuesFrom(Privacy:isRecipientOf Privacy:Data))
+
+# Class: Privacy:DataSafeGuardMechanism (Data safe guard mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:DataSafeGuardMechanism "Data safe guard mechanism"@en)
+AnnotationAssertion(skos:definition Privacy:DataSafeGuardMechanism "Data safe guard mechanism may include any mechanism such as mechanisms to provide access to the collected data to the authorized  user, or encryption mechanism- a process of storing information in a code format."@en)
+SubClassOf(Privacy:DataSafeGuardMechanism Privacy:SecurityMechanism)
+
+# Class: Privacy:DataStorageDurationPractice (Data storage duration practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataStorageDurationPractice "Data storage duration practice"@en)
+AnnotationAssertion(skos:definition Privacy:DataStorageDurationPractice "The data practices that discusses about the duration of the storage of personal data."@en)
+SubClassOf(Privacy:DataStorageDurationPractice Privacy:DataStoragePrivacyPractice)
+SubClassOf(Privacy:DataStorageDurationPractice ObjectExactCardinality(1 Privacy:hasDurationPractice time:GeneralDurationDescription))
+
+# Class: Privacy:DataStorageErasurePractice (Data storage erasure practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataStorageErasurePractice "Data storage erasure practice"@en)
+SubClassOf(Privacy:DataStorageErasurePractice Privacy:DataStorageModificationPractice)
+
+# Class: Privacy:DataStorageLocationPractice (Data storage location practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataStorageLocationPractice "Data storage location practice"@en)
+AnnotationAssertion(skos:definition Privacy:DataStorageLocationPractice "The data practices that discuss where and how the collected data is stored."@en)
+SubClassOf(Privacy:DataStorageLocationPractice Privacy:DataStoragePrivacyPractice)
+SubClassOf(Privacy:DataStorageLocationPractice ObjectSomeValuesFrom(Privacy:hasStorageEntity Privacy:StorageEntity))
+SubClassOf(Privacy:DataStorageLocationPractice ObjectSomeValuesFrom(Privacy:hasStorageLocation Privacy:SpatialEntity))
+
+# Class: Privacy:DataStorageModificationPractice (Data storage modification practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataStorageModificationPractice "Data storage modification practice"@en)
+AnnotationAssertion(skos:definition Privacy:DataStorageModificationPractice "The data practices that discuss how the data subject can modify (rectify/erase) the stored data."@en)
+SubClassOf(Privacy:DataStorageModificationPractice Privacy:DataStoragePrivacyPractice)
+SubClassOf(Privacy:DataStorageModificationPractice ObjectSomeValuesFrom(Privacy:hasResponseType Privacy:ResponseType))
+SubClassOf(Privacy:DataStorageModificationPractice ObjectExactCardinality(1 Privacy:hasResponseDelay time:GeneralDurationDescription))
+
+# Class: Privacy:DataStoragePrivacyPractice (Data storage practice.)
+
+AnnotationAssertion(rdfs:label Privacy:DataStoragePrivacyPractice "Data storage practice."@en)
+AnnotationAssertion(skos:definition Privacy:DataStoragePrivacyPractice "Data practices that discusses about the storage of the collected data."@en)
+SubClassOf(Privacy:DataStoragePrivacyPractice Privacy:DataPractice)
+
+# Class: Privacy:DataStorageRectificationPractice (Data storage rectification practice)
+
+AnnotationAssertion(rdfs:label Privacy:DataStorageRectificationPractice "Data storage rectification practice"@en)
+SubClassOf(Privacy:DataStorageRectificationPractice Privacy:DataStorageModificationPractice)
+
+# Class: Privacy:DataSubject (Data subject)
+
+AnnotationAssertion(rdfs:label Privacy:DataSubject "Data subject"@en)
+AnnotationAssertion(skos:definition Privacy:DataSubject "Data subject is defined as an individual from which an organization or OSN may collect data. In other word, Data subject is an individual who can identified directly or indirectly by the collected data. Note that a data subject can also be a data provider."@en)
+SubClassOf(Privacy:DataSubject Privacy:Role)
+
+# Class: Privacy:DefiniteDurationDescription (Definite duration description)
+
+AnnotationAssertion(rdfs:label Privacy:DefiniteDurationDescription "Definite duration description"@en)
+EquivalentClasses(Privacy:DefiniteDurationDescription ObjectComplementOf(Privacy:IndefiniteDurationDescription))
+SubClassOf(Privacy:DefiniteDurationDescription time:GeneralDurationDescription)
+
+# Class: Privacy:DemographicData (Demographic data)
+
+AnnotationAssertion(rdfs:label Privacy:DemographicData "Demographic data"@en)
+SubClassOf(Privacy:DemographicData Privacy:PersonalData)
+
+# Class: Privacy:EncryptionMechanism (Encryption mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:EncryptionMechanism "Encryption mechanism"@en)
+SubClassOf(Privacy:EncryptionMechanism Privacy:DataSafeGuardMechanism)
+
+# Class: Privacy:Entity (Entity)
+
+AnnotationAssertion(rdfs:label Privacy:Entity "Entity"@en)
+
+# Class: Privacy:FirstPartyDataRecipient (First party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:FirstPartyDataRecipient "First party data recipient")
+AnnotationAssertion(skos:definition Privacy:FirstPartyDataRecipient "If any data recipient isRecipientOf the data directly from a data subject, the data reipient is known as first party data recipient.")
+SubClassOf(Privacy:FirstPartyDataRecipient Privacy:DataRecipient)
+DisjointClasses(Privacy:FirstPartyDataRecipient Privacy:ThirdPartyDataRecipient)
+
+# Class: Privacy:GDPRFirstPartyDataRecipient (GDPR first party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:GDPRFirstPartyDataRecipient "GDPR first party data recipient")
+AnnotationAssertion(skos:definition Privacy:GDPRFirstPartyDataRecipient "GDPR first party data recipient are those first party data recipients whom the data subject directly provides their data and the data subject has the option to choose - opt out- so that the first party data recipient will not sell the collected data.")
+SubClassOf(Privacy:GDPRFirstPartyDataRecipient Privacy:FirstPartyDataRecipient)
+
+# Class: Privacy:GDPRThirdPartyDataRecipient (GDPR third party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:GDPRThirdPartyDataRecipient "GDPR third party data recipient")
+AnnotationAssertion(skos:definition Privacy:GDPRThirdPartyDataRecipient "According to the privacy regulation GDPR, the third party data recipient is defined as follows: a natural or legal person, public authority, agency or body other than the data subject or first party data recipient and who are authorised to process personal data about the data subject.")
+SubClassOf(Privacy:GDPRThirdPartyDataRecipient Privacy:ThirdPartyDataRecipient)
+
+# Class: Privacy:GeneticData (Genetic data)
+
+AnnotationAssertion(rdfs:label Privacy:GeneticData "Genetic data"@en)
+SubClassOf(Privacy:GeneticData Privacy:PersonalData)
+
+# Class: Privacy:HealthData (Health data)
+
+AnnotationAssertion(rdfs:label Privacy:HealthData "Health data"@en)
+SubClassOf(Privacy:HealthData Privacy:PersonalData)
+
+# Class: Privacy:HealthPurpose (Health purpose)
+
+AnnotationAssertion(rdfs:label Privacy:HealthPurpose "Health purpose")
+SubClassOf(Privacy:HealthPurpose Privacy:Purpose)
+
+# Class: Privacy:HumanitarianPurpose (Humanitarian purpose)
+
+AnnotationAssertion(rdfs:label Privacy:HumanitarianPurpose "Humanitarian purpose")
+SubClassOf(Privacy:HumanitarianPurpose Privacy:Purpose)
+
+# Class: Privacy:IdentityData (Identity data)
+
+AnnotationAssertion(rdfs:label Privacy:IdentityData "Identity data"@en)
+SubClassOf(Privacy:IdentityData Privacy:PersonalData)
+
+# Class: Privacy:IndefiniteDurationDescription (Indefinite duration description)
+
+AnnotationAssertion(rdfs:label Privacy:IndefiniteDurationDescription "Indefinite duration description"@en)
+SubClassOf(Privacy:IndefiniteDurationDescription time:GeneralDurationDescription)
+SubClassOf(Privacy:IndefiniteDurationDescription DataMaxCardinality(0 time:hours))
+SubClassOf(Privacy:IndefiniteDurationDescription DataMaxCardinality(0 time:minutes))
+SubClassOf(Privacy:IndefiniteDurationDescription DataMaxCardinality(0 time:seconds))
+SubClassOf(Privacy:IndefiniteDurationDescription DataMaxCardinality(0 time:weeks))
+SubClassOf(Privacy:IndefiniteDurationDescription DataMaxCardinality(0 time:years))
+
+# Class: Privacy:JournalisricPurpose (Journalistic purpose)
+
+AnnotationAssertion(rdfs:label Privacy:JournalisricPurpose "Journalistic purpose")
+SubClassOf(Privacy:JournalisricPurpose Privacy:Purpose)
+
+# Class: Privacy:JudicialPurpose (Judicial purpose)
+
+AnnotationAssertion(rdfs:label Privacy:JudicialPurpose "Judicial purpose")
+SubClassOf(Privacy:JudicialPurpose Privacy:Purpose)
+
+# Class: Privacy:LegalAgent (Legal agent)
+
+AnnotationAssertion(rdfs:label Privacy:LegalAgent "Legal agent"@en)
+SubClassOf(Privacy:LegalAgent Privacy:SocialAgent)
+
+# Class: Privacy:LegalPerson (Legal person)
+
+AnnotationAssertion(rdfs:label Privacy:LegalPerson "Legal person"@en)
+SubClassOf(Privacy:LegalPerson Privacy:LegalAgent)
+
+# Class: Privacy:MarketingPurpose (Marketing purpose)
+
+AnnotationAssertion(rdfs:label Privacy:MarketingPurpose "Marketing purpose")
+SubClassOf(Privacy:MarketingPurpose Privacy:Purpose)
+
+# Class: Privacy:Minor (Minor)
+
+AnnotationAssertion(rdfs:label Privacy:Minor "Minor")
+AnnotationAssertion(skos:definition Privacy:Minor "According to privacy regulations, if any data subject is below a certain age limit (defined by the regulation), is considered as Minor and the organizations are reuiqred to follow special rules to process the data collected from Minor.")
+SubClassOf(Privacy:Minor Privacy:DataSubject)
+
+# Class: Privacy:OneFactorAuthenticationMechanism (One factor authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:OneFactorAuthenticationMechanism "One factor authentication mechanism"@en)
+SubClassOf(Privacy:OneFactorAuthenticationMechanism Privacy:AuthenticationMechanism)
+
+# Class: Privacy:Organization (Organization)
+
+AnnotationAssertion(rdfs:label Privacy:Organization "Organization"@en)
+SubClassOf(Privacy:Organization Privacy:LegalAgent)
+SubClassOf(Privacy:Organization ObjectExactCardinality(1 Privacy:hasPolicy Privacy:PrivacyPolicy))
+
+# Class: Privacy:PasswordbasedAuthenticationMechanism (Password-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:PasswordbasedAuthenticationMechanism "Password-based authentication mechanism"@en)
+SubClassOf(Privacy:PasswordbasedAuthenticationMechanism Privacy:OneFactorAuthenticationMechanism)
+
+# Class: Privacy:PersonalData (Personal data)
+
+AnnotationAssertion(rdfs:label Privacy:PersonalData "Personal data"@en)
+AnnotationAssertion(skos:definition Privacy:PersonalData "Personal data is any piece of information that are raw and can be used to directly identify an individual. We defined seven categories of personal data and assigned them as sub classes of the personal data class."@en)
+SubClassOf(Privacy:PersonalData Privacy:Data)
+DisjointClasses(Privacy:PersonalData Privacy:ProcessedData)
+
+# Class: Privacy:PersonalFinancialData (Financial data)
+
+AnnotationAssertion(rdfs:label Privacy:PersonalFinancialData "Financial data"@en)
+SubClassOf(Privacy:PersonalFinancialData Privacy:PersonalData)
+DisjointClasses(Privacy:PersonalFinancialData Privacy:ProcessedData)
+
+# Class: Privacy:PrivacyPolicy (Privacy policy)
+
+AnnotationAssertion(rdfs:label Privacy:PrivacyPolicy "Privacy policy")
+AnnotationAssertion(skos:definition Privacy:PrivacyPolicy "A privacy policy is a legal contract between an organization and a privacy regulation that disclose the data practices of an organization in an attempt to comply with an specific privacy regulation."@en)
+SubClassOf(Privacy:PrivacyPolicy Privacy:Entity)
+SubClassOf(Privacy:PrivacyPolicy ObjectSomeValuesFrom(Privacy:hasDatPractice Privacy:DataPractice))
+
+# Class: Privacy:PrivacyRegulation (Privacy regulation)
+
+AnnotationAssertion(rdfs:label Privacy:PrivacyRegulation "Privacy regulation"@en)
+AnnotationAssertion(skos:definition Privacy:PrivacyRegulation "A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual."@en)
+SubClassOf(Privacy:PrivacyRegulation Privacy:Entity)
+SubClassOf(Privacy:PrivacyRegulation ObjectSomeValuesFrom(Privacy:allows Privacy:DataPractice))
+SubClassOf(Privacy:PrivacyRegulation ObjectSomeValuesFrom(Privacy:disallows Privacy:DataPractice))
+
+# Class: Privacy:ProcessedData (Processed data)
+
+AnnotationAssertion(rdfs:label Privacy:ProcessedData "Processed data"@en)
+AnnotationAssertion(skos:definition Privacy:ProcessedData "Processed data is any piece of information that have been processed using different mechanism such as anonymous or pseuonymous so that the data cannot be used to directly identify an individual."@en)
+SubClassOf(Privacy:ProcessedData Privacy:Data)
+
+# Class: Privacy:ProfilingPurpose (Profiling purpose)
+
+AnnotationAssertion(rdfs:label Privacy:ProfilingPurpose "Profiling purpose")
+SubClassOf(Privacy:ProfilingPurpose Privacy:Purpose)
+
+# Class: Privacy:PseudonymousProcessedData (Pseudonymous processed data)
+
+AnnotationAssertion(rdfs:label Privacy:PseudonymousProcessedData "Pseudonymous processed data"@en)
+SubClassOf(Privacy:PseudonymousProcessedData Privacy:ProcessedData)
+
+# Class: Privacy:PublicInterestPurpose (Public interest purpose)
+
+AnnotationAssertion(rdfs:label Privacy:PublicInterestPurpose "Public interest purpose")
+SubClassOf(Privacy:PublicInterestPurpose Privacy:Purpose)
+
+# Class: Privacy:Purpose (Purpose)
+
+AnnotationAssertion(rdfs:label Privacy:Purpose "Purpose")
+AnnotationAssertion(skos:definition Privacy:Purpose "An organization may collect and process users' personal information for several purposes such as health or marketting purpose. We reuse the purposes introduced by the PrOnto ontology and assigned them as the sub-classes for the purpose class.")
+SubClassOf(Privacy:Purpose Privacy:Entity)
+DisjointClasses(Privacy:Purpose Privacy:Role)
+
+# Class: Privacy:ResearchPurpose (Research purpose)
+
+AnnotationAssertion(rdfs:label Privacy:ResearchPurpose "Research purpose")
+SubClassOf(Privacy:ResearchPurpose Privacy:Purpose)
+
+# Class: Privacy:ResponseType (Response type)
+
+AnnotationAssertion(rdfs:label Privacy:ResponseType "Response type")
+AnnotationAssertion(skos:definition Privacy:ResponseType "An organization is required to response to any request placed by the data subject either by phone, mail, privacy policy, or electronic email.")
+SubClassOf(Privacy:ResponseType Privacy:Entity)
+
+# Class: Privacy:Role (Role)
+
+AnnotationAssertion(rdfs:label Privacy:Role "Role")
+AnnotationAssertion(skos:definition Privacy:Role "According to the privacy regulations such as GDPR or CCPA, the processing or collection of personal data vary based on different roles such as data provider and data recipient.")
+SubClassOf(Privacy:Role Privacy:Entity)
+
+# Class: Privacy:SecurityMechanism (Security mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:SecurityMechanism "Security mechanism"@en)
+AnnotationAssertion(skos:definition Privacy:SecurityMechanism "According to the privacy regulations organization are required to mainatin proper security to protect the collected data-- often referred as  data safe guard mechanism."@en)
+SubClassOf(Privacy:SecurityMechanism Privacy:Entity)
+SubClassOf(Privacy:SecurityMechanism ObjectSomeValuesFrom(Privacy:appliesTo Privacy:Data))
+
+# Class: Privacy:SecurityPurpose (Security purpose)
+
+AnnotationAssertion(rdfs:label Privacy:SecurityPurpose "Security purpose")
+SubClassOf(Privacy:SecurityPurpose Privacy:Purpose)
+
+# Class: Privacy:SocialAgent (Social agent)
+
+AnnotationAssertion(rdfs:label Privacy:SocialAgent "Social agent"@en)
+AnnotationAssertion(skos:definition Privacy:SocialAgent "An agentive physical object which is capable of actis as a social individual."@en)
+SubClassOf(Privacy:SocialAgent Privacy:Entity)
+SubClassOf(Privacy:SocialAgent ObjectSomeValuesFrom(Privacy:actsIn Privacy:Role))
+
+# Class: Privacy:SpatialEntity (Spatial entity)
+
+AnnotationAssertion(rdfs:label Privacy:SpatialEntity "Spatial entity"@en)
+AnnotationAssertion(skos:definition Privacy:SpatialEntity "Spatial location of storing personal data, such as Netharland, Finland."@en)
+SubClassOf(Privacy:SpatialEntity Privacy:Entity)
+DisjointClasses(Privacy:SpatialEntity Privacy:StorageEntity)
+
+# Class: Privacy:StatisticPurpose (Statistic purpose)
+
+AnnotationAssertion(rdfs:label Privacy:StatisticPurpose "Statistic purpose")
+SubClassOf(Privacy:StatisticPurpose Privacy:Purpose)
+
+# Class: Privacy:StatisticalProcessedData (Statistical processed data)
+
+AnnotationAssertion(rdfs:label Privacy:StatisticalProcessedData "Statistical processed data"@en)
+SubClassOf(Privacy:StatisticalProcessedData Privacy:ProcessedData)
+
+# Class: Privacy:StorageEntity (Storage entity)
+
+AnnotationAssertion(rdfs:label Privacy:StorageEntity "Storage entity"@en)
+AnnotationAssertion(skos:definition Privacy:StorageEntity "Storage types of storing personal data, such as data center or on device."@en)
+SubClassOf(Privacy:StorageEntity Privacy:Entity)
+
+# Class: Privacy:SymmetricEncryptionMechanism (Symmetric encryption mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:SymmetricEncryptionMechanism "Symmetric encryption mechanism"@en)
+SubClassOf(Privacy:SymmetricEncryptionMechanism Privacy:EncryptionMechanism)
+
+# Class: Privacy:ThirdPartyDataRecipient (Third party data recipient)
+
+AnnotationAssertion(rdfs:label Privacy:ThirdPartyDataRecipient "Third party data recipient")
+AnnotationAssertion(skos:definition Privacy:ThirdPartyDataRecipient "If any first party data recipient shares their collected data to another organization or entity, the second organziation or entity is knows as third party data recipient. It is to be noted that, a third party data recipient can be another organization or company with whom the first party data recipient is affilianted, or any governmental organization.")
+SubClassOf(Privacy:ThirdPartyDataRecipient Privacy:DataRecipient)
+
+# Class: Privacy:TokenbasedAuthenticationMechanism (Token-based authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:TokenbasedAuthenticationMechanism "Token-based authentication mechanism"@en)
+SubClassOf(Privacy:TokenbasedAuthenticationMechanism Privacy:OneFactorAuthenticationMechanism)
+
+# Class: Privacy:TwoFactorAuthenticationMechanism (Two factor authentication mechanism)
+
+AnnotationAssertion(rdfs:label Privacy:TwoFactorAuthenticationMechanism "Two factor authentication mechanism"@en)
+SubClassOf(Privacy:TwoFactorAuthenticationMechanism Privacy:AuthenticationMechanism)
+
+
+DisjointClasses(Privacy:ActivityData Privacy:BiomentricData Privacy:DemographicData Privacy:GeneticData Privacy:HealthData Privacy:IdentityData)
+DisjointClasses(Privacy:AnonymousProcessedData Privacy:PseudonymousProcessedData Privacy:StatisticalProcessedData)
+DisjointClasses(Privacy:BiometricbasedAuthenticationMechanism Privacy:PasswordbasedAuthenticationMechanism Privacy:TokenbasedAuthenticationMechanism)
+DisjointClasses(Privacy:HealthPurpose Privacy:HumanitarianPurpose Privacy:JournalisricPurpose Privacy:JudicialPurpose Privacy:MarketingPurpose Privacy:ProfilingPurpose Privacy:ResearchPurpose Privacy:SecurityPurpose Privacy:StatisticPurpose)
+)
