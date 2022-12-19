@@ -1,4 +1,4 @@
-# Authors:  Sanonda Datta Gupta and Torsten Hahmann
+
 @prefix : <http://umaine.edu/Privacy/dataset1#>.
 @prefix : <http://umaine.edu/Privacy/core/v1#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
