@@ -1,0 +1,166 @@
+CQ1: Does the OSN store my data for an indefinite time?
+Query: select  ?Organization ?DurationPeriod ?Type  where {
+    ?Organization Privacy:hasPolicy ?Policy.
+    ?Policy Privacy:hasDurationPractice ?DurationPeriod.
+    ?DurationPeriod rdf:type ?Type FILTER (?Type in (Privacy:IndefiniteDurationDescription,Privacy:DefiniteDurationDescription)).
+  
+  
+ Result: Raw Response: 
+ 
+ {
+  "head": {
+    "vars": [
+      "Organization",
+      "DurationPeriod",
+      "Type"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Organization": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Telegram"
+        },
+        "DurationPeriod": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#As_Long_Telgram_Needs"
+        },
+        "Type": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#IndefiniteDurationDescription"
+        }
+      }
+    ]
+  }
+}
+
+CQ2: How can I request to modify the stored data and how long does it take to process my request?
+Query:select  ?Organization ?Practice ?RectificationRequestType ?RectificationRequestDelay ?ResponseType where {
+    ?Organization Privacy:hasPolicy ?Policy.
+    ?Policy Privacy:hasDataPractice ?Practice.
+    ?Practice Privacy:hasRequestType ?RectificationRequestType.
+   ?Practice Privacy:hasResponseDelay ?RectificationRequestDelay.
+   ?Practice Privacy:hasResponseType ?ResponseType.
+}
+
+Result: Raw Response: 
+{
+  "head": {
+    "vars": [
+      "Organization",
+      "Practice",
+      "RectificationRequestType",
+      "RectificationRequestDelay",
+      "ResponseType"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Organization": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Telegram"
+        },
+        "Practice": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#DataStorageModificationPractice1"
+        },
+        "RectificationRequestType": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#GDPRbot"
+        },
+        "RectificationRequestDelay": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#the_earliest_opportunity"
+        },
+        "ResponseType": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Did_Not_Mention"
+        }
+      }
+    ]
+  }
+}
+
+
+
+
+CQ3: What kind of encryption mechanisms has been applied to my secret chats and media files?
+Query: select  ?Organization ?Practice ?EncryptionMechanism ?Data where {
+    ?Organization Privacy:hasPolicy ?Policy.
+    ?Policy Privacy:hasDataPractice ?Practice.
+    ?Practice Privacy:hasEncryptionMechanism ?EncryptionMechanism.
+    ?Practice Privacy:actsOn ?Data FILTER (?Data in (Privacy:Photos, Privacy:SecretChat, Privacy:Video)).
+}
+
+Result (RawResponse): {
+  "head": {
+    "vars": [
+      "Organization",
+      "Practice",
+      "EncryptionMechanism",
+      "Data"
+    ]
+  },
+  "results": {
+    "bindings": [
+      {
+        "Organization": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Telegram"
+        },
+        "Practice": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#DataStorageLocationPractice1"
+        },
+        "EncryptionMechanism": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#EncryptionPractice1"
+        },
+        "Data": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Photos"
+        }
+      },
+      {
+        "Organization": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Telegram"
+        },
+        "Practice": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#DataStorageLocationPractice2"
+        },
+        "EncryptionMechanism": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#End-to-End-Encryption"
+        },
+        "Data": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#SecretChat"
+        }
+      },
+      {
+        "Organization": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Telegram"
+        },
+        "Practice": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#DataStorageLocationPractice1"
+        },
+        "EncryptionMechanism": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#EncryptionPractice1"
+        },
+        "Data": {
+          "type": "uri",
+          "value": "http://umaine.edu/Privacy/core/v1#Video"
+        }
+      }
+    ]
+  }
+} 
+
+CQ3. 
