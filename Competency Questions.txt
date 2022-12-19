@@ -1,34 +1,40 @@
-﻿CQ1. Which OSNs define at least one storage practice? According to GDPR [1] and CCPA [2], an OSN is required to provide storage practices such as the duration of storing the data or security mechanisms while storing the data. With the help of this CQ, we will be able to capture storage practices that OSNs follow while storing users' data.  
+ Does the OSN store my data for an indefinite time?  GDPR and CCPA do not allow storing personal information for an indefinite period of time. Hence, this CQ enables us to capture OSNs that store users' data indefinitely.
+ 
+ How can I request to modify the stored data and how long does it take to process my request? Organizations must ensure that users can exercise their right to rectify or modify any inaccurate data. Additionally, they are required to respond to the request within an undue delay and should explicitly mention this in their privacy policies.
+  
+  
+  
+  What kind of encryption mechanisms has been applied to my secret chats and media files? Privacy regulations require organizations to describe the kinds of security practices, such as encryption practice and information integrity practices, that are used to ensure the secure storage of users' information. Thus, this question tests whether an OSN explicitly defines security mechanisms and, if so, what kind.
+  
+  Which OSNs define at least one storage practice? According to GDPR [1] and CCPA [2], an OSN is required to provide storage practices such as the duration of storing the data or security mechanisms while storing the data. With the help of this CQ, we will be able to capture storage practices that OSNs follow while storing users' data.  
 
 
+ Is there any OSN's data practice that stores data for an indefinite amount of time?  GDPR [1] and CCPA [2] do not allow storing personal information for an indefinite period of time. Hence, this CQ enables us to capture OSNs that store users' data for an indefinite amount of time.
 
 
-CQ2. Is there any OSN's data practice that stores data for an indefinite amount of time?  GDPR [1] and CCPA [2] do not allow storing personal information for an indefinite period of time. Hence, this CQ enables us to capture OSNs that store users' data for an indefinite amount of time.
-
-
-CQ3. Which OSNs define what kind of visibility storage practices? Our analysis of regulations and policies shows that OSNs may define different types of visibility storage practices, such as users can only view the retained information. This CQ aims to answer if any OSN explicitly discuss details about their visibility storage practices.
+ Which OSNs define what kind of visibility storage practices? Our analysis of regulations and policies shows that OSNs may define different types of visibility storage practices, such as users can only view the retained information. This CQ aims to answer if any OSN explicitly discuss details about their visibility storage practices.
 
 
          
-CQ4. Does OSN X store my messages for an indefinite amount of time? Privacy regulations such as GDPR[1], and CCPA[2] require organizations to explicitly mention how long a company stores users' data and what other criteria are used to determine the duration of the storage. With this CQ, we can model the duration of data practices described in the privacy policy that an OSN follows while storing users' data.
+ Does OSN X store my messages for an indefinite amount of time? Privacy regulations such as GDPR[1], and CCPA[2] require organizations to explicitly mention how long a company stores users' data and what other criteria are used to determine the duration of the storage. With this CQ, we can model the duration of data practices described in the privacy policy that an OSN follows while storing users' data.
 
 
-CQ5. What kind of security mechanisms have been applied to my posts and images? GDPR [1], and CCPA [2] require organizations to describe the kinds of security practices, such as encryption practice and information integrity practice, that is used to ensure the secure storage of users' information. Thus, this question tests whether an OSN explicitly defines security storage practices, and if so, what kind. 
+ What kind of security mechanisms have been applied to my posts and images? GDPR [1], and CCPA [2] require organizations to describe the kinds of security practices, such as encryption practice and information integrity practice, that is used to ensure the secure storage of users' information. Thus, this question tests whether an OSN explicitly defines security storage practices, and if so, what kind. 
 
 
-CQ6. How and where does the OSN store the collected information? Users may want to know how there data has been stored (in a data center or on device) and also the geographical location, where the data has been kept. The CQ can help answer this question.. 
+ How and where does the OSN store the collected information? Users may want to know how there data has been stored (in a data center or on device) and also the geographical location, where the data has been kept. The CQ can help answer this question.. 
 
 
-CQ7. What data practices potentially do not comply with the regulation the OSN follows?  GDPR [1] and CCPA [2] do not allow certain data practices, for instance storing users’ data for an indefinite period of time. Hence, if any OSN stores users' data for an indefinite amount of time, it leads to a privacy violation, according to GDPR and CCPA.This CQ aims to provide the lists of data practices that may lead to non-compliance with a certain regulation.
+ What data practices potentially do not comply with the regulation the OSN follows?  GDPR [1] and CCPA [2] do not allow certain data practices, for instance storing users’ data for an indefinite period of time. Hence, if any OSN stores users' data for an indefinite amount of time, it leads to a privacy violation, according to GDPR and CCPA.This CQ aims to provide the lists of data practices that may lead to non-compliance with a certain regulation.
 
 
-CQ8. What types of security mechanisms are applied to a special data type, such as religious belief or biometric data? According to GDPR (Article 9) and CCPA, personal information such as genetic data, biometric data, and religious beliefs require more protection because of their sensitivity. According to the privacy regulations, to process such data, a company must comply with the requirements (under GDPR Article 6) and provide separate conditions (under GDPR Article 9) while storing the data. OSNs collect data from users, such as religious beliefs and biometric information. This question identifies an OSN's data practices that apply to special data types.
+ What types of security mechanisms are applied to a special data type, such as religious belief or biometric data? According to GDPR (Article 9) and CCPA, personal information such as genetic data, biometric data, and religious beliefs require more protection because of their sensitivity. According to the privacy regulations, to process such data, a company must comply with the requirements (under GDPR Article 6) and provide separate conditions (under GDPR Article 9) while storing the data. OSNs collect data from users, such as religious beliefs and biometric information. This question identifies an OSN's data practices that apply to special data types.
 
 
-CQ9. Which OSNs do not define any visibility storage practices? Our analysis of regulations and policies shows that OSNs may define different types of visibility storage practices, such as users can only view the retained information. This CQ aims to answer if there is any OSN that does not discuss details about their visibility storage practices, which may lead to potential privacy violations.
+ Which OSNs do not define any visibility storage practices? Our analysis of regulations and policies shows that OSNs may define different types of visibility storage practices, such as users can only view the retained information. This CQ aims to answer if there is any OSN that does not discuss details about their visibility storage practices, which may lead to potential privacy violations.
 
 
-CQ10. For which purposes the OSN stores what types of data? According to GDPR [1], and CCPA [2], organizations must explain the purpose of storing users' information for legal purposes or application services. Thus, this question helps identify whether an OSN explicitly defines purpose storage practices, and if so, what types, thus complying with the regulations.
+ For which purposes the OSN stores what types of data? According to GDPR [1], and CCPA [2], organizations must explain the purpose of storing users' information for legal purposes or application services. Thus, this question helps identify whether an OSN explicitly defines purpose storage practices, and if so, what types, thus complying with the regulations.
 
 
 [1]. “The EU GDPR - Article 14”, https://eugdpr.org
