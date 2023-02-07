@@ -1,0 +1,203 @@
+
+@prefix : <http://umaine.edu/oppo/dataset1#>.
+@prefix : <http://umaine.edu/oppo/core/v1#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dpv: <https://w3id.org/dpv#>.
+@prefix oppo: <http://umaine.edu/oppo/core/v1#> .
+@base <http://umaine.edu/oppo/core/v1#> .
+
+<http://umaine.edu/oppo/core/v1#> rdf:type owl:Ontology ;
+                                      owl:imports <http://www.w3.org/2006/time> .
+
+### OSN Definition
+:Telegram rdf:type oppo:Organization.
+
+:TelegramUser rdf:type oppo:Role.
+
+#:SignalUsers rdf:type oppo:LegalPerson.
+
+
+#Telegramuser is Datasubject 
+
+:TelegramUser rdf:type oppo:Role.
+
+#Telegram is DataRecipient
+
+:Telegram oppo:actsIn oppo:Role.
+
+
+#### 
+
+##OSN has privacypolicy
+
+:Telegram oppo:hasPolicy :TelegramPolicy.
+:TelegramPolicy rdf:type oppo:PrivacyPolicy.
+
+
+
+
+#PrivacyPolicy has data practice ---- Datapractices.
+
+
+##Now this is all about telegram 
+
+:Email rdf:type oppo:IdentityData.
+:PublicChat rdf:type oppo:ActivityData.
+:AboutInformation rdf:type oppo:ActivityData.
+:Photos rdf:type oppo:BiomentricData.
+:UserName rdf:type oppo:IdentityData.
+:Location rdf:type oppo:IdentityData.
+:PhoneNumber rdf:type oppo:IdentityData.
+:Video rdf:type oppo:BiomentricData.
+:SecretChat rdf:type oppo:ActivityData.
+
+#####Data is about DataSubject
+:Email oppo:isAbout :TelegramUser.
+:PublicChat oppo:isAbout :TelegramUser.
+:AboutInformation oppo:isAbout :TelegramUser.
+:Photos oppo:isAbout :TelegramUser.
+:UserName oppo:isAbout :TelegramUser.
+:Location oppo:isAbout :TelegramUser.
+:Video oppo:isAbout :TelegramUser.
+:SecretChat oppo:isAbout :TelegramUser.
+:PhoneNumber oppo:isAbout :TelegramUser.
+
+####TelegramUser is also DataProvider
+
+#:Email oppo:isProvidedBy :TelegramUser.
+#:PublicChat oppo:isProvidedBy :TelegramUser.
+#:AboutInformation oppo:isProvidedBy :TelegramUser.
+#:Photos oppo:isProvidedBy :TelegramUser.
+#:UserName oppo:isProvidedBy :TelegramUser.
+
+
+#####DataRecipient is recipient Of Data
+
+:Telegram oppo:isRecipientOf :Email.
+:Telegram oppo:isRecipientOf :PublicChat.
+:Telegram oppo:isRecipientOf :AboutInformation.
+:Telegram oppo:isRecipientOf :Photos.
+:Telegram oppo:isRecipientOf :UserName.
+:Telegram oppo:isRecipientOf :Location.
+:Telegram oppo:isRecipientOf :Video.
+:Telegram oppo:isRecipientOf :SecretChat.
+:Telegram oppo:isRecipientOf :PhoneNumber.
+
+
+
+
+###Now all About Telegram's Data Practices 
+
+#"Unless stated otherwise in this Privacy Policy, the personal data that you provide us will only be stored for as long as.."
+##This is a data storage practice
+
+
+
+:DataStorageStorageDurationPractice1 rdf:type oppo:DataPractice.
+:TelegramPolicy oppo:hasDataPractice :DataStorageStorageDurationPractice1.
+:DataStorageStorageDurationPractice1 oppo:hasDurationPractice :As_Long_Telgram_Needs.
+:As_Long_Telgram_Needs rdf:type oppo:IndefiniteDurationDescription.
+
+
+:DataStorageStorageDurationPractice1 :actsOn :PublicChat.
+:DataStorageStorageDurationPractice1 :actsOn :SecretChat.
+:DataStorageStorageDurationPractice1 :actsOn :Email.
+:DataStorageStorageDurationPractice1 :actsOn :SecretChat.
+
+:DataStorageStorageDurationPractice1 :actsOn :AboutInformation.
+:DataStorageStorageDurationPractice1 :actsOn :Photos.
+
+:DataStorageStorageDurationPractice1 :actsOn :Location.
+:DataStorageStorageDurationPractice1 :actsOn :PhoneNumber.
+
+
+
+
+
+#We store messages, photos, videos and documents from your public chats on data servers...in the Netherlands. 
+
+:DataStorageLocationPractice1 rdf:type oppo:DataPractice.
+:TelegramPolicy oppo:hasDataPractice :DataStorageLocationPractice1.
+
+:DataServers rdf:type oppo:StorageEntity.
+:DataStorageLocationPractice1 oppo:actsOn :Video.
+:DataStorageLocationPractice1 oppo:actsOn :Photos.
+:DataStorageLocationPractice1 oppo:actsOn :PublicChat.
+
+:Netherlands rdf:type oppo:SpatialLocation.
+
+:DataStorageLocationPractice1 oppo:hasStorageLocation :Netherlands.
+:DataStorageLocationPractice1 oppo:hasStorageEntity :DataServers.
+
+
+
+#All data is stored heavily encrypted
+#Secret chats use end-to-end encryption. This means that all data is encrypted with a key that only you and the recipient know....including location
+
+
+
+:DataStoragePractice1 rdf:type oppo:DataPractice.
+:TelegramPolicy oppo:hasDataPractice :DataStoragePractice1.
+:DataStoragePractice1 oppo:hasEncryptionTechnique :End-to-End-Encryption.
+:DataStoragePractice1 oppo:hasEncryptionTechnique :EncryptionPractice1.
+:End-to-End-Encryption rdf:type oppo:AsymmetricEncryptionMechanism.
+:End-to-End-Encryption oppo:appliesTo :SecretChat.
+:End-to-End-Encryption oppo:appliesTo :Location.
+:EncryptionPractice1 oppo:appliesTo :Video.
+:EncryptionPractice1 oppo:appliesTo :Photos.
+:EncryptionPractice1 oppo:appliesTo :PublicChat.
+:EncryptionPractice1 oppo:appliesTo :Email.
+:EncryptionPractice1 oppo:appliesTo :PhoneNumber.
+
+#you enable 2-step-verification for your account or store documents using the Telegram Passport feature,
+
+:2-step-verification rdf:type oppo:TwoFactorAuthenticationMechanism.
+:DataStoragePractice1 oppo:hasAuthenticationMechanism :2-step-verification.
+
+
+#correct any inaccurate or incomplete personal data we hold on you
+
+:DataStorageModificationPractice1 rdf:type oppo:DataPractice.
+:TelegramPolicy oppo:hasDataPractice :DataStorageModificationPractice1.
+
+:DataStorageModificationPractice1 oppo:actsOn :UserName.
+:DataStorageModificationPractice1 oppo:actsOn :Video.
+:DataStorageModificationPractice1 oppo:actsOn :Photos.
+:DataStorageModificationPractice1 oppo:actsOn :PhoneNumber.
+:DataStorageModificationPractice1 oppo:actsOn :Email.
+
+#If you have any questions about privacy and our data policies, please contact our @GDPRbot......which we will answer at the earliest opportunity.
+
+:the_earliest_opportunity rdf:type oppo:IndefiniteDurationDescription.
+:DataStorageModificationPractice1 oppo:hasResponseDelay :the_earliest_opportunity.
+
+:GDPRbot rdf:type oppo:RequestType.
+:DataStorageModificationPractice1 oppo:hasRequestType :GDPRbot.
+
+##Comments from authors: It is to be noted that, we follow open-world assumptions. Thus, we do not need Did_Not_Mention type as an instance of the Response Type 
+
+###Unlike other services, we don't use your data for ad targeting or other commercial purposes####
+##Comments from authors: It is to be noted that, we follow open-world assumptions. TelegramDataPractice instance (below) is a custom class capturing all of Telegrams data practices
+##Telegram does not use data for Marketing Purpose
+
+:Purpose1 rdf:type oppo:Purpose.
+:TelegramDataPractice rdf:type oppo:DataPractice.
+:TelegramPolicy oppo:hasDataPractice :TelegramDataPractice.
+:TelegramDataPractice oppo:hasPurpose :Purpose1.
+:Purpose1	owl:complementOf oppo:MarketingPurpose.
+
+
+
+
+
+
+
+
+
