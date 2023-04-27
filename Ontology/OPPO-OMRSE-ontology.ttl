@@ -1,0 +1,164 @@
+@prefix : <http://purl.obolibrary.org/obo/omrse.owl#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix obo1: <http://purl.org/obo/owl/obo#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix swrl: <http://www.w3.org/2003/11/swrl#> .
+@prefix swrla: <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#> .
+@prefix swrlb: <http://www.w3.org/2003/11/swrlb#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix protege: <http://protege.stanford.edu/plugins/owl/protege#> .
+@prefix subsets: <http://purl.obolibrary.org/obo/ro/subsets#> .
+@prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
+@prefix oppo: <http://umaine.edu/oppo/core/v1#> .
+@base <http://purl.obolibrary.org/obo/omrse.owl> .
+
+<http://purl.obolibrary.org/obo/omrse.owl> rdf:type owl:Ontology ;
+                                            owl:versionIRI <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ;
+                                            dc:contributor "Daniel Welch" ;
+                                            dc:creator "Amanda Hicks" ,
+                                                       "Mathias Brochhausen"@en ,
+                                                       "Shariq Tariq"@en ,
+                                                       "Swetha Garimalla"@en ,
+                                                       "William Hogan"@en ;
+                                            terms:license "https://creativecommons.org/licenses/by/4.0/" ;
+                                            rdfs:comment "This ontology grew out of efforts to represent the reality underlying the demographic information required by the US federal government's \"meaningful use\" criteria for electronic medical records and a presentation by Dr. William Hogan at the Electronic Health Record of the Future conference in Buffalo, NY http://ontology.buffalo.edu/EHR/Demographics_Hogan_Buffalo_2010_09_22.ppt"@en ;
+                                            rdfs:label "The Ontology of Medically Related Social Entities"@en ;
+                                            owl:versionInfo "2022-12-21"^^xsd:string .
+
+
+
+###  http://purl.obolibrary.org/obo/OMRSE_00002072
+obo:OMRSE_00002072 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OMRSE_00000048 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:RO_0000052 ;
+                                     owl:allValuesFrom obo:BFO_0000040
+                                   ] ;
+                   obo:IAO_0000115 "A role inhering in an entity realized by social interactions in human society."@en ;
+                   obo:IAO_0000117 "Matthew Diller"@en ;
+                   dc:contributor "Mathias Brochhausen"@en ;
+                   rdfs:comment "Previous definition: A role played by an entity in human social processes."@en ;
+                   rdfs:label "role in human social processes"@en .
+
+
+###  http://purl.obolibrary.org/obo/OMRSE_00000048
+obo:OMRSE_00000048 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000023
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty obo:RO_0000052 ;
+                                                                owl:someValuesFrom obo:BFO_0000040
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf obo:BFO_0000023 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:RO_0000052 ;
+                                     owl:someValuesFrom obo:BFO_0000040
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:RO_0000052 ;
+                                     owl:allValuesFrom obo:BFO_0000040
+                                   ] ;
+                   rdfs:label "material entity role"@en .
+
+###  http://purl.obolibrary.org/obo/OMRSE_00000038
+obo:OMRSE_00000038 rdf:type owl:Class ;
+                   rdfs:subClassOf obo:OMRSE_00002072 ,
+                                   [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0000052 ;
+                                                            owl:someValuesFrom [ rdf:type owl:Class ;
+                                                                                 owl:unionOf ( obo:NCBITaxon_9606
+                                                                                               obo:OMRSE_00000023
+                                                                                             )
+                                                                               ]
+                                                          ]
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty obo:RO_0000052 ;
+                                                            owl:allValuesFrom [ rdf:type owl:Class ;
+                                                                                owl:unionOf ( obo:NCBITaxon_9606
+                                                                                              obo:OMRSE_00000023
+                                                                                            )
+                                                                              ]
+                                                          ]
+                                                        ) ;
+                                     rdf:type owl:Class
+                                   ] ;
+                   obo:IAO_0000115 "A role borne by a human individual or by a collection of humans regarded as possessing rights and duties enforeable at law."@en ;
+                   obo:IAO_0000117 "Mathias Brochhausen" ;
+                   obo:IAO_0000119 "Malcolm N. Shaw: International Law. Cambridge University Press, Cambridge, 2008." ;
+                   rdfs:comment """We are aware of the fact that Wikipedia's definition differs from ours by saying that \"Legal personality (...) is the characteristic of a non-living entity regarded by law to have the status of personhood\" (http://en.wikipedia.org/wiki/Legal_personality) 
+However, Shaw explicates:
+\"In any legal system, certain entities, whether they be individuals or companies, will be regarded as possessing rights and duties enforceable at law. Thus an individual may prosecute or be prosecuted for assault and a company can sue for breach of contract. They are able to do this because the law recognises them as 'legal persons' possessing the capacity to have and to maintain certain rights, and being subject to perform specific duties. (...) In municipal law individuals, limited companies and public corporations are recognized as each possessing a distinct legal personality, the terms of which are circumscribed by the relevant legislation\" (Shaw MN: International Law. Sixth Edition. Cambridge University Press, Cambridge, 2008).                We hold that Shaw's position is ontological more prolific since it not only allows to explain how groups of individuals become recognized as unities at law, but also how different individuals can hold different legal personality roles (always against the context of one legal system). The latter will proof useful when dealing with the representing comatous patients or minorsat law in ontologies."""@en ;
+                   rdfs:label "legal person role"@en .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000245
+obo:OBI_0000245 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                obo:IAO_0000111 "organization"@en ;
+                obo:IAO_0000112 "PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods."@en ;
+                obo:IAO_0000114 obo:IAO_0000122 ;
+                obo:IAO_0000115 "An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en ,
+                                "An organization is a continuant entity which can play roles,  has members, and has a set of organization rules.  Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members."@en ;
+                obo:IAO_0000116 """BP: The definition summarizes long email discussions on the OBI developer, roles, biomaterial and denrie branches. It leaves open if an organization is a material entity or a dependent continuant, as no consensus was reached on that.  The current placement as material is therefore temporary, in order to move forward with development. Here is the entire email summary, on which the definition is based:
+
+1) there are organization_member_roles (president, treasurer, branch
+editor), with individual persons as bearers
+
+2) there are organization_roles (employer, owner, vendor, patent holder)
+
+3) an organization has a charter / rules / bylaws, which specify what roles
+there are, how they should be realized, and how to modify the
+charter/rules/bylaws themselves.
+
+It is debatable what the organization itself is (some kind of dependent
+continuant or an aggregate of people). This also determines who/what the
+bearer of organization_roles' are. My personal favorite is still to define
+organization as a kind of 'legal entity', but thinking it through leads to
+all kinds of questions that are clearly outside the scope of OBI.
+
+Interestingly enough, it does not seem to matter much where we place
+organization itself, as long as we can subclass it (University, Corporation,
+Government Agency, Hospital), instantiate it (Affymetrix, NCBI, NIH, ISO,
+W3C, University of Oklahoma), and have it play roles.
+
+This leads to my proposal: We define organization through the statements 1 -
+3 above, but without an 'is a' statement for now. We can leave it in its
+current place in the is_a hierarchy (material entity) or move it up to
+'continuant'. We leave further clarifications to BFO, and close this issue
+for now."""@en ;
+                obo:IAO_0000117 "PERSON: Alan Ruttenberg" ,
+                                "PERSON: Bjoern Peters" ,
+                                "PERSON: Philippe Rocca-Serra" ,
+                                "PERSON: Susanna Sansone" ;
+                obo:IAO_0000119 "GROUP: OBI" ;
+                rdfs:label "organization"@en .  
+				   
+###  http://purl.obolibrary.org/obo/OMRSE_00000051
+obo:OMRSE_00000051 rdf:type owl:Class ;
+                   owl:equivalentClass [ owl:intersectionOf ( obo:BFO_0000023
+                                                              [ rdf:type owl:Restriction ;
+                                                                owl:onProperty obo:RO_0000052 ;
+                                                                owl:someValuesFrom obo:OBI_0000245
+                                                              ]
+                                                            ) ;
+                                         rdf:type owl:Class
+                                       ] ;
+                   rdfs:subClassOf obo:OMRSE_00000048 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:RO_0000052 ;
+                                     owl:someValuesFrom obo:OBI_0000245
+                                   ] ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty obo:RO_0000052 ;
+                                     owl:allValuesFrom obo:OBI_0000245
+                                   ] ;
+                   rdfs:label "organization role"@en .
