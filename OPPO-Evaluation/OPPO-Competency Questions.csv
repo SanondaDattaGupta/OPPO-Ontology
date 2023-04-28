@@ -1,0 +1,89 @@
+Questions,Reference Privacy Policy,"Excerpt of the Privacy Policy . In the case of multiple OSNs, We included excerpt from one policy ",Topics
+What should be my minimum age to use the social media?,Signal Policy,You must be at least 13 years old to use our Services.,"minor, age"
+What information I must need to provide to create the social media account and how long those information is being stored? ,all OSN Policies,"Example from Signal: To create an account you must register for our Services using your phone
+number.","Duration, Data, Purpose"
+What is the security mechanism the social media follows to keep my data secure?,"Signal, Whatsapp, Telegram ",Signal utilizes state-of-the-art security and end-to-end encryption to provide private messaging andInternet calling services to users worldwide (“Services”).,security mechanism
+For which purposes does the OSN collect my location information?,Signal,"You may optionally add otherinformation to your account, such as a profile name and profile picture.",Purpose
+Where does the social media store my video and photo?,"Signal, Telegram",Your message history is stored on your own devices,storage location
+What kind of information does the OSN store about users? What information from third-parties can the OSN access that I did not provide?,"Signal, Telegram",".....Additional technical information is stored on our servers, including randomly generated authentication tokens, keys, push tokens, and other material that is necessary to establish calls and transmit messages. Signal limits this additional technical information to the minimum required to operate the Services......","Data, third-party recipient, access mechanism "
+"Does the OSN access my contacts? if Yes, then for which purpose? What security mechanism they follow while storing my contact information?",Signal Policy ,"Signal can optionally discover which contacts in your address book are Signal users, usinga service designed to protect the privacy of your contacts. Information from the contacts on yourdevice may be cryptographically hashed and transmitted to the server in order to determine which ofyour contacts are registered.","security mechanisms, data types, purpose"
+What personal information does the OSN store when I contact customer support? For what purposes can the OSN use that data?,Signal ,"If you contact Signal User Support, any personal data you may share with us is keptonly for the purposes of researching the issue and contacting you about your case.","Purpose, inofrmation types.  (need revision)"
+How can I contact the customer center?,All privacy policies. ,"If you have questions about our Privacy Policy please contact us at privacy@signal.org. Attn. PrivacySignal Messenger, LLC.650 Castro Street, Suite 120-223 Mountain View, CA 94041","Currently out of scope of the OPPO, will be considered in the future. "
+How will I get notified if the OSN changes any of its data practises?,Almost all privacy policies,"We may amend or update our Privacy Policy. We will provide you notice of amendments to this Privacy Policy,
+as appropriate, and update the “Last modified” date at the top of this Privacy Policy. Please review our Privacy
+Policy from time to time",out of the scope of the current stage of OPPO. Notification mechanism
+Where does the social media typically store my message?,"whatsapp, signal,Telegram","....your data is stored in data centers in the Netherlands. These are third-party provided data centers in which Telegram rents a designated space. However, the servers and networks that sit inside these data centers and on which your personal data is stored are owned by Telegram. ........","storage location, data types"
+"If my message is unable to be delivered to the recipient, where the message is stored? How long?",Whats App,"If a message cannot be delivered immediately (for example, if the recipient
+is offline), we keep it in encrypted form on our servers for up to 30 days as we try to deliver it. ","storage location, data types, duration"
+What security mechanisms are followed to store media information?,"WhatsApp, Telegram ","When a user forwards media within a message, we store that media temporarily
+in encrypted form on our servers to aid in more efficient delivery of additional forwards.","secruity mechanisms, data types"
+What security mechanism is followed by the social media in general? ,"WhatsApp, Telegram ","We offer end-to-end encryption for our Services. End-to-end encryption means that your messages
+are encrypted to protect against us and third parties from reading them",security mechanism
+How long my undelivered messages are being stored in the server?,WhatsApp,"If a message is still undelivered after 30 days, we delete it",duration
+What are the information the OSN collects in addition and how long they are being stored?,Whats App,Section: Automatically collected information ,"duration, storage practice, collection practice"
+Does the social media access my location if I choose not to provide it ?,Whats App ,"Even if you do not use our location-related features, we use IP addresses and other information like phone number area codes to estimate your general location (e.g., city and country)","Data Access Mechanism , information type (location)"
+Why the social media collect my location information?,Any OSN that collects location media information ,Example: We also use your location information for diagnostics and troubleshooting purposes.,purposes
+What types of my personal information does the OSN collect from other sources? ,WhatsApp,"We receive information about you from other users. For example,
+when other users you know use our Services, they may provide your phone number, name, and other
+information (like information from their mobile address book) just as you may provide theirs.","third party data recipient, data provider, information types"
+How can I access my personal information?,WhatsApp,"Managing And Retaining Your Information
+You can access or port your information using our in-app Request Acount info feature,",data access mechanism (need revision)
+How long my personal information is being stored and for which purposes?,Any OSN ,"Example:We store information for as long as necessary for the purposes identified in this Privacy Policy, including to
+provide our Services or for other legitimate purposes, such as complying with legal obligations, enforcing and
+preventing violations of our Terms, or protecting or defending our rights, property, and users","Purpose, personal information type, duration description "
+How the data storage duration is determined?,WhatsApp,"The storage
+periods are determined on a case-by-case basis that depends on factors like the nature of the information, why
+it is collected and processed, relevant legal or operational retention needs, and legal obligations.","Currently out of scope of the OPPO, will be considered in the future. "
+How can I modify my personal information?,Most of the OSN,"...correct any inaccurate or incomplete personal data we hold on you........ to exercise rights, please contact our @GDPRbot......which we will answer at the earliest opportunity.......",Data modification practice
+Can I delete my OSN account?,Most OSN,...ou may end these Terms with Signal at any time by deleting Signal Messenger from your device and discontinuing use of our Services......,Data erasure practice
+Which of my personal information will be removed after I request to delete my account?,WhatsApp ,"When you delete your WhatsApp account, your undelivered messages are
+deleted from our servers as well as any of your other information we no longer need to operate and
+provide our Services. Deleting your account will, for example, delete your account info and profile photo,
+delete you from all WhatsApp groups, and delete your WhatsApp message history.",Data Erasure practice and information types
+Which of my personal information will still be available after I delete my account?,WhatsApp,"Please remember that when you delete your
+account, it does not affect your information related to the groups you created or the information other
+users have relating to you, such as their copy of the messages you sent them","Data erasure practice , information types, storage practice, duration practice "
+Why does the OSN collect information by cookies?,SnapChat,"For example, we may use
+information collected on other websites to show you
+more relevant ads. Most web browsers are set to
+accept cookies by default",Purpose
+How does the OSN use my information collected from third-parties?,Snap Chat,"Advertisers, app developers, publishers, and other
+third parties may share information with us as well. We may use this information, among other ways, to help target or measure the performance of ads.",third-party
+How does the OSN use the personal information provided by me?,Snap Chat,"Section- How we use information: monitor, analyze, personalized, profiling, trends",Purpose 
+What are the contents that have no definite storage duration specified?,"Most OSN policies, ",**OSNs mostly do not discuss about the definite storage practices instead of describing sporadically they store certain contents as long as they need**,Duration Data Types
+What contents are stored for a maximum of 12 months?,"Most OSN policies, ","Example: Other content, like Story posts, are stored for
+longer","duration, data types"
+How long does the OSN store my location information?,Snapchat,"We store location information for diff erent lengths of
+time based on how precise it is and which services
+ayou
+Snap — like those saved to Memories or posted to
+Snap Map or Spotlight — we’ll retain that location as
+long as we store the Snap","duration, data types"
+How can I see the location data (or any data) retained about me?,Almost all privacy policies,.. you can access your data from any of your devices anytime without having to rely on third-party backups.....,"user access, data types"
+How long does it take the OSN to delete my account?,"SnapChat, Telegram","Keep in mind that, while our systems are designed to
+carry out our deletion practices automatically, we cannot
+promise that deletion will occur within a specific
+timeframe","duration description, Data Erasure practice"
+Why the OSN may retain my information after I request to delete my account?,Most policies + GDPR ,"Example: There may be legal requirements to store
+your data and we may need to suspend those deletion
+practices if we receive valid legal process asking us to
+preserve content, if we receive reports of abuse or other
+Terms of Service violations, or if your account, content
+created by you, or content created with other users is
+flagged by others or our systems for abuse or other
+Terms of Service violations. Finally, we may also retain
+certain information in backup for a limited period of time
+or as required by law.","purpose, request to erase"
+How can I download the copy of my personal information collected and stored by the OSN?,Most Policies,....right to ...request a copy of all your personal data that we store and to transmit that copy to another data controller.... to exercise right please contact our @gdprbot....,data access
+How can I request the OSN to limit the usage of my personal information?,WhatsApp,"In most cases, if you let us
+use your information, you can simply revoke your
+permission by changing the settings in the app or on
+your device if your device offers those options. ","Data access, data minimization. Currently out of the scope of OPPO. "
+Does the OSN use my information for advertisement purposes?,Most policies,..We don't use your data to show you ads.....,purpose
+What information do I need to provide to OSN and how long the information is being stored? ,Most policies,**Most of the OSNs describe what information they require and where they are stored in different parts of the policy**,"information type, storage practice"
+Where and how does the OSN store my information?,Most policies,"....your data is stored in data centers in the Netherlands. These are third-party provided data centers in which Telegram rents a designated space. However, the servers and networks that sit inside these data centers and on which your personal data is stored are owned by Telegram. As such, we do not share your personal data with such data centers. ......",storage location and entity
+How can I delete my account?,Most policies,.......ou may end these Terms with Signal at any time by deleting Signal Messenger from your device and discontinuing use of our Services.........,erasure practice
+Why does the OSN collect my cookie information?,Most policies,...only cookies we use are those to operate and provide our Services on the web....,"purpose, information type"
+Does the OSN use my information for advertisement purposes?,Most policies,..We don't use your data to show you ads.....,purpose
+Who has access to my credit card information ?,Most policies,"...We do not access and do not store your credit card information. When you save your credit card info, it is saved on the respective payment provider's servers and the payment provider........","information type, data access, isRecipientOf"
+How long does the OSN store my photos?,Most policies,...the personal data that you provide us will only be stored for as long as it is necessary for us to fulfill our obligations...,photo is considered as PI
