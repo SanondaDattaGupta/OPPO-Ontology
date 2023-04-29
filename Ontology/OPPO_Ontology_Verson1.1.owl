@@ -781,35 +781,49 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageErasurePractice"/>
-        <Class IRI="DataStorageLocationPractice"/>
+        <Class IRI="DataStorageModificationPractice"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageLocationPractice"/>
         <Class IRI="DataStoragePractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageLocationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageEntity"/>
+            <Class IRI="StorageEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageLocationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageLocation"/>
+            <Class IRI="SpatialEntity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageModificationPractice"/>
         <Class IRI="DataStoragePractice"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageModificationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageEntity"/>
+            <Class IRI="StorageEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageModificationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageLocation"/>
+            <Class IRI="SpatialEntity"/>
+        </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageModificationPractice"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="hasResponseDelay"/>
             <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageEntity"/>
-            <Class IRI="StorageEntity"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageLocation"/>
-            <Class IRI="SpatialEntity"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
@@ -832,7 +846,7 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageRectificationPractice"/>
-        <Class IRI="DataStorageLocationPractice"/>
+        <Class IRI="DataStorageModificationPractice"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataSubjectRole"/>
@@ -2156,6 +2170,11 @@
         <Literal xml:lang="en">Biometry-based Authentication Mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>BiometrybasedAuthenticationMechanism</IRI>
+        <Literal>a single factor authentication mechanism which requires to match any biometric information such as fingerprint and facial recognition.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>CreditRating</IRI>
         <Literal>Credit Rating</Literal>
@@ -2238,7 +2257,12 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DataStorageErasurePractice</IRI>
-        <Literal xml:lang="en">data erasure rectification practice</Literal>
+        <Literal xml:lang="en">data storage erasure practice</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>DataStorageErasurePractice</IRI>
+        <Literal>Privacy regulations such as GDPR and CCPA require organizations to provide users with right to erase the stored data. The data practices related to erasure of collected or stored data include how long it takes to process users&apos; deletion request or how the user can exercise the data erasure right (Request type).</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2276,6 +2300,11 @@
         <Literal xml:lang="en">data storage rectification practice</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>DataStorageRectificationPractice</IRI>
+        <Literal>Privacy regulations such as GDPR and CCPA require organizations to provide users with right to modify or update the stored inaccurate data. The data practices related to  modification of collected or stored data include how long it takes to process users&apos; data modification request or how the user can exercise the data rectification right.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DataSubjectRole</IRI>
         <Literal xml:lang="en">data subject role</Literal>
@@ -2289,6 +2318,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>DefiniteDurationDescription</IRI>
         <Literal xml:lang="en">Definite Duration Description</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>DefiniteDurationDescription</IRI>
+        <Literal>An organization may describe specifically (definite) how long the collected data will be stored (retention period) or how long the organization may take to response to users&apos; request (response delay), referred as definite duration description.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2314,6 +2348,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>EndToEndEncryptionMechanism</IRI>
         <Literal xml:lang="en">end-to-end encryption mechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>EndToEndEncryptionMechanism</IRI>
+        <Literal>an encryption mechanism to provide secure communication and prevent a third-party to get access to stored or transferred data.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2401,6 +2440,11 @@
         <Literal xml:lang="en">Indefinite Duration Description</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>IndefiniteDurationDescription</IRI>
+        <Literal>An organization may describe unspecifically (indefinite) how long the collected data will be stored (retention period) (such as as long as they need) or how long the organization may take to response to users&apos; request (response delay) (such as : earliest possible time), referred as indefinite duration description.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>IndividualData</IRI>
         <Literal xml:lang="en">individual data</Literal>
@@ -2431,6 +2475,11 @@
         <Literal xml:lang="en">one factor authentication mechanism</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>OneFactorAuthenticationMechanism</IRI>
+        <Literal>a single authentication mechanism that requires matching one factor such as biometric information or password or token.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>OrganizationalDataProviderRole</IRI>
         <Literal xml:lang="en">organizational data provider role</Literal>
@@ -2444,6 +2493,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>PasswordbasedAuthenticationMechanism</IRI>
         <Literal xml:lang="en">Password-based Authentication Mechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>PasswordbasedAuthenticationMechanism</IRI>
+        <Literal>a single factor authentication mechanism which requires to match user defined password.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2579,6 +2633,11 @@
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>TokenbasedAuthenticationMechanism</IRI>
         <Literal xml:lang="en">Token-based Authentication Mechanism</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="skos:definition"/>
+        <IRI>TokenbasedAuthenticationMechanism</IRI>
+        <Literal>a single factor authentication mechanism which requires to match token.</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
