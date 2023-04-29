@@ -1,2686 +1,1859 @@
-<?xml version="1.0"?>
-<Ontology xmlns="http://www.w3.org/2002/07/owl#"
-     xml:base="http://umaine.edu/oppo/core/v1#"
-     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-     xmlns:xml="http://www.w3.org/XML/1998/namespace"
-     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-     ontologyIRI="http://umaine.edu/oppo/core/v1#">
-    <Prefix name="" IRI="http://umaine.edu/oppo/core/v1#"/>
-    <Prefix name="obo" IRI="http://purl.obolibrary.org/obo/"/>
-    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
-    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
-    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
-    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
-    <Prefix name="dpvo" IRI="https://w3id.org/dpv/dpv-owl#"/>
-    <Prefix name="gdpr" IRI="http://umaine.edu/gdpr#"/>
-    <Prefix name="oppo" IRI="http://umaine.edu/oppo/core/v1#"/>
-    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
-    <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
-    <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
-    <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl</Import>
-    <Import>http://www.w3.org/2006/time</Import>
-    <Import>https://w3id.org/dpv/dpv-owl#</Import>
-    <Declaration>
-        <Class abbreviatedIRI="obo:BFO_0000011"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:BFO_0000015"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:BFO_0000035"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:IAO_0000178"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:OBI_0000245"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="gdpr:GDPRMinorDataSubject"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="gdpr:HealthData"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="gdpr:HealthStatusData"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ActivityPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AggregatedData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AnonymizedData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AuditingPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="AuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BiometricPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="BiometrybasedAuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="CryptographicHashingMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataAccessPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataProviderRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataRecipientRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataRestorationPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataSecurityPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStorageDurationPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStorageErasurePractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStorageLocationPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStorageModificationPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStoragePractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataStorageRectificationPractice"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DataSubjectRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DefiniteDurationDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="DemographicPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EncryptionMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EndToEndEncryptionMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="EthnicPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="FinancialPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="FirstPartyDataRecipientRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="GeneticPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HashingMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="HealthPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IdentityPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IdeologicalPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IndefiniteDurationDescription"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="IndividualData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="LegalPersonDataProviderRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="MinorDataSubjectRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OneFactorAuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="OrganizationalDataProviderRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PasswordbasedAuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PrivacyPolicy"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PrivacyRegulation"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="Pseudonymization"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="PseudonymizedPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SecurityMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SexualPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="SpatialEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="StatisticalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="StorageEntity"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TechnicalPersonalData"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="ThirdPartyDataRecipientRole"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TokenbasedAuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class IRI="TwoFactorAuthenticationMechanism"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="actsIn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="actsOn"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="allows"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="appliesTo"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="disallows"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasDataPractice"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasDurationDescription"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasPolicy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasPurpose"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasResponseDelay"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasSecurityMechanism"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasStorageEntity"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="hasStorageLocation"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isAbout"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isProvidedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isRecievedBy"/>
-    </Declaration>
-    <Declaration>
-        <ObjectProperty IRI="isRecipientOf"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasRequestType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty IRI="hasResponseType"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:hours"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:minutes"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:months"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:seconds"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:weeks"/>
-    </Declaration>
-    <Declaration>
-        <DataProperty abbreviatedIRI="time:years"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Age"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="American_Indian_or_Alaska_Native"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Asian"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BankAccount"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BillingAddress"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Black_or_African_American"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BloodPressure"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BodyTemperature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Bot"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BrowserHistory"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="BrowserType"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Calender_Events"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Contacts"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Content_Interaction"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="CookieInformation"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Country"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="CreditCardNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="CreditRating"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DNA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DateofBirth"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DeviceGeneralSetting"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DeviceLogs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DeviceUniqueIdentifier"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DiagnosisSymptoms"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DigitalSignature"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="DrivingLicense"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Electrocardiogram"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Email"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Ethnicity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="FacialRecognition"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Fax"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="FaxNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="FingerGeometry"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="FingerPrint"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Food_Habit"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Genetic_Disease"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Genetric_Characteristics"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Heart-Rate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Height"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Hispanic_or_Latino"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="IPAddress"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Image"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Image_of_the_Food"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="IrisRecognition"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Language"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="LogFiles"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Mail"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MailingAddress"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Medication"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="MuscleFat"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Name"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="NationalId"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Nationality"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Native_Hawaiian_or_Other_pacific_Islander"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PassportNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Payment_History"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Philosophical_Beliefs"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Phone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PixelTags"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PolicyUpdate"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Political_Belief"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Posts"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PrivateChat"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Product_Uage"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PsychologicalData"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="PublicChat"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="RNA"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Race"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Religious_Belief"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SearchTerm"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Serial_Number"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Sex"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SexualIdentity"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Shared_Content"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SiteRegistration"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Sleep_Log"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SocialMediaAccount"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="SocialSecurityNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Survey_Response"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Technical_Model"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="ThirdPartyPayment"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="TimeZone"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VehicleColor"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VehicleModel"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VehicleNumber"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VeinRecognition"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Video"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VoiceRecognition"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="VoiceRecording"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="WaterPercentage"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="WebBeacon"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="Weight"/>
-    </Declaration>
-    <Declaration>
-        <NamedIndividual IRI="White"/>
-    </Declaration>
-    <Declaration>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
-    </Declaration>
-    <Declaration>
-        <Class abbreviatedIRI="obo:OMRSE_00000023"/>
-    </Declaration>
-    <EquivalentClasses>
-        <Class IRI="DefiniteDurationDescription"/>
-        <ObjectComplementOf>
-            <Class IRI="IndefiniteDurationDescription"/>
-        </ObjectComplementOf>
-    </EquivalentClasses>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000004"/>
-        <Class abbreviatedIRI="obo:BFO_0000002"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000006"/>
-        <Class IRI="SpatialEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000011"/>
-        <Class abbreviatedIRI="obo:BFO_0000003"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000015"/>
-        <Class abbreviatedIRI="obo:BFO_0000003"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000020"/>
-        <Class abbreviatedIRI="obo:BFO_0000002"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000029"/>
-        <Class IRI="SpatialEntity"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000035"/>
-        <Class abbreviatedIRI="obo:BFO_0000003"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:BFO_0000140"/>
-        <Class abbreviatedIRI="obo:BFO_0000141"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="isAbout"/>
-            <Class IRI="DataSubjectRole"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="isProvidedBy"/>
-            <Class IRI="DataProviderRole"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:IAO_0000178"/>
-        <Class abbreviatedIRI="obo:BFO_0000040"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
-        <Class abbreviatedIRI="obo:BFO_0000040"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:OBI_0000245"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="actsIn"/>
-            <Class abbreviatedIRI="obo:OMRSE_00000051"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:OMRSE_00000023"/>
-        <Class abbreviatedIRI="obo:BFO_0000040"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:OMRSE_00000048"/>
-        <Class abbreviatedIRI="obo:BFO_0000023"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="obo:OMRSE_00002072"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000048"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="gdpr:GDPRMinorDataSubject"/>
-        <Class IRI="MinorDataSubjectRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="gdpr:HealthData"/>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="gdpr:HealthStatusData"/>
-        <Class abbreviatedIRI="gdpr:HealthData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ActivityPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AggregatedData"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AnonymizedData"/>
-        <Class IRI="IndividualData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AuditingPractice"/>
-        <Class IRI="DataSecurityPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="AuthenticationMechanism"/>
-        <Class IRI="SecurityMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BiometricPersonalData"/>
-        <Class abbreviatedIRI="gdpr:HealthData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BiometricPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="BiometrybasedAuthenticationMechanism"/>
-        <Class IRI="OneFactorAuthenticationMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="CryptographicHashingMechanism"/>
-        <Class IRI="HashingMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataAccessPractice"/>
-        <Class IRI="DataSecurityPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataPractice"/>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataPractice"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="actsOn"/>
-            <Class abbreviatedIRI="obo:IAO_0000027"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataPractice"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasPurpose"/>
-            <Class abbreviatedIRI="dpvo:Purpose"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataPractice"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasSecurityMechanism"/>
-            <Class IRI="SecurityMechanism"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataProviderRole"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000048"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataRecipientRole"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000051"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataRecipientRole"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="isRecipientOf"/>
-            <Class abbreviatedIRI="obo:IAO_0000027"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataRestorationPractice"/>
-        <Class IRI="DataSecurityPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataSecurityPractice"/>
-        <Class IRI="DataPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageDurationPractice"/>
-        <Class IRI="DataStoragePractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageDurationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasDurationDescription"/>
-            <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageErasurePractice"/>
-        <Class IRI="DataStorageLocationPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageLocationPractice"/>
-        <Class IRI="DataStoragePractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <Class IRI="DataStoragePractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasResponseDelay"/>
-            <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageEntity"/>
-            <Class IRI="StorageEntity"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageLocation"/>
-            <Class IRI="SpatialEntity"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="hasRequestType"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <DataSomeValuesFrom>
-            <DataProperty IRI="hasResponseType"/>
-            <Datatype abbreviatedIRI="xsd:string"/>
-        </DataSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStoragePractice"/>
-        <Class IRI="DataPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageRectificationPractice"/>
-        <Class IRI="DataStorageLocationPractice"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataSubjectRole"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000038"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DefiniteDurationDescription"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DemographicPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EncryptionMechanism"/>
-        <Class IRI="SecurityMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EndToEndEncryptionMechanism"/>
-        <Class IRI="EncryptionMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EthnicPersonalData"/>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="EthnicPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinancialPersonalData"/>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FinancialPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="FirstPartyDataRecipientRole"/>
-        <Class IRI="DataRecipientRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="GeneticPersonalData"/>
-        <Class abbreviatedIRI="gdpr:HealthData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="GeneticPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HashingMechanism"/>
-        <Class IRI="SecurityMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="HealthPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IdentityPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IdeologicalPersonalData"/>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IdeologicalPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IndefiniteDurationDescription"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="IndividualData"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LegalPersonDataProviderRole"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000038"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="LegalPersonDataProviderRole"/>
-        <Class IRI="DataProviderRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="MinorDataSubjectRole"/>
-        <Class IRI="DataSubjectRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OneFactorAuthenticationMechanism"/>
-        <Class IRI="AuthenticationMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OrganizationalDataProviderRole"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000051"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="OrganizationalDataProviderRole"/>
-        <Class IRI="DataProviderRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PasswordbasedAuthenticationMechanism"/>
-        <Class IRI="OneFactorAuthenticationMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PersonalData"/>
-        <Class IRI="IndividualData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PrivacyPolicy"/>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PrivacyPolicy"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="hasDataPractice"/>
-            <Class IRI="DataPractice"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PrivacyRegulation"/>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PrivacyRegulation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="allows"/>
-            <Class IRI="DataPractice"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PrivacyRegulation"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="disallows"/>
-            <Class IRI="DataPractice"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="Pseudonymization"/>
-        <Class IRI="SecurityMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="PseudonymizedPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SecurityMechanism"/>
-        <Class abbreviatedIRI="obo:IAO_0000030"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SecurityMechanism"/>
-        <ObjectSomeValuesFrom>
-            <ObjectProperty IRI="appliesTo"/>
-            <Class abbreviatedIRI="obo:IAO_0000027"/>
-        </ObjectSomeValuesFrom>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SexualPersonalData"/>
-        <Class abbreviatedIRI="gdpr:SensitiveData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SexualPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="SpatialEntity"/>
-        <Class abbreviatedIRI="obo:BFO_0000141"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="StatisticalData"/>
-        <Class IRI="AggregatedData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="StorageEntity"/>
-        <Class abbreviatedIRI="obo:IAO_0000178"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TechnicalPersonalData"/>
-        <Class IRI="PersonalData"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="ThirdPartyDataRecipientRole"/>
-        <Class IRI="DataRecipientRole"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TokenbasedAuthenticationMechanism"/>
-        <Class IRI="OneFactorAuthenticationMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TwoFactorAuthenticationMechanism"/>
-        <Class IRI="AuthenticationMechanism"/>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="TwoFactorAuthenticationMechanism"/>
-        <ObjectExactCardinality cardinality="2">
-            <ObjectProperty IRI="hasSecurityMechanism"/>
-            <Class IRI="OneFactorAuthenticationMechanism"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class abbreviatedIRI="dpvo:Purpose"/>
-        <Class abbreviatedIRI="obo:BFO_0000016"/>
-    </SubClassOf>
-    <DisjointClasses>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-        <Class IRI="DataPractice"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="DataPractice"/>
-        <Class IRI="PrivacyPolicy"/>
-    </DisjointClasses>
-    <DisjointClasses>
-        <Class IRI="DataPractice"/>
-        <Class IRI="PrivacyRegulation"/>
-    </DisjointClasses>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Age</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Age"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>American Indian or Alaska Native</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment.</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="American_Indian_or_Alaska_Native"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Asian</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="Asian"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Bank Account</Literal>
-        </Annotation>
-        <Class IRI="FinancialPersonalData"/>
-        <NamedIndividual IRI="BankAccount"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Billing Address</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="BillingAddress"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Black or African American</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person having origins in any of the black racial groups of Africa. Terms such as &quot;Haitian&quot; or &quot;Negro&quot; can be used in addition to &quot;Black or African American.&quot;</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="Black_or_African_American"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Blood Pressure</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="BloodPressure"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Body Temperature</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="BodyTemperature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Browser History</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="BrowserHistory"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Browser Type</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="BrowserType"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Calender Event</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Calender_Events"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Contacts</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="Contacts"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Content Interaction</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Content_Interaction"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Cookie Information</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="CookieInformation"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Country</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Country"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Credit Card Detail</Literal>
-        </Annotation>
-        <Class IRI="FinancialPersonalData"/>
-        <NamedIndividual IRI="CreditCardNumber"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Credit Rating</Literal>
-        </Annotation>
-        <Class IRI="FinancialPersonalData"/>
-        <NamedIndividual IRI="CreditRating"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>DNA</Literal>
-        </Annotation>
-        <Class IRI="GeneticPersonalData"/>
-        <NamedIndividual IRI="DNA"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Date of Birth</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="DateofBirth"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Device General Information</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="DeviceGeneralSetting"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Device Logs</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="DeviceLogs"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Device Unique Identifier</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="DeviceUniqueIdentifier"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Diagnosis Symptoms</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="DiagnosisSymptoms"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Digital Signature</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="DigitalSignature"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Driving License</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="DrivingLicense"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Electro-Cardiogram</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="Electrocardiogram"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Email</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="Email"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Ethnicity</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Ethnicity"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Facial Recognition</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="FacialRecognition"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Fax Number</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="FaxNumber"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Finger Geometry</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="FingerGeometry"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Finger Print</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="FingerPrint"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Food Habit</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Food_Habit"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Genetic Disease</Literal>
-        </Annotation>
-        <Class IRI="GeneticPersonalData"/>
-        <NamedIndividual IRI="Genetic_Disease"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Genetic Characteristics</Literal>
-        </Annotation>
-        <Class IRI="GeneticPersonalData"/>
-        <NamedIndividual IRI="Genetric_Characteristics"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Height</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Height"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Hispanic or Latino</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, &quot;Spanish origin,&quot; can be used in addition to &quot;Hispanic or Latino.&quot;</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="Hispanic_or_Latino"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>IP Address</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="IPAddress"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Image</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="Image"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Image of the Food</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Image_of_the_Food"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Iris Recognition</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="IrisRecognition"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Language</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Language"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Log Files</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="LogFiles"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Mailing Address</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="MailingAddress"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Medication</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="Medication"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Muscle Fat</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="MuscleFat"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Name may include any or both first name and last name.</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Name</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="Name"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>National ID</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="NationalId"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Native Hawaiian or Other Pacfic Islander</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands.</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="Native_Hawaiian_or_Other_pacific_Islander"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Passport Number</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="PassportNumber"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Payment History</Literal>
-        </Annotation>
-        <Class IRI="FinancialPersonalData"/>
-        <NamedIndividual IRI="Payment_History"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Philosophical Belief</Literal>
-        </Annotation>
-        <Class IRI="IdeologicalPersonalData"/>
-        <NamedIndividual IRI="Philosophical_Beliefs"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Phone</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="Phone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Pixel Tags</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="PixelTags"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Political Belief</Literal>
-        </Annotation>
-        <Class IRI="IdeologicalPersonalData"/>
-        <NamedIndividual IRI="Political_Belief"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Social Media Posts</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Posts"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Private Chat</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="PrivateChat"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Psychological Data</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="PsychologicalData"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
-            <Literal>Public Chat</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="PublicChat"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>RNA</Literal>
-        </Annotation>
-        <Class IRI="GeneticPersonalData"/>
-        <NamedIndividual IRI="RNA"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Race</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Race"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Religious Belief</Literal>
-        </Annotation>
-        <Class IRI="IdeologicalPersonalData"/>
-        <NamedIndividual IRI="Religious_Belief"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Search Term</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="SearchTerm"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Serial Number</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="Serial_Number"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Sex</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Sex"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Sexual Identity</Literal>
-        </Annotation>
-        <Class IRI="SexualPersonalData"/>
-        <NamedIndividual IRI="SexualIdentity"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Shared Content</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Shared_Content"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Site Registration</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="SiteRegistration"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Sleeping Log</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Sleep_Log"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Social Media Account</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="SocialMediaAccount"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Social Security Number</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="SocialSecurityNumber"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Survey Response</Literal>
-        </Annotation>
-        <Class IRI="ActivityPersonalData"/>
-        <NamedIndividual IRI="Survey_Response"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Technical Model</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="Technical_Model"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Third Party Payment Firm</Literal>
-        </Annotation>
-        <Class IRI="FinancialPersonalData"/>
-        <NamedIndividual IRI="ThirdPartyPayment"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Time Zone</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="TimeZone"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Vehicle Number</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="VehicleNumber"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Vein Recognition</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="VeinRecognition"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Video</Literal>
-        </Annotation>
-        <Class IRI="IdentityPersonalData"/>
-        <NamedIndividual IRI="Video"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Voice Recognition</Literal>
-        </Annotation>
-        <Class IRI="BiometricPersonalData"/>
-        <NamedIndividual IRI="VoiceRecognition"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Water Percentage</Literal>
-        </Annotation>
-        <Class IRI="HealthPersonalData"/>
-        <NamedIndividual IRI="WaterPercentage"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Web Beacon</Literal>
-        </Annotation>
-        <Class IRI="TechnicalPersonalData"/>
-        <NamedIndividual IRI="WebBeacon"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>Weight</Literal>
-        </Annotation>
-        <Class IRI="DemographicPersonalData"/>
-        <NamedIndividual IRI="Weight"/>
-    </ClassAssertion>
-    <ClassAssertion>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-            <Literal>White</Literal>
-        </Annotation>
-        <Annotation>
-            <AnnotationProperty abbreviatedIRI="skos:definition"/>
-            <Literal>A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.</Literal>
-        </Annotation>
-        <Class IRI="EthnicPersonalData"/>
-        <NamedIndividual IRI="White"/>
-    </ClassAssertion>
-    <InverseObjectProperties>
-        <ObjectProperty IRI="isRecievedBy"/>
-        <ObjectProperty IRI="isRecipientOf"/>
-    </InverseObjectProperties>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="actsIn"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="actsOn"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="allows"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="appliesTo"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="disallows"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasDataPractice"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasDurationDescription"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasPolicy"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasPurpose"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasResponseDelay"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasSecurityMechanism"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasStorageEntity"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="hasStorageLocation"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="isAbout"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="isProvidedBy"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="isRecievedBy"/>
-    </AsymmetricObjectProperty>
-    <AsymmetricObjectProperty>
-        <ObjectProperty IRI="isRecipientOf"/>
-    </AsymmetricObjectProperty>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="actsIn"/>
-        <Class abbreviatedIRI="obo:OBI_0000245"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="actsOn"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="allows"/>
-        <Class IRI="PrivacyRegulation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="appliesTo"/>
-        <Class IRI="SecurityMechanism"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="disallows"/>
-        <Class IRI="PrivacyRegulation"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasDataPractice"/>
-        <Class IRI="PrivacyPolicy"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasDurationDescription"/>
-        <Class IRI="DataStorageDurationPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPolicy"/>
-        <Class abbreviatedIRI="obo:OBI_0000245"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasPurpose"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasResponseDelay"/>
-        <Class IRI="DataStorageModificationPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasSecurityMechanism"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasStorageEntity"/>
-        <Class IRI="DataStorageLocationPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <Class IRI="DataStorageLocationPractice"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isAbout"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isProvidedBy"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isRecievedBy"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyDomain>
-        <ObjectProperty IRI="isRecipientOf"/>
-        <Class IRI="DataRecipientRole"/>
-    </ObjectPropertyDomain>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="actsIn"/>
-        <Class abbreviatedIRI="obo:OMRSE_00000051"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="actsOn"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="allows"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="appliesTo"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="disallows"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasDataPractice"/>
-        <Class IRI="DataPractice"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasDurationDescription"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPolicy"/>
-        <Class IRI="PrivacyPolicy"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasPurpose"/>
-        <Class abbreviatedIRI="dpvo:Purpose"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasResponseDelay"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasSecurityMechanism"/>
-        <Class IRI="SecurityMechanism"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasStorageEntity"/>
-        <Class IRI="StorageEntity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="hasStorageLocation"/>
-        <Class IRI="SpatialEntity"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isAbout"/>
-        <Class IRI="DataSubjectRole"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isProvidedBy"/>
-        <Class IRI="DataProviderRole"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isRecievedBy"/>
-        <Class IRI="DataRecipientRole"/>
-    </ObjectPropertyRange>
-    <ObjectPropertyRange>
-        <ObjectProperty IRI="isRecipientOf"/>
-        <Class abbreviatedIRI="obo:IAO_0000027"/>
-    </ObjectPropertyRange>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasRequestType"/>
-        <Class IRI="DataStorageModificationPractice"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty IRI="hasResponseType"/>
-        <Class IRI="DataStorageModificationPractice"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:hours"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:minutes"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:months"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:seconds"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:weeks"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyDomain>
-        <DataProperty abbreviatedIRI="time:years"/>
-        <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-    </DataPropertyDomain>
-    <DataPropertyRange>
-        <DataProperty IRI="hasRequestType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty IRI="hasResponseType"/>
-        <Datatype abbreviatedIRI="xsd:string"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:hours"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:minutes"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:months"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:seconds"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:weeks"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <DataPropertyRange>
-        <DataProperty abbreviatedIRI="time:years"/>
-        <Datatype abbreviatedIRI="xsd:decimal"/>
-    </DataPropertyRange>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000011</AbbreviatedIRI>
-        <Literal>spatiotemporal region</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000015</AbbreviatedIRI>
-        <Literal>process</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000020</AbbreviatedIRI>
-        <Literal>specifically dependent continuant</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000029</AbbreviatedIRI>
-        <Literal>site</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000035</AbbreviatedIRI>
-        <Literal>process boundary</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:BFO_0000140</AbbreviatedIRI>
-        <Literal>continuant fiat boundary</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:IAO_0000178</AbbreviatedIRI>
-        <Literal>material information bearer</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:NCBITaxon_9606</AbbreviatedIRI>
-        <Literal>homo sapiens</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OMRSE_00000023</AbbreviatedIRI>
-        <Literal>collection of humans</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>obo:OMRSE_00002072</AbbreviatedIRI>
-        <Literal>role in human social processes</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>gdpr:GDPRMinorDataSubject</AbbreviatedIRI>
-        <Literal xml:lang="en">GDPR minor data subject</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>gdpr:HealthData</AbbreviatedIRI>
-        <Literal xml:lang="en"> GDPR Health Data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>gdpr:HealthStatusData</AbbreviatedIRI>
-        <Literal xml:lang="en">Health Status Data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>gdpr:SensitiveData</AbbreviatedIRI>
-        <Literal xml:lang="en">GDPR- sensitive personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ActivityPersonalData</IRI>
-        <Literal xml:lang="en">activity personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>ActivityPersonalData</IRI>
-        <Literal>Data that reflects the activity of an individual, such as food habits, sleeping log, or social media post.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AggregatedData</IRI>
-        <Literal xml:lang="en">aggregated data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>AggregatedData</IRI>
-        <Literal>Agrregated data is the high-level data that is acuired by aggregating individual-level data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>AggregatedData</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Aggregate_data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AnonymizedData</IRI>
-        <Literal xml:lang="en">anonymized data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>AnonymizedData</IRI>
-        <Literal>Data which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>AnonymizedData</IRI>
-        <Literal>https://ico.org.uk/media/about-the-ico/consultations/2619862/anonymisation-intro-and-first-chapter.pdf</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AuditingPractice</IRI>
-        <Literal xml:lang="en">data security auditing practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>AuditingPractice</IRI>
-        <Literal>a practice to inspect if the organization is followeing proper safeguard mecanisms to protect the collected data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>AuthenticationMechanism</IRI>
-        <Literal xml:lang="en">authentication mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>AuthenticationMechanism</IRI>
-        <Literal>Authentication mechanism refers to the types of security mechanism, which enable the authenticated users to have access to their personal information. Usually OSNs follow two types of authentication mechanism: One Factor Authentication Mechanism and Two Factor Authentication Mechanism.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BiometricPersonalData</IRI>
-        <Literal xml:lang="en">biometric personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>BiometricPersonalData</IRI>
-        <Literal xml:lang="en">Biometric is the measurement and statistical analysis of people&apos;s unique and behavioral characteristics.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>BiometricPersonalData</IRI>
-        <Literal>Please also see: https://www.techtarget.com/searchsecurity/definition/biometrics</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>BiometrybasedAuthenticationMechanism</IRI>
-        <Literal xml:lang="en">Biometry-based Authentication Mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CreditRating</IRI>
-        <Literal>Credit Rating</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>CryptographicHashingMechanism</IRI>
-        <Literal xml:lang="en">cryptographic hashing mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataAccessPractice</IRI>
-        <Literal xml:lang="en">data security access practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataAccessPractice</IRI>
-        <Literal>security practices that limit the access to data, thus prevent unauthorized access to the users&apos; data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataPractice</IRI>
-        <Literal xml:lang="en">data practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataPractice</IRI>
-        <Literal>The process an organization follows to collect, process, share, or store the personal data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataProviderRole</IRI>
-        <Literal xml:lang="en">data provider role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataProviderRole</IRI>
-        <Literal>Data provider defines as organizations or individuals which provide data to another organization(s) or individual(s).</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataRecipientRole</IRI>
-        <Literal xml:lang="en">data recipient role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataRecipientRole</IRI>
-        <Literal>Data provider can be any organization or individual who provides data to the organization.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataRestorationPractice</IRI>
-        <Literal xml:lang="en">data security restoration practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataRestorationPractice</IRI>
-        <Literal>a practice that describes how a lost data can be recovered.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataSecurityPractice</IRI>
-        <Literal xml:lang="en">data security practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataSecurityPractice</IRI>
-        <Literal>According to the privacy regulations organization are required to mainatin proper security to protect the collected data-- often referred as  data security practice.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStorageDurationPractice</IRI>
-        <Literal xml:lang="en">data storage duration practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataStorageDurationPractice</IRI>
-        <Literal>The data practices that discusses about the duration of the storage of personal data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStorageErasurePractice</IRI>
-        <Literal xml:lang="en">data erasure rectification practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStorageLocationPractice</IRI>
-        <Literal xml:lang="en">data storage location practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataStorageLocationPractice</IRI>
-        <Literal>The data practices that discuss where and how the collected data is stored.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStorageModificationPractice</IRI>
-        <Literal xml:lang="en">data storage modification practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataStorageModificationPractice</IRI>
-        <Literal>The data practices that discuss how the data subject can modify (rectify/erase) the stored data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStoragePractice</IRI>
-        <Literal xml:lang="en">data storage practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataStoragePractice</IRI>
-        <Literal>Data practices that discusses about the storage of the collected data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataStorageRectificationPractice</IRI>
-        <Literal xml:lang="en">data storage rectification practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DataSubjectRole</IRI>
-        <Literal xml:lang="en">data subject role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DataSubjectRole</IRI>
-        <Literal>Data subject is defined as an individual from which an organization or OSN may collect data. In other word, Data subject is an individual who can identified directly or indirectly by the collected data. Note that a data subject can also be a data provider.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DefiniteDurationDescription</IRI>
-        <Literal xml:lang="en">Definite Duration Description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>DemographicPersonalData</IRI>
-        <Literal xml:lang="en">demographic personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>DemographicPersonalData</IRI>
-        <Literal>Any socioeconomic information such as age, income, birth date.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EncryptionMechanism</IRI>
-        <Literal xml:lang="en">encryption mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>EncryptionMechanism</IRI>
-        <Literal>Acccording to privacy regulations such as GDPR and CCPA, organizations must store collected data in a secured manner, One of the security mechanisms outline in the regulation is encryption mechanism, which is essentially crambling data into a secret code using a digital key (encrypt) that can be access to the actual data (decrypt) using the same  digital key.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EndToEndEncryptionMechanism</IRI>
-        <Literal xml:lang="en">end-to-end encryption mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>EthnicPersonalData</IRI>
-        <Literal xml:lang="en">ethnic personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>EthnicPersonalData</IRI>
-        <Literal>Data that is associated with revealing an individual&apos;s racial or ethnic origin.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>EthnicPersonalData</IRI>
-        <Literal>https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FinancialPersonalData</IRI>
-        <Literal xml:lang="en">financial personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>FinancialPersonalData</IRI>
-        <Literal>Any information that is related to an invidual&apos;s financial status</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>FirstPartyDataRecipientRole</IRI>
-        <Literal xml:lang="en">first party data recipient role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>GeneticPersonalData</IRI>
-        <Literal xml:lang="en">genetic personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>GeneticPersonalData</IRI>
-        <Literal xml:lang="en">Data related to an invidual&apos;s genetic characteristics and tests (such as DNA, RNA, Genetic Disease )</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HashingMechanism</IRI>
-        <Literal xml:lang="en">hashing mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>HashingMechanism</IRI>
-        <Literal>Hashing a security mechanism that map the actual data into a fixed-length value.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>HealthPersonalData</IRI>
-        <Literal xml:lang="en">health personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>HealthPersonalData</IRI>
-        <Literal>Any information that is associated to an invidual&apos;s health condition</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IdentityPersonalData</IRI>
-        <Literal xml:lang="en">identity personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>IdentityPersonalData</IRI>
-        <Literal>Any information than can directly identify an individual</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IdeologicalPersonalData</IRI>
-        <Literal xml:lang="en">ideological personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>IdeologicalPersonalData</IRI>
-        <Literal xml:lang="en">Any sort of information that reflects the belief of an individual (such as political, religious belief)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IndefiniteDurationDescription</IRI>
-        <Literal xml:lang="en">Indefinite Duration Description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>IndividualData</IRI>
-        <Literal xml:lang="en">individual data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>IndividualData</IRI>
-        <Literal>Data that is associated to an individual.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>LegalPersonDataProviderRole</IRI>
-        <Literal xml:lang="en">legal person data provider role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>LegalPersonDataProviderRole</IRI>
-        <Literal xml:lang="en">Data subjects are eventually act in a legal person data provider role when they provide their data to an organization. Note that, data subject role and legal person data provider role are not equivalent. The reason is, an organization may collect data about a data subject from a third party in which case the data is still about the data subject, but the data subject does not act as a legal person data provider role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>MinorDataSubjectRole</IRI>
-        <Literal xml:lang="en">minor data subject role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OneFactorAuthenticationMechanism</IRI>
-        <Literal xml:lang="en">one factor authentication mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>OrganizationalDataProviderRole</IRI>
-        <Literal xml:lang="en">organizational data provider role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>OrganizationalDataProviderRole</IRI>
-        <Literal xml:lang="en">Organization may recieve data from other organization (third-party they are affiliated with), in such cases, the third-party organization acts in organizationalDataProviderRole</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PasswordbasedAuthenticationMechanism</IRI>
-        <Literal xml:lang="en">Password-based Authentication Mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PersonalData</IRI>
-        <Literal xml:lang="en">personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>PersonalData</IRI>
-        <Literal>Personal data is any data that can directly or indirectly identify an individual.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>PersonalData</IRI>
-        <Literal>https://gdpr-info.eu/art-4-gdpr/</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PrivacyPolicy</IRI>
-        <Literal xml:lang="en">privacy policy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>PrivacyPolicy</IRI>
-        <Literal>A privacy policy is a legal contract between an organization and a privacy regulation that disclose the data practices of an organization in an attempt to comply with an specific privacy regulation.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PrivacyRegulation</IRI>
-        <Literal xml:lang="en">privacy regulation</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>PrivacyRegulation</IRI>
-        <Literal>A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>Pseudonymization</IRI>
-        <Literal xml:lang="en">pseudonymization mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>Pseudonymization</IRI>
-        <Literal>A securoty mechanism to replace personally identifiable information with pseudo or aritifical information.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>PseudonymizedPersonalData</IRI>
-        <Literal xml:lang="en">pseudonymized personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>PseudonymizedPersonalData</IRI>
-        <Literal>Personal data that has been replaced using with pseudo or aritifical information.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>PseudonymizedPersonalData</IRI>
-        <Literal>https://en.wikipedia.org/wiki/Pseudonymization</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SecurityMechanism</IRI>
-        <Literal xml:lang="en">securiy mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>SecurityMechanism</IRI>
-        <Literal>According to the privacy regulations organization are required to follow certain security mechanisms such as authentication or encryption mechanism, while collecting, storing, and processing personal information.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SexualPersonalData</IRI>
-        <Literal xml:lang="en">sexual personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>SexualPersonalData</IRI>
-        <Literal>Any data that is associated to the sexual identity of an individual.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>SpatialEntity</IRI>
-        <Literal xml:lang="en">spatial entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>SpatialEntity</IRI>
-        <Literal>Spatial location of storing personal data, such as Netharland, Finland.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>StatisticalData</IRI>
-        <Literal xml:lang="en">Statistical Data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>StatisticalData</IRI>
-        <Literal>Data that are the outcome of the observation of aggregated data.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:note"/>
-        <IRI>StatisticalData</IRI>
-        <Literal>https://www.statisticalaid.com/statistical-data-definition-types-and-requirements/</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>StorageEntity</IRI>
-        <Literal xml:lang="en">storage entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>StorageEntity</IRI>
-        <Literal>Storage type such as on device, or physical data center.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TechnicalPersonalData</IRI>
-        <Literal xml:lang="en">technical personal data</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>TechnicalPersonalData</IRI>
-        <Literal>Any data that are associated with an individual&apos;s interaction with technology such as device and interenet.</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>ThirdPartyDataRecipientRole</IRI>
-        <Literal xml:lang="en">third party data recipient role</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TokenbasedAuthenticationMechanism</IRI>
-        <Literal xml:lang="en">Token-based Authentication Mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>TwoFactorAuthenticationMechanism</IRI>
-        <Literal xml:lang="en">two factor authentication mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="skos:definition"/>
-        <IRI>TwoFactorAuthenticationMechanism</IRI>
-        <Literal>Two Factor Authentication Mechanism entails, two steps of One Factor Authentication Mechanism (e.g., Password + Biometrics)</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>actsIn</IRI>
-        <Literal>acts in</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>actsOn</IRI>
-        <Literal>acts on</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>allows</IRI>
-        <Literal>allows</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>appliesTo</IRI>
-        <Literal>applies to</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>disallows</IRI>
-        <Literal>disallows</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasDataPractice</IRI>
-        <Literal>has data practice</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasDurationDescription</IRI>
-        <Literal>has duration description</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPolicy</IRI>
-        <Literal>has policy</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasPurpose</IRI>
-        <Literal>has purpose</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasRequestType</IRI>
-        <Literal>has request type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasResponseDelay</IRI>
-        <Literal>has response delay</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasResponseType</IRI>
-        <Literal>has response type</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasSecurityMechanism</IRI>
-        <Literal>has security mechanism</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasStorageEntity</IRI>
-        <Literal>has storage entity</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>hasStorageLocation</IRI>
-        <Literal>has storage location</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isAbout</IRI>
-        <Literal>is about</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isProvidedBy</IRI>
-        <Literal>is provided by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isRecievedBy</IRI>
-        <Literal>is recieved by</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <IRI>isRecipientOf</IRI>
-        <Literal>is recipient of</Literal>
-    </AnnotationAssertion>
-    <AnnotationAssertion>
-        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
-        <AbbreviatedIRI>time:GeneralDurationDescription</AbbreviatedIRI>
-        <Literal xml:lang="en">Generalized Duration Description</Literal>
-    </AnnotationAssertion>
-</Ontology>
+@prefix : <http://umaine.edu/oppo/core/v1#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix dpvo: <https://w3id.org/dpv/dpv-owl#> .
+@prefix gdpr: <http://umaine.edu/gdpr#> .
+@prefix oppo: <http://umaine.edu/oppo/core/v1#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@base <http://umaine.edu/oppo/core/v1#> .
+
+<http://umaine.edu/oppo/core/v1#> rdf:type owl:Ontology ;
+                                   owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
+                                               <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ,
+                                               <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ,
+                                               <http://www.w3.org/2006/time> ,
+                                               dpvo: .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
 
 
+#################################################################
+#    Object Properties
+#################################################################
 
-<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+###  http://umaine.edu/oppo/core/v1#actsIn
+oppo:actsIn rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ;
+            rdfs:domain obo:OBI_0000245 ;
+            rdfs:range obo:OMRSE_00000051 ;
+            rdfs:label "acts in" .
 
+
+###  http://umaine.edu/oppo/core/v1#actsOn
+oppo:actsOn rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ;
+            rdfs:domain oppo:DataPractice ;
+            rdfs:range obo:IAO_0000027 ;
+            rdfs:label "acts on" .
+
+
+###  http://umaine.edu/oppo/core/v1#allows
+oppo:allows rdf:type owl:ObjectProperty ,
+                     owl:AsymmetricProperty ;
+            rdfs:domain oppo:PrivacyRegulation ;
+            rdfs:range oppo:DataPractice ;
+            rdfs:label "allows" .
+
+
+###  http://umaine.edu/oppo/core/v1#appliesTo
+oppo:appliesTo rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain oppo:SecurityMechanism ;
+               rdfs:range obo:IAO_0000027 ;
+               rdfs:label "applies to" .
+
+
+###  http://umaine.edu/oppo/core/v1#disallows
+oppo:disallows rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain oppo:PrivacyRegulation ;
+               rdfs:range oppo:DataPractice ;
+               rdfs:label "disallows" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasDataPractice
+oppo:hasDataPractice rdf:type owl:ObjectProperty ,
+                              owl:AsymmetricProperty ;
+                     rdfs:domain oppo:PrivacyPolicy ;
+                     rdfs:range oppo:DataPractice ;
+                     rdfs:label "has data practice" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasDurationDescription
+oppo:hasDurationDescription rdf:type owl:ObjectProperty ,
+                                     owl:AsymmetricProperty ;
+                            rdfs:domain oppo:DataStorageDurationPractice ;
+                            rdfs:range time:GeneralDurationDescription ;
+                            rdfs:label "has duration description" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasPolicy
+oppo:hasPolicy rdf:type owl:ObjectProperty ,
+                        owl:AsymmetricProperty ;
+               rdfs:domain obo:OBI_0000245 ;
+               rdfs:range oppo:PrivacyPolicy ;
+               rdfs:label "has policy" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasPurpose
+oppo:hasPurpose rdf:type owl:ObjectProperty ,
+                         owl:AsymmetricProperty ;
+                rdfs:domain oppo:DataPractice ;
+                rdfs:range dpvo:Purpose ;
+                rdfs:label "has purpose" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasResponseDelay
+oppo:hasResponseDelay rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ;
+                      rdfs:domain oppo:DataStorageModificationPractice ;
+                      rdfs:range time:GeneralDurationDescription ;
+                      rdfs:label "has response delay" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasSecurityMechanism
+oppo:hasSecurityMechanism rdf:type owl:ObjectProperty ,
+                                   owl:AsymmetricProperty ;
+                          rdfs:domain oppo:DataPractice ;
+                          rdfs:range oppo:SecurityMechanism ;
+                          rdfs:label "has security mechanism" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasStorageEntity
+oppo:hasStorageEntity rdf:type owl:ObjectProperty ,
+                               owl:AsymmetricProperty ;
+                      rdfs:domain oppo:DataStorageLocationPractice ;
+                      rdfs:range oppo:StorageEntity ;
+                      rdfs:label "has storage entity" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasStorageLocation
+oppo:hasStorageLocation rdf:type owl:ObjectProperty ,
+                                 owl:AsymmetricProperty ;
+                        rdfs:domain oppo:DataStorageLocationPractice ;
+                        rdfs:range oppo:SpatialEntity ;
+                        rdfs:label "has storage location" .
+
+
+###  http://umaine.edu/oppo/core/v1#isAbout
+oppo:isAbout rdf:type owl:ObjectProperty ,
+                      owl:AsymmetricProperty ;
+             rdfs:domain obo:IAO_0000027 ;
+             rdfs:range oppo:DataSubjectRole ;
+             rdfs:label "is about" .
+
+
+###  http://umaine.edu/oppo/core/v1#isProvidedBy
+oppo:isProvidedBy rdf:type owl:ObjectProperty ,
+                           owl:AsymmetricProperty ;
+                  rdfs:domain obo:IAO_0000027 ;
+                  rdfs:range oppo:DataProviderRole ;
+                  rdfs:label "is provided by" .
+
+
+###  http://umaine.edu/oppo/core/v1#isRecievedBy
+oppo:isRecievedBy rdf:type owl:ObjectProperty ;
+                  owl:inverseOf oppo:isRecipientOf ;
+                  rdf:type owl:AsymmetricProperty ;
+                  rdfs:domain obo:IAO_0000027 ;
+                  rdfs:range oppo:DataRecipientRole ;
+                  rdfs:label "is recieved by" .
+
+
+###  http://umaine.edu/oppo/core/v1#isRecipientOf
+oppo:isRecipientOf rdf:type owl:ObjectProperty ,
+                            owl:AsymmetricProperty ;
+                   rdfs:domain oppo:DataRecipientRole ;
+                   rdfs:range obo:IAO_0000027 ;
+                   rdfs:label "is recipient of" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://umaine.edu/oppo/core/v1#hasRequestType
+oppo:hasRequestType rdf:type owl:DatatypeProperty ;
+                    rdfs:domain oppo:DataStorageModificationPractice ;
+                    rdfs:range xsd:string ;
+                    rdfs:label "has request type" .
+
+
+###  http://umaine.edu/oppo/core/v1#hasResponseType
+oppo:hasResponseType rdf:type owl:DatatypeProperty ;
+                     rdfs:domain oppo:DataStorageModificationPractice ;
+                     rdfs:range xsd:string ;
+                     rdfs:label "has response type" .
+
+
+###  http://www.w3.org/2006/time#hours
+time:hours rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#minutes
+time:minutes rdf:type owl:DatatypeProperty ;
+             rdfs:domain time:GeneralDurationDescription ;
+             rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#months
+time:months rdf:type owl:DatatypeProperty ;
+            rdfs:domain time:GeneralDurationDescription ;
+            rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#seconds
+time:seconds rdf:type owl:DatatypeProperty ;
+             rdfs:domain time:GeneralDurationDescription ;
+             rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#weeks
+time:weeks rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+###  http://www.w3.org/2006/time#years
+time:years rdf:type owl:DatatypeProperty ;
+           rdfs:domain time:GeneralDurationDescription ;
+           rdfs:range xsd:decimal .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://purl.obolibrary.org/obo/BFO_0000004
+obo:BFO_0000004 rdfs:subClassOf obo:BFO_0000002 .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000006
+obo:BFO_0000006 rdfs:subClassOf oppo:SpatialEntity .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000011
+obo:BFO_0000011 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000003 ;
+                rdfs:label "spatiotemporal region" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000015
+obo:BFO_0000015 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000003 ;
+                rdfs:label "process" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000020
+obo:BFO_0000020 rdfs:subClassOf obo:BFO_0000002 ;
+                rdfs:label "specifically dependent continuant" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000029
+obo:BFO_0000029 rdfs:subClassOf oppo:SpatialEntity ;
+                rdfs:label "site" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000035
+obo:BFO_0000035 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000003 ;
+                rdfs:label "process boundary" .
+
+
+###  http://purl.obolibrary.org/obo/BFO_0000140
+obo:BFO_0000140 rdfs:subClassOf obo:BFO_0000141 ;
+                rdfs:label "continuant fiat boundary" .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000027
+obo:IAO_0000027 rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty oppo:isAbout ;
+                                  owl:someValuesFrom oppo:DataSubjectRole
+                                ] ,
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty oppo:isProvidedBy ;
+                                  owl:someValuesFrom oppo:DataProviderRole
+                                ] ;
+                owl:disjointWith oppo:DataPractice .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000030
+obo:IAO_0000030 rdf:type owl:Class .
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000178
+obo:IAO_0000178 rdf:type owl:Class ;
+                rdfs:subClassOf obo:BFO_0000040 ;
+                rdfs:label "material information bearer" .
+
+
+###  http://purl.obolibrary.org/obo/NCBITaxon_9606
+obo:NCBITaxon_9606 rdfs:subClassOf obo:BFO_0000040 ;
+                   rdfs:label "homo sapiens" .
+
+
+###  http://purl.obolibrary.org/obo/OBI_0000245
+obo:OBI_0000245 rdf:type owl:Class ;
+                rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                  owl:onProperty oppo:actsIn ;
+                                  owl:someValuesFrom obo:OMRSE_00000051
+                                ] .
+
+
+###  http://purl.obolibrary.org/obo/OMRSE_00000023
+obo:OMRSE_00000023 rdfs:subClassOf obo:BFO_0000040 ;
+                   rdfs:label "collection of humans" .
+
+
+###  http://purl.obolibrary.org/obo/OMRSE_00000048
+obo:OMRSE_00000048 rdfs:subClassOf obo:BFO_0000023 .
+
+
+###  http://purl.obolibrary.org/obo/OMRSE_00002072
+obo:OMRSE_00002072 rdfs:subClassOf obo:OMRSE_00000048 ;
+                   rdfs:label "role in human social processes" .
+
+
+###  http://umaine.edu/gdpr#GDPRMinorDataSubject
+gdpr:GDPRMinorDataSubject rdf:type owl:Class ;
+                          rdfs:subClassOf oppo:MinorDataSubjectRole ;
+                          rdfs:label "GDPR minor data subject"@en .
+
+
+###  http://umaine.edu/gdpr#HealthData
+gdpr:HealthData rdf:type owl:Class ;
+                rdfs:subClassOf gdpr:SensitiveData ;
+                rdfs:label " GDPR Health Data"@en .
+
+
+###  http://umaine.edu/gdpr#HealthStatusData
+gdpr:HealthStatusData rdf:type owl:Class ;
+                      rdfs:subClassOf gdpr:HealthData ;
+                      rdfs:label "Health Status Data"@en .
+
+
+###  http://umaine.edu/gdpr#SensitiveData
+gdpr:SensitiveData rdf:type owl:Class ;
+                   rdfs:subClassOf oppo:PersonalData ;
+                   rdfs:label "GDPR- sensitive personal data"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#ActivityPersonalData
+oppo:ActivityPersonalData rdf:type owl:Class ;
+                          rdfs:subClassOf oppo:PersonalData ;
+                          rdfs:label "activity personal data"@en ;
+                          skos:definition "Data that reflects the activity of an individual, such as food habits, sleeping log, or social media post." .
+
+
+###  http://umaine.edu/oppo/core/v1#AggregatedData
+oppo:AggregatedData rdf:type owl:Class ;
+                    rdfs:subClassOf obo:IAO_0000027 ;
+                    rdfs:label "aggregated data"@en ;
+                    skos:definition "Agrregated data is the high-level data that is acuired by aggregating individual-level data." ;
+                    skos:note "https://en.wikipedia.org/wiki/Aggregate_data" .
+
+
+###  http://umaine.edu/oppo/core/v1#AnonymizedData
+oppo:AnonymizedData rdf:type owl:Class ;
+                    rdfs:subClassOf oppo:IndividualData ;
+                    rdfs:label "anonymized data"@en ;
+                    skos:definition "Data which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable." ;
+                    skos:note "https://ico.org.uk/media/about-the-ico/consultations/2619862/anonymisation-intro-and-first-chapter.pdf" .
+
+
+###  http://umaine.edu/oppo/core/v1#AuditingPractice
+oppo:AuditingPractice rdf:type owl:Class ;
+                      rdfs:subClassOf oppo:DataSecurityPractice ;
+                      rdfs:label "data security auditing practice"@en ;
+                      skos:definition "a practice to inspect if the organization is followeing proper safeguard mecanisms to protect the collected data." .
+
+
+###  http://umaine.edu/oppo/core/v1#AuthenticationMechanism
+oppo:AuthenticationMechanism rdf:type owl:Class ;
+                             rdfs:subClassOf oppo:SecurityMechanism ;
+                             rdfs:label "authentication mechanism"@en ;
+                             skos:definition "Authentication mechanism refers to the types of security mechanism, which enable the authenticated users to have access to their personal information. Usually OSNs follow two types of authentication mechanism: One Factor Authentication Mechanism and Two Factor Authentication Mechanism." .
+
+
+###  http://umaine.edu/oppo/core/v1#BiometricPersonalData
+oppo:BiometricPersonalData rdf:type owl:Class ;
+                           rdfs:subClassOf gdpr:HealthData ,
+                                           oppo:PersonalData ;
+                           rdfs:label "biometric personal data"@en ;
+                           skos:definition "Biometric is the measurement and statistical analysis of people's unique and behavioral characteristics."@en ;
+                           skos:note "Please also see: https://www.techtarget.com/searchsecurity/definition/biometrics" .
+
+
+###  http://umaine.edu/oppo/core/v1#BiometrybasedAuthenticationMechanism
+oppo:BiometrybasedAuthenticationMechanism rdf:type owl:Class ;
+                                          rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
+                                          rdfs:label "Biometry-based Authentication Mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#CryptographicHashingMechanism
+oppo:CryptographicHashingMechanism rdf:type owl:Class ;
+                                   rdfs:subClassOf oppo:HashingMechanism ;
+                                   rdfs:label "cryptographic hashing mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#DataAccessPractice
+oppo:DataAccessPractice rdf:type owl:Class ;
+                        rdfs:subClassOf oppo:DataSecurityPractice ;
+                        rdfs:label "data security access practice"@en ;
+                        skos:definition "security practices that limit the access to data, thus prevent unauthorized access to the users' data." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataPractice
+oppo:DataPractice rdf:type owl:Class ;
+                  rdfs:subClassOf obo:IAO_0000030 ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty oppo:actsOn ;
+                                    owl:someValuesFrom obo:IAO_0000027
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty oppo:hasPurpose ;
+                                    owl:someValuesFrom dpvo:Purpose
+                                  ] ,
+                                  [ rdf:type owl:Restriction ;
+                                    owl:onProperty oppo:hasSecurityMechanism ;
+                                    owl:someValuesFrom oppo:SecurityMechanism
+                                  ] ;
+                  owl:disjointWith oppo:PrivacyPolicy ,
+                                   oppo:PrivacyRegulation ;
+                  rdfs:label "data practice"@en ;
+                  skos:definition "The process an organization follows to collect, process, share, or store the personal data." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataProviderRole
+oppo:DataProviderRole rdf:type owl:Class ;
+                      rdfs:subClassOf obo:OMRSE_00000048 ;
+                      rdfs:label "data provider role"@en ;
+                      skos:definition "Data provider defines as organizations or individuals which provide data to another organization(s) or individual(s)." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataRecipientRole
+oppo:DataRecipientRole rdf:type owl:Class ;
+                       rdfs:subClassOf obo:OMRSE_00000051 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty oppo:isRecipientOf ;
+                                         owl:someValuesFrom obo:IAO_0000027
+                                       ] ;
+                       rdfs:label "data recipient role"@en ;
+                       skos:definition "Data provider can be any organization or individual who provides data to the organization." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataRestorationPractice
+oppo:DataRestorationPractice rdf:type owl:Class ;
+                             rdfs:subClassOf oppo:DataSecurityPractice ;
+                             rdfs:label "data security restoration practice"@en ;
+                             skos:definition "a practice that describes how a lost data can be recovered." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataSecurityPractice
+oppo:DataSecurityPractice rdf:type owl:Class ;
+                          rdfs:subClassOf oppo:DataPractice ;
+                          rdfs:label "data security practice"@en ;
+                          skos:definition "According to the privacy regulations organization are required to mainatin proper security to protect the collected data-- often referred as  data security practice." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStorageDurationPractice
+oppo:DataStorageDurationPractice rdf:type owl:Class ;
+                                 rdfs:subClassOf oppo:DataStoragePractice ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty oppo:hasDurationDescription ;
+                                                   owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                   owl:onClass time:GeneralDurationDescription
+                                                 ] ;
+                                 rdfs:label "data storage duration practice"@en ;
+                                 skos:definition "The data practices that discusses about the duration of the storage of personal data." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStorageErasurePractice
+oppo:DataStorageErasurePractice rdf:type owl:Class ;
+                                rdfs:subClassOf oppo:DataStorageLocationPractice ;
+                                rdfs:label "data erasure rectification practice"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStorageLocationPractice
+oppo:DataStorageLocationPractice rdf:type owl:Class ;
+                                 rdfs:subClassOf oppo:DataStoragePractice ;
+                                 rdfs:label "data storage location practice"@en ;
+                                 skos:definition "The data practices that discuss where and how the collected data is stored." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStorageModificationPractice
+oppo:DataStorageModificationPractice rdf:type owl:Class ;
+                                     rdfs:subClassOf oppo:DataStoragePractice ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasResponseDelay ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass time:GeneralDurationDescription
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasStorageEntity ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass oppo:StorageEntity
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasStorageLocation ;
+                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                       owl:onClass oppo:SpatialEntity
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasRequestType ;
+                                                       owl:someValuesFrom xsd:string
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasResponseType ;
+                                                       owl:someValuesFrom xsd:string
+                                                     ] ;
+                                     rdfs:label "data storage modification practice"@en ;
+                                     skos:definition "The data practices that discuss how the data subject can modify (rectify/erase) the stored data." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStoragePractice
+oppo:DataStoragePractice rdf:type owl:Class ;
+                         rdfs:subClassOf oppo:DataPractice ;
+                         rdfs:label "data storage practice"@en ;
+                         skos:definition "Data practices that discusses about the storage of the collected data." .
+
+
+###  http://umaine.edu/oppo/core/v1#DataStorageRectificationPractice
+oppo:DataStorageRectificationPractice rdf:type owl:Class ;
+                                      rdfs:subClassOf oppo:DataStorageLocationPractice ;
+                                      rdfs:label "data storage rectification practice"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#DataSubjectRole
+oppo:DataSubjectRole rdf:type owl:Class ;
+                     rdfs:subClassOf obo:OMRSE_00000038 ;
+                     rdfs:label "data subject role"@en ;
+                     skos:definition "Data subject is defined as an individual from which an organization or OSN may collect data. In other word, Data subject is an individual who can identified directly or indirectly by the collected data. Note that a data subject can also be a data provider." .
+
+
+###  http://umaine.edu/oppo/core/v1#DefiniteDurationDescription
+oppo:DefiniteDurationDescription rdf:type owl:Class ;
+                                 rdfs:subClassOf time:GeneralDurationDescription ;
+                                 owl:disjointWith oppo:IndefiniteDurationDescription ;
+                                 rdfs:label "Definite Duration Description"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#DemographicPersonalData
+oppo:DemographicPersonalData rdf:type owl:Class ;
+                             rdfs:subClassOf oppo:PersonalData ;
+                             rdfs:label "demographic personal data"@en ;
+                             skos:definition "Any socioeconomic information such as age, income, birth date." .
+
+
+###  http://umaine.edu/oppo/core/v1#EncryptionMechanism
+oppo:EncryptionMechanism rdf:type owl:Class ;
+                         rdfs:subClassOf oppo:SecurityMechanism ;
+                         rdfs:label "encryption mechanism"@en ;
+                         skos:definition "Acccording to privacy regulations such as GDPR and CCPA, organizations must store collected data in a secured manner, One of the security mechanisms outline in the regulation is encryption mechanism, which is essentially crambling data into a secret code using a digital key (encrypt) that can be access to the actual data (decrypt) using the same  digital key." .
+
+
+###  http://umaine.edu/oppo/core/v1#EndToEndEncryptionMechanism
+oppo:EndToEndEncryptionMechanism rdf:type owl:Class ;
+                                 rdfs:subClassOf oppo:EncryptionMechanism ;
+                                 rdfs:label "end-to-end encryption mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#EthnicPersonalData
+oppo:EthnicPersonalData rdf:type owl:Class ;
+                        rdfs:subClassOf gdpr:SensitiveData ,
+                                        oppo:PersonalData ;
+                        rdfs:label "ethnic personal data"@en ;
+                        skos:definition "Data that is associated with revealing an individual's racial or ethnic origin." ;
+                        skos:note "https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html" .
+
+
+###  http://umaine.edu/oppo/core/v1#FinancialPersonalData
+oppo:FinancialPersonalData rdf:type owl:Class ;
+                           rdfs:subClassOf gdpr:SensitiveData ,
+                                           oppo:PersonalData ;
+                           rdfs:label "financial personal data"@en ;
+                           skos:definition "Any information that is related to an invidual's financial status" .
+
+
+###  http://umaine.edu/oppo/core/v1#FirstPartyDataRecipientRole
+oppo:FirstPartyDataRecipientRole rdf:type owl:Class ;
+                                 rdfs:subClassOf oppo:DataRecipientRole ;
+                                 rdfs:label "first party data recipient role"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#GeneticPersonalData
+oppo:GeneticPersonalData rdf:type owl:Class ;
+                         rdfs:subClassOf gdpr:HealthData ,
+                                         oppo:PersonalData ;
+                         rdfs:label "genetic personal data"@en ;
+                         skos:definition "Data related to an invidual's genetic characteristics and tests (such as DNA, RNA, Genetic Disease )"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#HashingMechanism
+oppo:HashingMechanism rdf:type owl:Class ;
+                      rdfs:subClassOf oppo:SecurityMechanism ;
+                      rdfs:label "hashing mechanism"@en ;
+                      skos:definition "Hashing a security mechanism that map the actual data into a fixed-length value." .
+
+
+###  http://umaine.edu/oppo/core/v1#HealthPersonalData
+oppo:HealthPersonalData rdf:type owl:Class ;
+                        rdfs:subClassOf oppo:PersonalData ;
+                        rdfs:label "health personal data"@en ;
+                        skos:definition "Any information that is associated to an invidual's health condition" .
+
+
+###  http://umaine.edu/oppo/core/v1#IdentityPersonalData
+oppo:IdentityPersonalData rdf:type owl:Class ;
+                          rdfs:subClassOf oppo:PersonalData ;
+                          rdfs:label "identity personal data"@en ;
+                          skos:note "Any information than can directly identify an individual" .
+
+
+###  http://umaine.edu/oppo/core/v1#IdeologicalPersonalData
+oppo:IdeologicalPersonalData rdf:type owl:Class ;
+                             rdfs:subClassOf gdpr:SensitiveData ,
+                                             oppo:PersonalData ;
+                             rdfs:label "ideological personal data"@en ;
+                             skos:definition "Any sort of information that reflects the belief of an individual (such as political, religious belief)"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#IndefiniteDurationDescription
+oppo:IndefiniteDurationDescription rdf:type owl:Class ;
+                                   owl:equivalentClass [ owl:intersectionOf ( time:GeneralDurationDescription
+                                                                              [ rdf:type owl:Class ;
+                                                                                owl:complementOf oppo:DefiniteDurationDescription
+                                                                              ]
+                                                                            ) ;
+                                                         rdf:type owl:Class
+                                                       ] ;
+                                   rdfs:subClassOf time:GeneralDurationDescription ;
+                                   rdfs:label "Indefinite Duration Description"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#IndividualData
+oppo:IndividualData rdf:type owl:Class ;
+                    rdfs:subClassOf obo:IAO_0000027 ;
+                    rdfs:label "individual data"@en ;
+                    skos:definition "Data that is associated to an individual." .
+
+
+###  http://umaine.edu/oppo/core/v1#LegalPersonDataProviderRole
+oppo:LegalPersonDataProviderRole rdf:type owl:Class ;
+                                 rdfs:subClassOf obo:OMRSE_00000038 ,
+                                                 oppo:DataProviderRole ;
+                                 rdfs:label "legal person data provider role"@en ;
+                                 skos:definition "Data subjects are eventually act in a legal person data provider role when they provide their data to an organization. Note that, data subject role and legal person data provider role are not equivalent. The reason is, an organization may collect data about a data subject from a third party in which case the data is still about the data subject, but the data subject does not act as a legal person data provider role"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#MinorDataSubjectRole
+oppo:MinorDataSubjectRole rdf:type owl:Class ;
+                          rdfs:subClassOf oppo:DataSubjectRole ;
+                          rdfs:label "minor data subject role"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism
+oppo:OneFactorAuthenticationMechanism rdf:type owl:Class ;
+                                      rdfs:subClassOf oppo:AuthenticationMechanism ;
+                                      rdfs:label "one factor authentication mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#OrganizationalDataProviderRole
+oppo:OrganizationalDataProviderRole rdf:type owl:Class ;
+                                    rdfs:subClassOf obo:OMRSE_00000051 ,
+                                                    oppo:DataProviderRole ;
+                                    rdfs:label "organizational data provider role"@en ;
+                                    skos:definition "Organization may recieve data from other organization (third-party they are affiliated with), in such cases, the third-party organization acts in organizationalDataProviderRole"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#PasswordbasedAuthenticationMechanism
+oppo:PasswordbasedAuthenticationMechanism rdf:type owl:Class ;
+                                          rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
+                                          rdfs:label "Password-based Authentication Mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#PersonalData
+oppo:PersonalData rdf:type owl:Class ;
+                  rdfs:subClassOf oppo:IndividualData ;
+                  rdfs:label "personal data"@en ;
+                  skos:definition "Personal data is any data that can directly or indirectly identify an individual." ;
+                  skos:note "https://gdpr-info.eu/art-4-gdpr/" .
+
+
+###  http://umaine.edu/oppo/core/v1#PrivacyPolicy
+oppo:PrivacyPolicy rdf:type owl:Class ;
+                   rdfs:subClassOf obo:IAO_0000030 ,
+                                   [ rdf:type owl:Restriction ;
+                                     owl:onProperty oppo:hasDataPractice ;
+                                     owl:someValuesFrom oppo:DataPractice
+                                   ] ;
+                   rdfs:label "privacy policy"@en ;
+                   skos:definition "A privacy policy is a legal contract between an organization and a privacy regulation that disclose the data practices of an organization in an attempt to comply with an specific privacy regulation." .
+
+
+###  http://umaine.edu/oppo/core/v1#PrivacyRegulation
+oppo:PrivacyRegulation rdf:type owl:Class ;
+                       rdfs:subClassOf obo:IAO_0000030 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty oppo:allows ;
+                                         owl:someValuesFrom oppo:DataPractice
+                                       ] ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty oppo:disallows ;
+                                         owl:someValuesFrom oppo:DataPractice
+                                       ] ;
+                       rdfs:label "privacy regulation"@en ;
+                       skos:definition "A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual." .
+
+
+###  http://umaine.edu/oppo/core/v1#Pseudonymization
+oppo:Pseudonymization rdf:type owl:Class ;
+                      rdfs:subClassOf oppo:SecurityMechanism ;
+                      rdfs:label "pseudonymization mechanism"@en ;
+                      skos:definition "A securoty mechanism to replace personally identifiable information with pseudo or aritifical information." .
+
+
+###  http://umaine.edu/oppo/core/v1#PseudonymizedPersonalData
+oppo:PseudonymizedPersonalData rdf:type owl:Class ;
+                               rdfs:subClassOf oppo:PersonalData ;
+                               rdfs:label "pseudonymized personal data"@en ;
+                               skos:definition "Personal data that has been replaced using with pseudo or aritifical information." ;
+                               skos:note "https://en.wikipedia.org/wiki/Pseudonymization" .
+
+
+###  http://umaine.edu/oppo/core/v1#SecurityMechanism
+oppo:SecurityMechanism rdf:type owl:Class ;
+                       rdfs:subClassOf obo:IAO_0000030 ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty oppo:appliesTo ;
+                                         owl:someValuesFrom obo:IAO_0000027
+                                       ] ;
+                       rdfs:label "securiy mechanism"@en ;
+                       skos:definition "According to the privacy regulations organization are required to follow certain security mechanisms such as authentication or encryption mechanism, while collecting, storing, and processing personal information." .
+
+
+###  http://umaine.edu/oppo/core/v1#SexualPersonalData
+oppo:SexualPersonalData rdf:type owl:Class ;
+                        rdfs:subClassOf gdpr:SensitiveData ,
+                                        oppo:PersonalData ;
+                        rdfs:label "sexual personal data"@en ;
+                        skos:definition "Any data that is associated to the sexual identity of an individual." .
+
+
+###  http://umaine.edu/oppo/core/v1#SpatialEntity
+oppo:SpatialEntity rdf:type owl:Class ;
+                   rdfs:subClassOf obo:BFO_0000141 ;
+                   rdfs:label "spatial entity"@en ;
+                   skos:definition "Spatial location of storing personal data, such as Netharland, Finland." .
+
+
+###  http://umaine.edu/oppo/core/v1#StatisticalData
+oppo:StatisticalData rdf:type owl:Class ;
+                     rdfs:subClassOf oppo:AggregatedData ;
+                     rdfs:label "Statistical Data"@en ;
+                     skos:definition "Data that are the outcome of the observation of aggregated data." ;
+                     skos:note "https://www.statisticalaid.com/statistical-data-definition-types-and-requirements/" .
+
+
+###  http://umaine.edu/oppo/core/v1#StorageEntity
+oppo:StorageEntity rdf:type owl:Class ;
+                   rdfs:subClassOf obo:IAO_0000178 ;
+                   rdfs:label "storage entity"@en ;
+                   skos:definition "Storage type such as on device, or physical data center." .
+
+
+###  http://umaine.edu/oppo/core/v1#TechnicalPersonalData
+oppo:TechnicalPersonalData rdf:type owl:Class ;
+                           rdfs:subClassOf oppo:PersonalData ;
+                           rdfs:label "technical personal data"@en ;
+                           skos:definition "Any data that are associated with an individual's interaction with technology such as device and interenet." .
+
+
+###  http://umaine.edu/oppo/core/v1#ThirdPartyDataRecipientRole
+oppo:ThirdPartyDataRecipientRole rdf:type owl:Class ;
+                                 rdfs:subClassOf oppo:DataRecipientRole ;
+                                 rdfs:label "third party data recipient role"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#TokenbasedAuthenticationMechanism
+oppo:TokenbasedAuthenticationMechanism rdf:type owl:Class ;
+                                       rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
+                                       rdfs:label "Token-based Authentication Mechanism"@en .
+
+
+###  http://umaine.edu/oppo/core/v1#TwoFactorAuthenticationMechanism
+oppo:TwoFactorAuthenticationMechanism rdf:type owl:Class ;
+                                      rdfs:subClassOf oppo:AuthenticationMechanism ,
+                                                      [ rdf:type owl:Restriction ;
+                                                        owl:onProperty oppo:hasSecurityMechanism ;
+                                                        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
+                                                        owl:onClass oppo:OneFactorAuthenticationMechanism
+                                                      ] ;
+                                      rdfs:label "two factor authentication mechanism"@en ;
+                                      skos:definition "Two Factor Authentication Mechanism entails, two steps of One Factor Authentication Mechanism (e.g., Password + Biometrics)" .
+
+
+###  http://www.w3.org/2006/time#GeneralDurationDescription
+time:GeneralDurationDescription rdf:type owl:Class ;
+                                owl:disjointUnionOf ( oppo:DefiniteDurationDescription
+                                                      oppo:IndefiniteDurationDescription
+                                                    ) ;
+                                rdfs:label "Generalized Duration Description"@en .
+
+
+###  https://w3id.org/dpv/dpv-owl#Purpose
+dpvo:Purpose rdfs:subClassOf obo:BFO_0000016 .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://umaine.edu/oppo/core/v1#Age
+oppo:Age rdf:type owl:NamedIndividual ,
+                  oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Age ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Age"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#American_Indian_or_Alaska_Native
+oppo:American_Indian_or_Alaska_Native rdf:type owl:NamedIndividual ,
+                                               oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:American_Indian_or_Alaska_Native ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "American Indian or Alaska Native" ;
+   skos:definition "A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment."
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Asian
+oppo:Asian rdf:type owl:NamedIndividual ,
+                    oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Asian ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "Asian" ;
+   skos:definition "A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam."
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#BankAccount
+oppo:BankAccount rdf:type owl:NamedIndividual ,
+                          oppo:FinancialPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BankAccount ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:FinancialPersonalData ;
+   rdfs:label "Bank Account"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#BillingAddress
+oppo:BillingAddress rdf:type owl:NamedIndividual ,
+                             oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BillingAddress ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Billing Address"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Black_or_African_American
+oppo:Black_or_African_American rdf:type owl:NamedIndividual ,
+                                        oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Black_or_African_American ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "Black or African American" ;
+   skos:definition "A person having origins in any of the black racial groups of Africa. Terms such as \"Haitian\" or \"Negro\" can be used in addition to \"Black or African American.\""
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#BloodPressure
+oppo:BloodPressure rdf:type owl:NamedIndividual ,
+                            oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BloodPressure ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Blood Pressure"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#BodyTemperature
+oppo:BodyTemperature rdf:type owl:NamedIndividual ,
+                              oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BodyTemperature ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Body Temperature"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Bot
+oppo:Bot rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#BrowserHistory
+oppo:BrowserHistory rdf:type owl:NamedIndividual ,
+                             oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BrowserHistory ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Browser History"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#BrowserType
+oppo:BrowserType rdf:type owl:NamedIndividual ,
+                          oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:BrowserType ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Browser Type"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Calender_Events
+oppo:Calender_Events rdf:type owl:NamedIndividual ,
+                              oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Calender_Events ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Calender Event"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Contacts
+oppo:Contacts rdf:type owl:NamedIndividual ,
+                       oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Contacts ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Contacts"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Content_Interaction
+oppo:Content_Interaction rdf:type owl:NamedIndividual ,
+                                  oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Content_Interaction ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Content Interaction"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#CookieInformation
+oppo:CookieInformation rdf:type owl:NamedIndividual ,
+                                oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:CookieInformation ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Cookie Information"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Country
+oppo:Country rdf:type owl:NamedIndividual ,
+                      oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Country ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Country"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#CreditCardNumber
+oppo:CreditCardNumber rdf:type owl:NamedIndividual ,
+                               oppo:FinancialPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:CreditCardNumber ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:FinancialPersonalData ;
+   rdfs:label "Credit Card Detail"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#CreditRating
+oppo:CreditRating rdf:type owl:NamedIndividual ,
+                           oppo:FinancialPersonalData ;
+                  rdfs:label "Credit Rating" .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:CreditRating ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:FinancialPersonalData ;
+   rdfs:label "Credit Rating"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DNA
+oppo:DNA rdf:type owl:NamedIndividual ,
+                  oppo:GeneticPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DNA ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:GeneticPersonalData ;
+   rdfs:label "DNA"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DateofBirth
+oppo:DateofBirth rdf:type owl:NamedIndividual ,
+                          oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DateofBirth ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Date of Birth"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DeviceGeneralSetting
+oppo:DeviceGeneralSetting rdf:type owl:NamedIndividual ,
+                                   oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DeviceGeneralSetting ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Device General Information"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DeviceLogs
+oppo:DeviceLogs rdf:type owl:NamedIndividual ,
+                         oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DeviceLogs ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Device Logs"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DeviceUniqueIdentifier
+oppo:DeviceUniqueIdentifier rdf:type owl:NamedIndividual ,
+                                     oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DeviceUniqueIdentifier ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Device Unique Identifier"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DiagnosisSymptoms
+oppo:DiagnosisSymptoms rdf:type owl:NamedIndividual ,
+                                oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DiagnosisSymptoms ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Diagnosis Symptoms"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DigitalSignature
+oppo:DigitalSignature rdf:type owl:NamedIndividual ,
+                               oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DigitalSignature ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Digital Signature"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#DrivingLicense
+oppo:DrivingLicense rdf:type owl:NamedIndividual ,
+                             oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:DrivingLicense ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Driving License"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Electrocardiogram
+oppo:Electrocardiogram rdf:type owl:NamedIndividual ,
+                                oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Electrocardiogram ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Electro-Cardiogram"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Email
+oppo:Email rdf:type owl:NamedIndividual ,
+                    oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Email ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Email"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Ethnicity
+oppo:Ethnicity rdf:type owl:NamedIndividual ,
+                        oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Ethnicity ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Ethnicity"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#FacialRecognition
+oppo:FacialRecognition rdf:type owl:NamedIndividual ,
+                                oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:FacialRecognition ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Facial Recognition"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Fax
+oppo:Fax rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#FaxNumber
+oppo:FaxNumber rdf:type owl:NamedIndividual ,
+                        oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:FaxNumber ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Fax Number"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#FingerGeometry
+oppo:FingerGeometry rdf:type owl:NamedIndividual ,
+                             oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:FingerGeometry ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Finger Geometry"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#FingerPrint
+oppo:FingerPrint rdf:type owl:NamedIndividual ,
+                          oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:FingerPrint ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Finger Print"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Food_Habit
+oppo:Food_Habit rdf:type owl:NamedIndividual ,
+                         oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Food_Habit ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Food Habit"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Genetic_Disease
+oppo:Genetic_Disease rdf:type owl:NamedIndividual ,
+                              oppo:GeneticPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Genetic_Disease ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:GeneticPersonalData ;
+   rdfs:label "Genetic Disease"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Genetric_Characteristics
+oppo:Genetric_Characteristics rdf:type owl:NamedIndividual ,
+                                       oppo:GeneticPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Genetric_Characteristics ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:GeneticPersonalData ;
+   rdfs:label "Genetic Characteristics"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Heart-Rate
+oppo:Heart-Rate rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#Height
+oppo:Height rdf:type owl:NamedIndividual ,
+                     oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Height ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Height"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Hispanic_or_Latino
+oppo:Hispanic_or_Latino rdf:type owl:NamedIndividual ,
+                                 oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Hispanic_or_Latino ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "Hispanic or Latino" ;
+   skos:definition "A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, \"Spanish origin,\" can be used in addition to \"Hispanic or Latino.\""
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#IPAddress
+oppo:IPAddress rdf:type owl:NamedIndividual ,
+                        oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:IPAddress ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "IP Address"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Image
+oppo:Image rdf:type owl:NamedIndividual ,
+                    oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Image ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Image"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Image_of_the_Food
+oppo:Image_of_the_Food rdf:type owl:NamedIndividual ,
+                                oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Image_of_the_Food ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:comment "Image of the Food"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#IrisRecognition
+oppo:IrisRecognition rdf:type owl:NamedIndividual ,
+                              oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:IrisRecognition ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Iris Recognition"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Language
+oppo:Language rdf:type owl:NamedIndividual ,
+                       oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Language ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Language"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#LogFiles
+oppo:LogFiles rdf:type owl:NamedIndividual ,
+                       oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:LogFiles ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Log Files"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Mail
+oppo:Mail rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#MailingAddress
+oppo:MailingAddress rdf:type owl:NamedIndividual ,
+                             oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:MailingAddress ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Mailing Address"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Medication
+oppo:Medication rdf:type owl:NamedIndividual ,
+                         oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Medication ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Medication"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#MuscleFat
+oppo:MuscleFat rdf:type owl:NamedIndividual ,
+                        oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:MuscleFat ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Muscle Fat"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Name
+oppo:Name rdf:type owl:NamedIndividual ,
+                   oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Name ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:comment "Name may include any or both first name and last name." ;
+   rdfs:label "Name"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#NationalId
+oppo:NationalId rdf:type owl:NamedIndividual ,
+                         oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:NationalId ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "National ID"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Nationality
+oppo:Nationality rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#Native_Hawaiian_or_Other_pacific_Islander
+oppo:Native_Hawaiian_or_Other_pacific_Islander rdf:type owl:NamedIndividual ,
+                                                        oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Native_Hawaiian_or_Other_pacific_Islander ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "Native Hawaiian or Other Pacfic Islander" ;
+   skos:definition "A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands."
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#PassportNumber
+oppo:PassportNumber rdf:type owl:NamedIndividual ,
+                             oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:PassportNumber ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Passport Number"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Payment_History
+oppo:Payment_History rdf:type owl:NamedIndividual ,
+                              oppo:FinancialPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Payment_History ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:FinancialPersonalData ;
+   rdfs:label "Payment History"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Philosophical_Beliefs
+oppo:Philosophical_Beliefs rdf:type owl:NamedIndividual ,
+                                    oppo:IdeologicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Philosophical_Beliefs ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdeologicalPersonalData ;
+   rdfs:label "Philosophical Belief"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Phone
+oppo:Phone rdf:type owl:NamedIndividual ,
+                    oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Phone ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Phone"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#PixelTags
+oppo:PixelTags rdf:type owl:NamedIndividual ,
+                        oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:PixelTags ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Pixel Tags"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#PolicyUpdate
+oppo:PolicyUpdate rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#Political_Belief
+oppo:Political_Belief rdf:type owl:NamedIndividual ,
+                               oppo:IdeologicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Political_Belief ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdeologicalPersonalData ;
+   rdfs:label "Political Belief"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Posts
+oppo:Posts rdf:type owl:NamedIndividual ,
+                    oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Posts ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:comment "Social Media Posts"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#PrivateChat
+oppo:PrivateChat rdf:type owl:NamedIndividual ,
+                          oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:PrivateChat ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:comment "Private Chat"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Product_Uage
+oppo:Product_Uage rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#PsychologicalData
+oppo:PsychologicalData rdf:type owl:NamedIndividual ,
+                                oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:PsychologicalData ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Psychological Data"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#PublicChat
+oppo:PublicChat rdf:type owl:NamedIndividual ,
+                         oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:PublicChat ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:comment "Public Chat"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#RNA
+oppo:RNA rdf:type owl:NamedIndividual ,
+                  oppo:GeneticPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:RNA ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:GeneticPersonalData ;
+   rdfs:label "RNA"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Race
+oppo:Race rdf:type owl:NamedIndividual ,
+                   oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Race ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Race"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Religious_Belief
+oppo:Religious_Belief rdf:type owl:NamedIndividual ,
+                               oppo:IdeologicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Religious_Belief ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdeologicalPersonalData ;
+   rdfs:label "Religious Belief"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#SearchTerm
+oppo:SearchTerm rdf:type owl:NamedIndividual ,
+                         oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:SearchTerm ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Search Term"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Serial_Number
+oppo:Serial_Number rdf:type owl:NamedIndividual ,
+                            oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Serial_Number ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Serial Number"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Sex
+oppo:Sex rdf:type owl:NamedIndividual ,
+                  oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Sex ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Sex"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#SexualIdentity
+oppo:SexualIdentity rdf:type owl:NamedIndividual ,
+                             oppo:SexualPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:SexualIdentity ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:SexualPersonalData ;
+   rdfs:label "Sexual Identity"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Shared_Content
+oppo:Shared_Content rdf:type owl:NamedIndividual ,
+                             oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Shared_Content ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Shared Content"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#SiteRegistration
+oppo:SiteRegistration rdf:type owl:NamedIndividual ,
+                               oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:SiteRegistration ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Site Registration"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Sleep_Log
+oppo:Sleep_Log rdf:type owl:NamedIndividual ,
+                        oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Sleep_Log ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Sleeping Log"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#SocialMediaAccount
+oppo:SocialMediaAccount rdf:type owl:NamedIndividual ,
+                                 oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:SocialMediaAccount ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Social Media Account"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#SocialSecurityNumber
+oppo:SocialSecurityNumber rdf:type owl:NamedIndividual ,
+                                   oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:SocialSecurityNumber ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Social Security Number"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Survey_Response
+oppo:Survey_Response rdf:type owl:NamedIndividual ,
+                              oppo:ActivityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Survey_Response ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:ActivityPersonalData ;
+   rdfs:label "Survey Response"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Technical_Model
+oppo:Technical_Model rdf:type owl:NamedIndividual ,
+                              oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Technical_Model ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Technical Model"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#ThirdPartyPayment
+oppo:ThirdPartyPayment rdf:type owl:NamedIndividual ,
+                                oppo:FinancialPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:ThirdPartyPayment ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:FinancialPersonalData ;
+   rdfs:label "Third Party Payment Firm"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#TimeZone
+oppo:TimeZone rdf:type owl:NamedIndividual ,
+                       oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:TimeZone ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Time Zone"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#VehicleColor
+oppo:VehicleColor rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#VehicleModel
+oppo:VehicleModel rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#VehicleNumber
+oppo:VehicleNumber rdf:type owl:NamedIndividual ,
+                            oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:VehicleNumber ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Vehicle Number"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#VeinRecognition
+oppo:VeinRecognition rdf:type owl:NamedIndividual ,
+                              oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:VeinRecognition ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Vein Recognition"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Video
+oppo:Video rdf:type owl:NamedIndividual ,
+                    oppo:IdentityPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Video ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:IdentityPersonalData ;
+   rdfs:label "Video"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#VoiceRecognition
+oppo:VoiceRecognition rdf:type owl:NamedIndividual ,
+                               oppo:BiometricPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:VoiceRecognition ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:BiometricPersonalData ;
+   rdfs:label "Voice Recognition"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#VoiceRecording
+oppo:VoiceRecording rdf:type owl:NamedIndividual .
+
+
+###  http://umaine.edu/oppo/core/v1#WaterPercentage
+oppo:WaterPercentage rdf:type owl:NamedIndividual ,
+                              oppo:HealthPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:WaterPercentage ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:HealthPersonalData ;
+   rdfs:label "Water Percentage"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#WebBeacon
+oppo:WebBeacon rdf:type owl:NamedIndividual ,
+                        oppo:TechnicalPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:WebBeacon ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:TechnicalPersonalData ;
+   rdfs:label "Web Beacon"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#Weight
+oppo:Weight rdf:type owl:NamedIndividual ,
+                     oppo:DemographicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:Weight ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:DemographicPersonalData ;
+   rdfs:label "Weight"
+ ] .
+
+
+###  http://umaine.edu/oppo/core/v1#White
+oppo:White rdf:type owl:NamedIndividual ,
+                    oppo:EthnicPersonalData .
+
+[ rdf:type owl:Axiom ;
+   owl:annotatedSource oppo:White ;
+   owl:annotatedProperty rdf:type ;
+   owl:annotatedTarget oppo:EthnicPersonalData ;
+   rdfs:label "White" ;
+   skos:definition "A person having origins in any of the original peoples of Europe, the Middle East, or North Africa."
+ ] .
+
+
+###  Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi
