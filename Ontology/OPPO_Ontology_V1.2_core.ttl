@@ -464,7 +464,8 @@ oppo:BiometricPersonalData rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#BiometrybasedAuthenticationMechanism
 oppo:BiometrybasedAuthenticationMechanism rdf:type owl:Class ;
                                           rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
-                                          rdfs:label "Biometry-based Authentication Mechanism"@en .
+                                          rdfs:label "Biometry-based Authentication Mechanism"@en ;
+                                          skos:definition "a single factor authentication mechanism which requires to match any biometric information such as fingerprint and facial recognition." .
 
 
 ###  http://umaine.edu/oppo/core/v1#CryptographicHashingMechanism
@@ -545,13 +546,22 @@ oppo:DataStorageDurationPractice rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#DataStorageErasurePractice
 oppo:DataStorageErasurePractice rdf:type owl:Class ;
-                                rdfs:subClassOf oppo:DataStorageLocationPractice ;
-                                rdfs:label "data erasure rectification practice"@en .
+                                rdfs:subClassOf oppo:DataStorageModificationPractice ;
+                                rdfs:label "data storage erasure practice"@en ;
+                                skos:definition "Privacy regulations such as GDPR and CCPA require organizations to provide users with right to erase the stored data. The data practices related to erasure of collected or stored data include how long it takes to process users' deletion request or how the user can exercise the data erasure right (Request type)." .
 
 
 ###  http://umaine.edu/oppo/core/v1#DataStorageLocationPractice
 oppo:DataStorageLocationPractice rdf:type owl:Class ;
-                                 rdfs:subClassOf oppo:DataStoragePractice ;
+                                 rdfs:subClassOf oppo:DataStoragePractice ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty oppo:hasStorageEntity ;
+                                                   owl:someValuesFrom oppo:StorageEntity
+                                                 ] ,
+                                                 [ rdf:type owl:Restriction ;
+                                                   owl:onProperty oppo:hasStorageLocation ;
+                                                   owl:someValuesFrom oppo:SpatialEntity
+                                                 ] ;
                                  rdfs:label "data storage location practice"@en ;
                                  skos:definition "The data practices that discuss where and how the collected data is stored." .
 
@@ -595,8 +605,9 @@ oppo:DataStoragePractice rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#DataStorageRectificationPractice
 oppo:DataStorageRectificationPractice rdf:type owl:Class ;
-                                      rdfs:subClassOf oppo:DataStorageLocationPractice ;
-                                      rdfs:label "data storage rectification practice"@en .
+                                      rdfs:subClassOf oppo:DataStorageModificationPractice ;
+                                      rdfs:label "data storage rectification practice"@en ;
+                                      skos:definition "Privacy regulations such as GDPR and CCPA require organizations to provide users with right to modify or update the stored inaccurate data. The data practices related to  modification of collected or stored data include how long it takes to process users' data modification request or how the user can exercise the data rectification right." .
 
 
 ###  http://umaine.edu/oppo/core/v1#DataSubjectRole
@@ -610,7 +621,8 @@ oppo:DataSubjectRole rdf:type owl:Class ;
 oppo:DefiniteDurationDescription rdf:type owl:Class ;
                                  rdfs:subClassOf time:GeneralDurationDescription ;
                                  owl:disjointWith oppo:IndefiniteDurationDescription ;
-                                 rdfs:label "Definite Duration Description"@en .
+                                 rdfs:label "Definite Duration Description"@en ;
+                                 skos:definition "An organization may describe specifically (definite) how long the collected data will be stored (retention period) or how long the organization may take to response to users' request (response delay), referred as definite duration description." .
 
 
 ###  http://umaine.edu/oppo/core/v1#DemographicPersonalData
@@ -630,7 +642,8 @@ oppo:EncryptionMechanism rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#EndToEndEncryptionMechanism
 oppo:EndToEndEncryptionMechanism rdf:type owl:Class ;
                                  rdfs:subClassOf oppo:EncryptionMechanism ;
-                                 rdfs:label "end-to-end encryption mechanism"@en .
+                                 rdfs:label "end-to-end encryption mechanism"@en ;
+                                 skos:definition "an encryption mechanism to provide secure communication and prevent a third-party to get access to stored or transferred data." .
 
 
 ###  http://umaine.edu/oppo/core/v1#EthnicPersonalData
@@ -703,7 +716,8 @@ oppo:IndefiniteDurationDescription rdf:type owl:Class ;
                                                          rdf:type owl:Class
                                                        ] ;
                                    rdfs:subClassOf time:GeneralDurationDescription ;
-                                   rdfs:label "Indefinite Duration Description"@en .
+                                   rdfs:label "Indefinite Duration Description"@en ;
+                                   skos:definition "An organization may describe unspecifically (indefinite) how long the collected data will be stored (retention period) (such as as long as they need) or how long the organization may take to response to users' request (response delay) (such as : earliest possible time), referred as indefinite duration description." .
 
 
 ###  http://umaine.edu/oppo/core/v1#IndividualData
@@ -730,7 +744,8 @@ oppo:MinorDataSubjectRole rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism
 oppo:OneFactorAuthenticationMechanism rdf:type owl:Class ;
                                       rdfs:subClassOf oppo:AuthenticationMechanism ;
-                                      rdfs:label "one factor authentication mechanism"@en .
+                                      rdfs:label "one factor authentication mechanism"@en ;
+                                      skos:definition "a single authentication mechanism that requires matching one factor such as biometric information or password or token." .
 
 
 ###  http://umaine.edu/oppo/core/v1#OrganizationalDataProviderRole
@@ -744,7 +759,8 @@ oppo:OrganizationalDataProviderRole rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#PasswordbasedAuthenticationMechanism
 oppo:PasswordbasedAuthenticationMechanism rdf:type owl:Class ;
                                           rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
-                                          rdfs:label "Password-based Authentication Mechanism"@en .
+                                          rdfs:label "Password-based Authentication Mechanism"@en ;
+                                          skos:definition "a single factor authentication mechanism which requires to match user defined password." .
 
 
 ###  http://umaine.edu/oppo/core/v1#PersonalData
@@ -853,7 +869,8 @@ oppo:ThirdPartyDataRecipientRole rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#TokenbasedAuthenticationMechanism
 oppo:TokenbasedAuthenticationMechanism rdf:type owl:Class ;
                                        rdfs:subClassOf oppo:OneFactorAuthenticationMechanism ;
-                                       rdfs:label "Token-based Authentication Mechanism"@en .
+                                       rdfs:label "Token-based Authentication Mechanism"@en ;
+                                       skos:definition "a single factor authentication mechanism which requires to match token." .
 
 
 ###  http://umaine.edu/oppo/core/v1#TwoFactorAuthenticationMechanism
