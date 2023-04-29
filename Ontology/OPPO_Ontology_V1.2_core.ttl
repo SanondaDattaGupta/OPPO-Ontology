@@ -570,19 +570,17 @@ oppo:DataStorageLocationPractice rdf:type owl:Class ;
 oppo:DataStorageModificationPractice rdf:type owl:Class ;
                                      rdfs:subClassOf oppo:DataStoragePractice ,
                                                      [ rdf:type owl:Restriction ;
-                                                       owl:onProperty oppo:hasResponseDelay ;
-                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass time:GeneralDurationDescription
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
                                                        owl:onProperty oppo:hasStorageEntity ;
-                                                       owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass oppo:StorageEntity
+                                                       owl:someValuesFrom oppo:StorageEntity
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty oppo:hasStorageLocation ;
+                                                       owl:someValuesFrom oppo:SpatialEntity
+                                                     ] ,
+                                                     [ rdf:type owl:Restriction ;
+                                                       owl:onProperty oppo:hasResponseDelay ;
                                                        owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
-                                                       owl:onClass oppo:SpatialEntity
+                                                       owl:onClass time:GeneralDurationDescription
                                                      ] ,
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty oppo:hasRequestType ;

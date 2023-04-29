@@ -807,23 +807,23 @@
     </SubClassOf>
     <SubClassOf>
         <Class IRI="DataStorageModificationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageEntity"/>
+            <Class IRI="StorageEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageModificationPractice"/>
+        <ObjectSomeValuesFrom>
+            <ObjectProperty IRI="hasStorageLocation"/>
+            <Class IRI="SpatialEntity"/>
+        </ObjectSomeValuesFrom>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="DataStorageModificationPractice"/>
         <ObjectExactCardinality cardinality="1">
             <ObjectProperty IRI="hasResponseDelay"/>
             <Class abbreviatedIRI="time:GeneralDurationDescription"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageEntity"/>
-            <Class IRI="StorageEntity"/>
-        </ObjectExactCardinality>
-    </SubClassOf>
-    <SubClassOf>
-        <Class IRI="DataStorageModificationPractice"/>
-        <ObjectExactCardinality cardinality="1">
-            <ObjectProperty IRI="hasStorageLocation"/>
-            <Class IRI="SpatialEntity"/>
         </ObjectExactCardinality>
     </SubClassOf>
     <SubClassOf>
