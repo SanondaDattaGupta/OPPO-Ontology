@@ -15,7 +15,7 @@
 @prefix oboInOwl: <http://www.geneontology.org/formats/oboInOwl#> .
 
 obo:iao.owl a owl:Ontology ;
-	owl:versionIRI <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ;
+	owl:versionIRI <https://github.com/SanondaDattaGupta/OPPO-Ontology/blob/main/Ontology/OPPO-IAO-Ontology.ttl> ;
 	protege:defaultLanguage "en"^^xsd:string ;
 	dc:contributor "Adam Goldstein"@en , "Alan Ruttenberg"@en , "Albert Goldfain"@en , "Barry Smith"@en , "Bjoern Peters"@en , "Carlo Torniai"@en , "Chris Mungall"@en , "Chris Stoeckert"@en , "Christian A. Boelling"@en , "Clint Dowland"@en , "Darren Natale"@en , "David Osumi-Sutherland"@en , "Gwen Frishkoff"@en , "Holger Stenzhorn"@en , "James A. Overton"@en , "James Malone"@en , "Jennifer Fostel"@en , "Jie Zheng"@en , "Jonathan Rees"@en , "Larisa Soldatova"@en , "Lawrence Hunter"@en , "Mathias Brochhausen"@en , "Matt Brush"@en , "Melanie Courtot"@en , "Michel Dumontier"@en , "Paolo Ciccarese"@en , "Pat Hayes"@en , "Philippe Rocca-Serra"@en , "Randy Dipert"@en , "Ron Rudnicki"@en , "Satya Sahoo"@en , "Sivaram Arabandi"@en , "Werner Ceusters"@en , "William Duncan"@en , "William Hogan"@en , "Yongqun (Oliver) He"@en ;
 	dc:description "The Information Artifact Ontology (IAO) is an ontology of information entities, originally driven by work by the OBI digital entity and realizable information entity branch." ;
