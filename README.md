@@ -14,4 +14,4 @@ The development version of OPPO (OPPO_Ontology_Verson1.1.owl (or OPPO_Ontology_V
 
 It is to be noted that,  downloading the OPPO_Ontology_Verson1.1.owl or OPPO_Ontology_Verson1.1.ttl file and opening it through Protege may result in 19000 concepts as it does not try to import the other files which are smaller and only includes concepts which are related to OPPO. 
 
-```To get a better impression of the ontology or to casually explore the core concepts of the OPPO, please refer to the OPPO_Ontology_V1.2_core.ttl.```
+```To get a better impression of the ontology or to casually explore the core concepts of the OPPO, please refer to the OPPO_Ontology_Minimal_Import.ttl.```
