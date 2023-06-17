@@ -13,7 +13,13 @@
 @prefix terms: <http://purl.org/dc/terms/> .
 @base <http://umaine.edu/oppo/core/v1> .
 
-<http://umaine.edu/oppo/core/v1> rdf:type owl:Ontology .
+<http://umaine.edu/oppo/core/v1#> rdf:type owl:Ontology ;
+                                   owl:imports <https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-IAO-Ontology.ttl> ,
+                                               <https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-OBI-Ontology.ttl> ,
+                                              <https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-OMRSE-ontology.ttl> ,
+                                               <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
+                                               <http://www.w3.org/2006/time> ,
+                                               <https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/dpvo-ontology.ttl> .
 
 #################################################################
 #    Annotation properties
