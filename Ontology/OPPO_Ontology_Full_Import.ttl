@@ -18,7 +18,7 @@
                                                <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ,
                                                <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ,
                                                <http://www.w3.org/2006/time> ,
-                                               dpvo: .
+                                               <https://w3id.org/dpv/dpv-owl> .
 
 #################################################################
 #    Annotation properties
