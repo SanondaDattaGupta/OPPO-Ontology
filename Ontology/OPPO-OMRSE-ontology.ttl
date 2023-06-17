@@ -20,7 +20,7 @@
 @base <http://purl.obolibrary.org/obo/omrse.owl> .
 
 <http://purl.obolibrary.org/obo/omrse.owl> rdf:type owl:Ontology ;
-                                            owl:versionIRI <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ;
+                                            owl:versionIRI <http://github.com/SanondaDattaGupta/OPPO-Ontology/blob/main/Ontology/OPPO-OBI-Ontology.ttl> ;
                                             dc:contributor "Daniel Welch" ;
                                             dc:creator "Amanda Hicks" ,
                                                        "Mathias Brochhausen"@en ,
