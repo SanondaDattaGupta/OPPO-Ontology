@@ -22,6 +22,7 @@
     <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
     <Import>http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl</Import>
     <Import>http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl</Import>
+     <Import>http://purl.obolibrary.org/obo/obi/2023-03-10/obi.owl</Import>
     <Import>http://www.w3.org/2006/time</Import>
     <Import>https://w3id.org/dpv/dpv-owl#</Import>
     <Declaration>
