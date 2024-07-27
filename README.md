@@ -2,7 +2,7 @@
 
 This ontology is a domain specific ontology that aims at capturing detailed data practices descibed in OSNs' privacy policies. 
 
-The OPPO mailing lists are as follows: sanonda.datta,gupta@drexel.edu and torsten.hahmann@maine.edu. 
+The OPPO mailing lists are as follows: sanonda.datta.gupta@drexel.edu and torsten.hahmann@maine.edu. Feel free to reach out if you any queries. 
 
 The development version of OPPO (OPPO_Ontology_Full_Import.owl (or OPPO_Ontology_Full_Import.ttl)) imports all ontologies/files present in the OPPO-Ontology/Ontology directory. It includes the following ontologies:
 
