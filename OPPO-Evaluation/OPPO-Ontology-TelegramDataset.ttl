@@ -304,10 +304,3 @@ _:TelegramComplementPurpose rdf:type owl:Class ;
 
 :TelegramPractice11 oppo:actsOn oppo:CreditCardNumber.
 
-
-
-
-
-
-
-
