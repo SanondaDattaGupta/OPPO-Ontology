@@ -19,3 +19,9 @@ OPPO was evaluated by creating a dataset from Telegram's privacy policy. The Com
 <u>It is to be noted that,  downloading the (OPPO_Ontology_Full_Import.owl (or OPPO_Ontology_Full_Import.ttl)) file and opening it through Protege may result in 19000 concepts as it does not try to import the other files which are smaller and only includes concepts which are related to OPPO.</u>
 
 `` All validations using external tools (e.g., OOPS! and RDF validators) were conducted on the OPPO_Ontology_Minimal_Import_RDF file, as the full ontology caused performance limitations in web-based validation tools. To get a better impression of the ontology or to casually explore the core concepts of the OPPO, please refer to the OPPO_Ontology_Minimal_Import.ttl.``
+
+## License
+
+The OPPO ontology is licensed under the Creative Commons Attribution 4.0 International (CC BY 4.0) License.  
+https://creativecommons.org/licenses/by/4.0/
+
