@@ -1,0 +1,1812 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+         xmlns:owl="http://www.w3.org/2002/07/owl#"
+         xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+
+  <owl:Ontology rdf:about="http://umaine.edu/oppo/core/v1#">
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-IAO-Ontology.ttl"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-OBI-Ontology.ttl"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-OMRSE-ontology.ttl"/>
+    <owl:imports rdf:resource="http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl"/>
+    <owl:imports rdf:resource="http://www.w3.org/2006/time"/>
+    <owl:imports rdf:resource="https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/dpvo-ontology.ttl"/>
+  </owl:Ontology>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#definition">
+  </owl:AnnotationProperty>
+
+  <owl:AnnotationProperty rdf:about="http://www.w3.org/2004/02/skos/core#note">
+  </owl:AnnotationProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#actsIn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000051"/>
+    <rdfs:label>acts in</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#actsOn">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:label>acts on</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#allows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyRegulation"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label>allows</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#appliesTo">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:label>applies to</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#disallows">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyRegulation"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label>disallows</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasDataPractice">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyPolicy"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label>has data practice</rdfs:label>
+  </owl:ObjectProperty>
+
+<owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasDurationDescription">
+  <owl:equivalentProperty rdf:resource="http://www.w3.org/2006/time#hasDurationDescription"/>
+</owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasDurationDescription">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain>
+      <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStorageDurationPractice">
+        <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataStoragePractice"/>
+        <rdfs:subClassOf>
+          <owl:Restriction>
+            <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasDurationDescription"/>
+            <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+          </owl:Restriction>
+        </rdfs:subClassOf>
+
+        <rdfs:label xml:lang="en">data storage duration practice</rdfs:label>
+        <skos:definition>The data practices that discusses about the duration of the storage of personal data.</skos:definition>
+      </owl:Class>
+    </rdfs:domain>
+
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:label>has duration description</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasPolicy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/OBI_0000245"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyPolicy"/>
+    <rdfs:label>has policy</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasPurpose">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:range rdf:resource="https://w3id.org/dpv/dpv-owl#Purpose"/>
+    <rdfs:label>has purpose</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasResponseDelay">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:label>has response delay</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasSecurityMechanism">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+    <rdfs:label>has security mechanism</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasStorageEntity">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageLocationPractice"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#StorageEntity"/>
+    <rdfs:label>has storage entity</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#hasStorageLocation">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageLocationPractice"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#SpatialEntity"/>
+    <rdfs:label>has storage location</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#isAbout">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataSubjectRole"/>
+    <rdfs:label>is about</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#isProvidedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataProviderRole"/>
+    <rdfs:label>is provided by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#isReceivedBy">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:range rdf:resource="http://umaine.edu/oppo/core/v1#DataRecipientRole"/>
+    <rdfs:label>is received by</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:ObjectProperty rdf:about="http://umaine.edu/oppo/core/v1#isRecipientOf">
+    <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+    <owl:inverseOf rdf:resource="http://umaine.edu/oppo/core/v1#isReceivedBy"/>
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataRecipientRole"/>
+    <rdfs:range rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:label>is recipient of</rdfs:label>
+  </owl:ObjectProperty>
+
+  <owl:DatatypeProperty rdf:about="http://umaine.edu/oppo/core/v1#hasRequestType">
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has request type</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://umaine.edu/oppo/core/v1#hasResponseType">
+    <rdfs:domain rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    <rdfs:label>has response type</rdfs:label>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#hours">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#minutes">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#months">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#seconds">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#weeks">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:DatatypeProperty rdf:about="http://www.w3.org/2006/time#years">
+    <rdfs:domain rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#decimal"/>
+  </owl:DatatypeProperty>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000002">
+    <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000003">
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000004">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    <rdfs:label>independent continuant</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000006">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SpatialEntity"/>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000011">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    <rdfs:label>spatiotemporal region</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000015">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    <rdfs:label>process</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000016">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    <rdfs:label>disposition</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000017">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000020">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+        <rdfs:label>specifically dependent continuant</rdfs:label>
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:label>realizable entity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000023">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000017"/>
+    <rdfs:label>role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000029">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SpatialEntity"/>
+    <rdfs:label>site</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000031">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000002"/>
+    <rdfs:label>generically dependent continuant</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000035">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000003"/>
+    <rdfs:label>process boundary</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000040">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    <owl:disjointWith rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:label>material entity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000140">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:label>continuant fiat boundary</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/BFO_0000141">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000004"/>
+    <rdfs:label>immaterial entity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000027">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#isAbout"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#DataSubjectRole"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#isProvidedBy"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#DataProviderRole"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <owl:disjointWith rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label>data item</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000030">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000031"/>
+    <rdfs:label>information content entity</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/IAO_0000178">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <rdfs:label>material information bearer</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/NCBITaxon_9606">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <rdfs:label>homo sapiens</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OBI_0000245">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#actsIn"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000051"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000023">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000040"/>
+    <rdfs:label>collection of humans</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000038">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00002072">
+        <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000048"/>
+        <rdfs:label>role in human social processes</rdfs:label>
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:label>legal person role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000048">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000023"/>
+    <rdfs:label>material entity role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://purl.obolibrary.org/obo/OMRSE_00000051">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000048"/>
+    <rdfs:label>organization role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/gdpr#GDPRMinorDataSubject">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#MinorDataSubjectRole">
+        <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataSubjectRole"/>
+        <rdfs:label xml:lang="en">minor data subject role</rdfs:label>
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">GDPR minor data subject</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/gdpr#HealthData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#SensitiveData"/>
+    <rdfs:label xml:lang="en"> GDPR Health Data</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/gdpr#HealthStatusData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#HealthData"/>
+    <rdfs:label xml:lang="en">Health Status Data</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/gdpr#SensitiveData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">GDPR- sensitive personal data</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#ActivityPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">activity personal data</rdfs:label>
+    <skos:definition>Data that reflects the activity of an individual, such as food habits, sleeping log, or social media post.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#AggregatedData">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <owl:disjointWith rdf:resource="http://umaine.edu/oppo/core/v1#IndividualData"/>
+    <rdfs:label xml:lang="en">aggregated data</rdfs:label>
+    <skos:definition>Agrregated data is the high-level data that is acuired by aggregating individual-level data.</skos:definition>
+    <skos:note>https://en.wikipedia.org/wiki/Aggregate_data</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#AnonymizedData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#IndividualData"/>
+    <rdfs:label xml:lang="en">anonymized data</rdfs:label>
+    <skos:definition>Data which does not relate to an identified or identifiable natural person or to personal data rendered anonymous in such a manner that the data subject is not or no longer identifiable.</skos:definition>
+    <skos:note>https://ico.org.uk/media/about-the-ico/consultations/2619862/anonymisation-intro-and-first-chapter.pdf</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#AuditingPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataSecurityPractice"/>
+    <rdfs:label xml:lang="en">data security auditing practice</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#AuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+    <rdfs:label xml:lang="en">authentication mechanism</rdfs:label>
+    <skos:definition>Authentication mechanism refers to the types of security mechanism, which enable the authenticated users to have access to their personal information. Usually OSNs follow two types of authentication mechanism: One Factor Authentication Mechanism and Two Factor Authentication Mechanism.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#BiometricPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#HealthData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">biometric personal data</rdfs:label>
+    <skos:definition xml:lang="en">Biometric is the measurement and statistical analysis of people's unique and behavioral characteristics.</skos:definition>
+    <skos:note>Please also see: https://www.techtarget.com/searchsecurity/definition/biometrics</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#BiometrybasedAuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism"/>
+    <rdfs:label xml:lang="en">Biometry-based Authentication Mechanism</rdfs:label>
+    <skos:definition>a single factor authentication mechanism which requires to match any biometric information such as fingerprint and facial recognition.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#CryptographicHashingMechanism">
+    <rdfs:subClassOf>
+      <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#HashingMechanism">
+        <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+        <rdfs:label xml:lang="en">hashing mechanism</rdfs:label>
+        <skos:definition>Hashing a security mechanism that map the actual data into a fixed-length value.</skos:definition>
+      </owl:Class>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">cryptographic hashing mechanism</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataAccessPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataSecurityPractice"/>
+    <rdfs:label xml:lang="en">data security access practice</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataPractice">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#actsOn"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasPurpose"/>
+        <owl:someValuesFrom rdf:resource="https://w3id.org/dpv/dpv-owl#Purpose"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasSecurityMechanism"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <owl:disjointWith rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyPolicy"/>
+    <owl:disjointWith rdf:resource="http://umaine.edu/oppo/core/v1#PrivacyRegulation"/>
+    <rdfs:label xml:lang="en">data practice</rdfs:label>
+    <skos:definition>The process an organization follows to collect, process, share, or store the personal data.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataProviderRole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000048"/>
+    <rdfs:label xml:lang="en">data provider role</rdfs:label>
+    <skos:definition>Data provider defines as organizations or individuals which provide data to another organization(s) or individual(s).</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataRecipientRole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000051"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#isRecipientOf"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">data recipient role</rdfs:label>
+    <skos:definition>Data provider can be any organization or individual who provides data to the organization.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataRestorationPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataSecurityPractice"/>
+    <rdfs:label xml:lang="en">data security restoration practice</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataSecurityPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label xml:lang="en">data security practice</rdfs:label>
+    <skos:definition>According to the privacy regulations organization are required to mainatin proper security to protect the collected data-- often referred as  data security practice.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStorageErasurePractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice"/>
+    <rdfs:label xml:lang="en">data storage erasure practice</rdfs:label>
+    <skos:definition>Privacy regulations such as GDPR and CCPA require organizations to provide users with right to erase the stored data. The data practices related to erasure of collected or stored data include how long it takes to process users' deletion request or how the user can exercise the data erasure right (Request type).</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStorageLocationPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataStoragePractice"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasStorageEntity"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#StorageEntity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasStorageLocation"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#SpatialEntity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">data storage location practice</rdfs:label>
+    <skos:definition>The data practices that discuss where and how the collected data is stored.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataStoragePractice"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasStorageEntity"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#StorageEntity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasStorageLocation"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#SpatialEntity"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasResponseDelay"/>
+        <owl:cardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:cardinality>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasRequestType"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasResponseType"/>
+        <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">data storage modification practice</rdfs:label>
+    <skos:definition>The data practices that discuss how the data subject can modify (rectify/erase) the stored data.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStoragePractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+    <rdfs:label xml:lang="en">data storage practice</rdfs:label>
+    <skos:definition>Data practices that discusses about the storage of the collected data.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataStorageRectificationPractice">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataStorageModificationPractice"/>
+    <rdfs:label xml:lang="en">data storage rectification practice</rdfs:label>
+    <skos:definition>Privacy regulations such as GDPR and CCPA require organizations to provide users with right to modify or update the stored inaccurate data. The data practices related to  modification of collected or stored data include how long it takes to process users' data modification request or how the user can exercise the data rectification right.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DataSubjectRole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000038"/>
+    <rdfs:label xml:lang="en">data subject role</rdfs:label>
+    <skos:definition>Data subject is defined as an individual from which an organization or OSN may collect data. In other word, Data subject is an individual who can identified directly or indirectly by the collected data. Note that a data subject can also be a data provider.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DefiniteDurationDescription">
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <owl:disjointWith rdf:resource="http://umaine.edu/oppo/core/v1#IndefiniteDurationDescription"/>
+    <rdfs:label xml:lang="en">Definite Duration Description</rdfs:label>
+    <skos:definition>An organization may describe specifically (definite) how long the collected data will be stored (retention period) or how long the organization may take to response to users' request (response delay), referred as definite duration description.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#DemographicPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">demographic personal data</rdfs:label>
+    <skos:definition>Any socioeconomic information such as age, income, birth date.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#EncryptionMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+    <rdfs:label xml:lang="en">encryption mechanism</rdfs:label>
+    <skos:definition>Acccording to privacy regulations such as GDPR and CCPA, organizations must store collected data in a secured manner, One of the security mechanisms outline in the regulation is encryption mechanism, which is essentially crambling data into a secret code using a digital key (encrypt) that can be access to the actual data (decrypt) using the same  digital key.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#EndToEndEncryptionMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#EncryptionMechanism"/>
+    <rdfs:label xml:lang="en">end-to-end encryption mechanism</rdfs:label>
+    <skos:definition>an encryption mechanism to provide secure communication and prevent a third-party to get access to stored or transferred data.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#EthnicPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#SensitiveData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">ethnic personal data</rdfs:label>
+    <skos:definition>Data that is associated with revealing an individual's racial or ethnic origin.</skos:definition>
+    <skos:note>https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#FinancialPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#SensitiveData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">financial personal data</rdfs:label>
+    <skos:definition>Any information that is related to an invidual's financial status</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#FirstPartyDataRecipientRole">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataRecipientRole"/>
+    <rdfs:label xml:lang="en">first party data recipient role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#GeneticPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#HealthData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">genetic personal data</rdfs:label>
+    <skos:definition xml:lang="en">Data related to an invidual's genetic characteristics and tests (such as DNA, RNA, Genetic Disease )</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#HealthPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">health personal data</rdfs:label>
+    <skos:definition>Any information that is associated to an invidual's health condition</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#IdentityPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">identity personal data</rdfs:label>
+    <skos:note>Any information than can directly identify an individual</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#SensitiveData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">ideological personal data</rdfs:label>
+    <skos:definition xml:lang="en">Any sort of information that reflects the belief of an individual (such as political, religious belief)</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#IndefiniteDurationDescription">
+    <owl:equivalentClass>
+      <owl:Class>
+        <owl:intersectionOf>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+            <rdf:rest>
+              <rdf:Description>
+                <rdf:first>
+                  <owl:Class>
+                    <owl:complementOf rdf:resource="http://umaine.edu/oppo/core/v1#DefiniteDurationDescription"/>
+                  </owl:Class>
+                </rdf:first>
+
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+              </rdf:Description>
+            </rdf:rest>
+
+          </rdf:Description>
+        </owl:intersectionOf>
+
+      </owl:Class>
+    </owl:equivalentClass>
+
+    <rdfs:subClassOf rdf:resource="http://www.w3.org/2006/time#GeneralDurationDescription"/>
+    <rdfs:label xml:lang="en">Indefinite Duration Description</rdfs:label>
+    <skos:definition>An organization may describe unspecifically (indefinite) how long the collected data will be stored (retention period) (such as as long as they need) or how long the organization may take to response to users' request (response delay) (such as : earliest possible time), referred as indefinite duration description.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#IndividualData">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+    <rdfs:label xml:lang="en">individual data</rdfs:label>
+    <skos:definition>Data that is associated to an individual.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#LegalPersonDataProviderRole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000038"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataProviderRole"/>
+    <rdfs:label xml:lang="en">legal person data provider role</rdfs:label>
+    <skos:definition xml:lang="en">Data subjects are eventually act in a legal person data provider role when they provide their data to an organization. Note that, data subject role and legal person data provider role are not equivalent. The reason is, an organization may collect data about a data subject from a third party in which case the data is still about the data subject, but the data subject does not act as a legal person data provider role</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#AuthenticationMechanism"/>
+    <rdfs:label xml:lang="en">one factor authentication mechanism</rdfs:label>
+    <skos:definition>a single authentication mechanism that requires matching one factor such as biometric information or password or token.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#OrganizationalDataProviderRole">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/OMRSE_00000051"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataProviderRole"/>
+    <rdfs:label xml:lang="en">organizational data provider role</rdfs:label>
+    <skos:definition xml:lang="en">Organization may recieve data from other organization (third-party they are affiliated with), in such cases, the third-party organization acts in organizationalDataProviderRole</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#PasswordbasedAuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism"/>
+    <rdfs:label xml:lang="en">Password-based Authentication Mechanism</rdfs:label>
+    <skos:definition>a single factor authentication mechanism which requires to match user defined password.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#PersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#IndividualData"/>
+    <rdfs:label xml:lang="en">personal data</rdfs:label>
+    <skos:definition>Personal data is any data that can directly or indirectly identify an individual.</skos:definition>
+    <skos:note>https://gdpr-info.eu/art-4-gdpr/</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#PrivacyPolicy">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasDataPractice"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">privacy policy</rdfs:label>
+    <skos:definition>A privacy policy is a legal contract between an organization and a privacy regulation that disclose the data practices of an organization in an attempt to comply with an specific privacy regulation.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#PrivacyRegulation">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#allows"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#disallows"/>
+        <owl:someValuesFrom rdf:resource="http://umaine.edu/oppo/core/v1#DataPractice"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">privacy regulation</rdfs:label>
+    <skos:definition>A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#Pseudonymization">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#SecurityMechanism"/>
+    <rdfs:label xml:lang="en">pseudonymization</rdfs:label>
+    <skos:definition>A securoty mechanism to replace personally identifiable information with pseudo or aritifical information.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#PseudonymizedPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">pseudonymized personal data</rdfs:label>
+    <skos:definition>Personal data that has been replaced using with pseudo or aritifical information.</skos:definition>
+    <skos:note>https://en.wikipedia.org/wiki/Pseudonymization</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#SecurityMechanism">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000030"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#appliesTo"/>
+        <owl:someValuesFrom rdf:resource="http://purl.obolibrary.org/obo/IAO_0000027"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">securiy mechanism</rdfs:label>
+    <skos:definition>According to the privacy regulations organization are required to follow certain security mechanisms such as authentication or encryption mechanism, while collecting, storing, and processing personal information.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#SexualPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/gdpr#SensitiveData"/>
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">sexual personal data</rdfs:label>
+    <skos:definition>Any data that is associated to the sexual identity of an individual.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#SpatialEntity">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000141"/>
+    <rdfs:label xml:lang="en">spatial entity</rdfs:label>
+    <skos:definition>Spatial location of storing personal data, such as Netharland, Finland.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#StatisticalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#AggregatedData"/>
+    <rdfs:label xml:lang="en">statistical data</rdfs:label>
+    <skos:definition>Data that are the outcome of the observation of aggregated data.</skos:definition>
+    <skos:note>https://www.statisticalaid.com/statistical-data-definition-types-and-requirements/</skos:note>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#StorageEntity">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/IAO_0000178"/>
+    <rdfs:label xml:lang="en">storage entity</rdfs:label>
+    <skos:definition>Storage type such as on device, or physical data center.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#TechnicalPersonalData">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#PersonalData"/>
+    <rdfs:label xml:lang="en">technical personal data</rdfs:label>
+    <skos:definition>Any data that are associated with an individual's interaction with technology such as device and interenet.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#ThirdPartyDataRecipientRole">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#DataRecipientRole"/>
+    <rdfs:label xml:lang="en">third party data recipient role</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#TokenbasedAuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism"/>
+    <rdfs:label xml:lang="en">Token-based Authentication Mechanism</rdfs:label>
+    <skos:definition>a single factor authentication mechanism which requires to match token.</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://umaine.edu/oppo/core/v1#TwoFactorAuthenticationMechanism">
+    <rdfs:subClassOf rdf:resource="http://umaine.edu/oppo/core/v1#AuthenticationMechanism"/>
+    <rdfs:subClassOf>
+      <owl:Restriction>
+        <owl:onProperty rdf:resource="http://umaine.edu/oppo/core/v1#hasSecurityMechanism"/>
+        <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:qualifiedCardinality>
+        <owl:onClass rdf:resource="http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism"/>
+      </owl:Restriction>
+    </rdfs:subClassOf>
+
+    <rdfs:label xml:lang="en">two factor authentication mechanism</rdfs:label>
+    <skos:definition>Two Factor Authentication Mechanism entails, two steps of One Factor Authentication Mechanism (e.g., Password + Biometrics)</skos:definition>
+  </owl:Class>
+
+  <owl:Class rdf:about="http://www.w3.org/2006/time#GeneralDurationDescription">
+    <owl:disjointUnionOf>
+      <rdf:Description>
+        <rdf:first rdf:resource="http://umaine.edu/oppo/core/v1#DefiniteDurationDescription"/>
+        <rdf:rest>
+          <rdf:Description>
+            <rdf:first rdf:resource="http://umaine.edu/oppo/core/v1#IndefiniteDurationDescription"/>
+            <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+          </rdf:Description>
+        </rdf:rest>
+
+      </rdf:Description>
+    </owl:disjointUnionOf>
+
+    <rdfs:label xml:lang="en">Generalized Duration Description</rdfs:label>
+  </owl:Class>
+
+  <owl:Class rdf:about="https://w3id.org/dpv/dpv-owl#Purpose">
+    <rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/BFO_0000016"/>
+  </owl:Class>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Age">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#American_Indian_or_Alaska_Native">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Asian">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BankAccount">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BillingAddress">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Black_or_African_American">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BloodPressure">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BodyTemperature">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Bot">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BrowserHistory">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#BrowserType">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Calender_Events">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Contacts">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Content_Interaction">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#CookieInformation">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Country">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#CreditCardNumber">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#CreditRating">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Credit Rating</rdfs:label>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DNA">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DateofBirth">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DeviceGeneralSetting">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DeviceLogs">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DeviceUniqueIdentifier">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DiagnosisSymptoms">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DigitalSignature">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#DrivingLicense">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Electrocardiogram">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Email">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Ethnicity">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#FacialRecognition">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Fax">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#FaxNumber">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#FingerGeometry">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#FingerPrint">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Food_Habit">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Genetic_Disease">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Genetric_Characteristics">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Heart-Rate">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Height">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Hispanic_or_Latino">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#IPAddress">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Image">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Image_of_the_Food">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#IrisRecognition">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Language">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#LogFiles">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Mail">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#MailingAddress">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Medication">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#MuscleFat">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Name">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#NationalId">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Nationality">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Native_Hawaiian_or_Other_pacific_Islander">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PassportNumber">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Payment_History">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Philosophical_Beliefs">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Phone">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PixelTags">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PolicyUpdate">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Political_Belief">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Posts">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PrivateChat">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Product_Uage">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PsychologicalData">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#PublicChat">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#RNA">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Race">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Religious_Belief">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#SearchTerm">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Serial_Number">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Sex">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#SexualIdentity">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#SexualPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Shared_Content">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#SiteRegistration">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Sleep_Log">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#SocialMediaAccount">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#SocialSecurityNumber">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Survey_Response">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Technical_Model">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#ThirdPartyPayment">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#TimeZone">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VehicleColor">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VehicleModel">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VehicleNumber">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VeinRecognition">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Video">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VoiceRecognition">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#VoiceRecording">
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#WaterPercentage">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#WebBeacon">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#Weight">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:NamedIndividual rdf:about="http://umaine.edu/oppo/core/v1#White">
+    <rdf:type rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+  </owl:NamedIndividual>
+
+  <owl:Axiom rdf:nodeID="genid27">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Age"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Age</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid28">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#American_Indian_or_Alaska_Native"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>American Indian or Alaska Native</rdfs:label>
+    <skos:definition>A person having origins in any of the original peoples of North and South America (including Central America), and who maintains tribal affiliation or community attachment.</skos:definition>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid29">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Asian"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>Asian</rdfs:label>
+    <skos:definition>A person having origins in any of the original peoples of the Far East, Southeast Asia, or the Indian subcontinent including, for example, Cambodia, China, India, Japan, Korea, Malaysia, Pakistan, the Philippine Islands, Thailand, and Vietnam.</skos:definition>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid30">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BankAccount"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Bank Account</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid31">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BillingAddress"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Billing Address</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid32">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Black_or_African_American"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>Black or African American</rdfs:label>
+    <skos:definition>A person having origins in any of the black racial groups of Africa. Terms such as &quot;Haitian&quot; or &quot;Negro&quot; can be used in addition to &quot;Black or African American.&quot;</skos:definition>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid33">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BloodPressure"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Blood Pressure</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid34">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BodyTemperature"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Body Temperature</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid35">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BrowserHistory"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Browser History</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid36">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#BrowserType"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Browser Type</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid37">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Calender_Events"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Calender Event</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid38">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Contacts"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Contacts</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid39">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Content_Interaction"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Content Interaction</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid40">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#CookieInformation"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Cookie Information</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid41">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Country"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Country</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid42">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#CreditCardNumber"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Credit Card Detail</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid43">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#CreditRating"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Credit Rating</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid44">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DNA"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+    <rdfs:label>DNA</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid45">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DateofBirth"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Date of Birth</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid46">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DeviceGeneralSetting"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Device General Information</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid47">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DeviceLogs"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Device Logs</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid48">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DeviceUniqueIdentifier"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Device Unique Identifier</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid49">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DiagnosisSymptoms"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Diagnosis Symptoms</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid50">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DigitalSignature"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Digital Signature</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid51">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#DrivingLicense"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Driving License</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid52">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Electrocardiogram"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Electro-Cardiogram</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid53">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Email"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Email</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid54">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Ethnicity"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Ethnicity</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid55">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#FacialRecognition"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Facial Recognition</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid56">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#FaxNumber"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Fax Number</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid57">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#FingerGeometry"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Finger Geometry</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid58">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#FingerPrint"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Finger Print</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid59">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Food_Habit"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Food Habit</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid60">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Genetic_Disease"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+    <rdfs:label>Genetic Disease</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid61">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Genetric_Characteristics"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+    <rdfs:label>Genetic Characteristics</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid62">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Height"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Height</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid63">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Hispanic_or_Latino"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>Hispanic or Latino</rdfs:label>
+    <skos:definition>A person of Cuban, Mexican, Puerto Rican, South or Central American, or other Spanish culture or origin, regardless of race. The term, &quot;Spanish origin,&quot; can be used in addition to &quot;Hispanic or Latino.&quot;</skos:definition>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid64">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#IPAddress"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>IP Address</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid65">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Image"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Image</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid66">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Image_of_the_Food"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:comment>Image of the Food</rdfs:comment>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid67">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#IrisRecognition"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Iris Recognition</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid68">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Language"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Language</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid69">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#LogFiles"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Log Files</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid70">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#MailingAddress"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Mailing Address</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid71">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Medication"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Medication</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid72">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#MuscleFat"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Muscle Fat</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid73">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Name"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:comment>Name may include any or both first name and last name.</rdfs:comment>
+    <rdfs:label>Name</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid74">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#NationalId"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>National ID</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid75">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Native_Hawaiian_or_Other_pacific_Islander"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>Native Hawaiian or Other Pacfic Islander</rdfs:label>
+    <skos:definition>A person having origins in any of the original peoples of Hawaii, Guam, Samoa, or other Pacific Islands.</skos:definition>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid76">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#PassportNumber"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Passport Number</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid77">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Payment_History"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Payment History</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid78">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Philosophical_Beliefs"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+    <rdfs:label>Philosophical Belief</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid79">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Phone"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Phone</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid80">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#PixelTags"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Pixel Tags</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid81">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Political_Belief"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+    <rdfs:label>Political Belief</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid82">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Posts"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:comment>Social Media Posts</rdfs:comment>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid83">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#PrivateChat"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:comment>Private Chat</rdfs:comment>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid84">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#PsychologicalData"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Psychological Data</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid85">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#PublicChat"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:comment>Public Chat</rdfs:comment>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid86">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#RNA"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#GeneticPersonalData"/>
+    <rdfs:label>RNA</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid87">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Race"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Race</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid88">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Religious_Belief"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdeologicalPersonalData"/>
+    <rdfs:label>Religious Belief</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid89">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#SearchTerm"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Search Term</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid90">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Serial_Number"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Serial Number</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid91">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Sex"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Sex</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid92">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#SexualIdentity"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#SexualPersonalData"/>
+    <rdfs:label>Sexual Identity</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid93">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Shared_Content"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Shared Content</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid94">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#SiteRegistration"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Site Registration</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid95">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Sleep_Log"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Sleeping Log</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid96">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#SocialMediaAccount"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Social Media Account</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid97">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#SocialSecurityNumber"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Social Security Number</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid98">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Survey_Response"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#ActivityPersonalData"/>
+    <rdfs:label>Survey Response</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid99">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Technical_Model"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Technical Model</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid100">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#ThirdPartyPayment"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#FinancialPersonalData"/>
+    <rdfs:label>Third Party Payment Firm</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid101">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#TimeZone"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Time Zone</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid102">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#VehicleNumber"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Vehicle Number</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid103">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#VeinRecognition"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Vein Recognition</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid104">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Video"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#IdentityPersonalData"/>
+    <rdfs:label>Video</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid105">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#VoiceRecognition"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#BiometricPersonalData"/>
+    <rdfs:label>Voice Recognition</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid106">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#WaterPercentage"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#HealthPersonalData"/>
+    <rdfs:label>Water Percentage</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid107">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#WebBeacon"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#TechnicalPersonalData"/>
+    <rdfs:label>Web Beacon</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid108">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#Weight"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#DemographicPersonalData"/>
+    <rdfs:label>Weight</rdfs:label>
+  </owl:Axiom>
+
+  <owl:Axiom rdf:nodeID="genid109">
+    <owl:annotatedSource rdf:resource="http://umaine.edu/oppo/core/v1#White"/>
+    <owl:annotatedProperty rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#type"/>
+    <owl:annotatedTarget rdf:resource="http://umaine.edu/oppo/core/v1#EthnicPersonalData"/>
+    <rdfs:label>White</rdfs:label>
+    <skos:definition>A person having origins in any of the original peoples of Europe, the Middle East, or North Africa.</skos:definition>
+  </owl:Axiom>
+
+</rdf:RDF>
