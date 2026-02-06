@@ -18,7 +18,6 @@
 									  
 
 #Definition of Telegram
-
 #Telegram is an instance of an organization that acts in a first party data recipient role
 
 :Telegram oppo:actsIn oppo:FirstPartyDataRecipientRole .
