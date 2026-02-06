@@ -2,7 +2,12 @@
 <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
          xmlns:owl="http://www.w3.org/2002/07/owl#"
          xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-         xmlns:skos="http://www.w3.org/2004/02/skos/core#">
+         xmlns:skos="http://www.w3.org/2004/02/skos/core#"
+         xmlns:dcterms="http://purl.org/dc/terms/">
+
+<owl:Ontology rdf:about="http://umaine.edu/oppo/core/v1#">
+  <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/" />
+</owl:Ontology>
 
   <owl:Ontology rdf:about="http://umaine.edu/oppo/core/v1#">
     <owl:imports rdf:resource="https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-IAO-Ontology.ttl"/>
