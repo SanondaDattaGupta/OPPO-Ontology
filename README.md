@@ -17,5 +17,4 @@ The OPPO ontology has also been extended to map GDPR's sensitive data with respe
 OPPO was evaluated by creating a dataset from Telegram's privacy policy. The Competency questions and its corresponding SPARQL query will be found in [CQ and SPARQL Query](https://github.com/SanondaDattaGupta/OPPO-Ontology/blob/main/OPPO-Evaluation/CQ%20and%20Sparql%20Query.md).
 
 <u>It is to be noted that,  downloading the (OPPO_Ontology_Full_Import.owl (or OPPO_Ontology_Full_Import.ttl)) file and opening it through Protege may result in 19000 concepts as it does not try to import the other files which are smaller and only includes concepts which are related to OPPO.</u>
-
-```To get a better impression of the ontology or to casually explore the core concepts of the OPPO, please refer to the OPPO_Ontology_Minimal_Import.ttl.```
+''' All validations using external tools (e.g., OOPS! and RDF validators) were conducted on the OPPO_Ontology_Minimal_Import_RDF file, as the full ontology caused performance limitations in web-based validation tools. To get a better impression of the ontology or to casually explore the core concepts of the OPPO, please refer to the OPPO_Ontology_Minimal_Import.ttl.```
