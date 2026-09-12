@@ -14,13 +14,26 @@
 @base <http://umaine.edu/oppo/core/v1#> .
 
 <http://umaine.edu/oppo/core/v1#> rdf:type owl:Ontology ;
-                                   terms:license <https://creativecommons.org/licenses/by/4.0/> ;
-                                   owl:imports <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
-                                               <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ,
-                                               <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ,
-                                              <http://purl.obolibrary.org/obo/obi/2023-03-10/obi.owl>,
-                                               <http://www.w3.org/2006/time> ,
-                                               <https://w3id.org/dpv/dpv-owl> .
+
+    terms:title "OPPO: Ontology for Privacy Policies of Online Social Networks"@en ;
+
+    terms:description "An ontology for representing fine-grained data retention, storage, and security practices described in online social network privacy policies."@en ;
+
+    terms:creator "Sanonda Datta Gupta" ,
+                  "Torsten Hahmann" ;
+
+    terms:license <https://creativecommons.org/licenses/by/4.0/> ;
+
+    owl:versionInfo "1.0.0" ;
+
+    owl:imports
+        <http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl> ,
+        <http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl> ,
+        <http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl> ,
+        <http://purl.obolibrary.org/obo/obi/2023-03-10/obi.owl> ,
+        <http://www.w3.org/2006/time> ,
+        <https://w3id.org/dpv/dpv-owl> .
+
 
 #################################################################
 #    Annotation properties
@@ -169,6 +182,13 @@ oppo:isRecipientOf rdf:type owl:ObjectProperty ,
                    rdfs:domain oppo:DataRecipientRole ;
                    rdfs:range obo:IAO_0000027 ;
                    rdfs:label "is recipient of" .
+
+###  http://umaine.edu/oppo/core/v1#providesAccessTo
+oppo:providesAccessTo rdf:type owl:ObjectProperty ;
+    rdfs:domain oppo:DataSecurityAccessPractice ;
+    rdfs:range obo:OMRSE_00000048 ;
+    rdfs:label "provides access to"@en ;
+    skos:definition "Relates a data security access practice description to the material entity role that the policy states is authorized to access the relevant data."@en .
 
 
 #################################################################
@@ -325,22 +345,35 @@ gdpr:GDPRMinorDataSubject rdf:type owl:Class ;
                           rdfs:label "GDPR minor data subject"@en .
 
 
+### http://umaine.edu/oppo/core/v1#OpinionPersonalData
+oppo:OpinionPersonalData rdf:type owl:Class ;
+    rdfs:subClassOf oppo:PersonalData ,
+                    gdpr:SpecialCategoryPersonalData ;
+    rdfs:label "opinion personal data"@en ;
+    skos:definition "Personal data that describes or reveals an individual's opinions."@en .
+
+
+### http://umaine.edu/gdpr#SpecialCategoryPersonalData
+gdpr:SpecialCategoryPersonalData rdf:type owl:Class ;
+    rdfs:subClassOf oppo:PersonalData ;
+    rdfs:label "GDPR Special Category Personal Data"@en .
+
 ###  http://umaine.edu/gdpr#HealthData
 gdpr:HealthData rdf:type owl:Class ;
-                rdfs:subClassOf gdpr:SensitiveData ;
+                rdfs:subClassOf gdpr:SpecialCategoryPersonalData ;
                 rdfs:label " GDPR Health Data"@en .
 
 
 ###  http://umaine.edu/gdpr#HealthStatusData
 gdpr:HealthStatusData rdf:type owl:Class ;
-                      rdfs:subClassOf gdpr:HealthData ;
+                      rdfs:subClassOf oppo:HealthPersonalData ;
                       rdfs:label "Health Status Data"@en .
 
 
 ###  http://umaine.edu/gdpr#SensitiveData
-gdpr:SensitiveData rdf:type owl:Class ;
-                   rdfs:subClassOf oppo:PersonalData ;
-                   rdfs:label "GDPR- sensitive personal data"@en .
+#gdpr:SensitiveData rdf:type owl:Class ;
+ #                  rdfs:subClassOf oppo:PersonalData ;
+ #                  rdfs:label "GDPR- sensitive personal data"@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#ActivityPersonalData
@@ -366,8 +399,8 @@ oppo:AnonymizedData rdf:type owl:Class ;
                     skos:note "https://ico.org.uk/media/about-the-ico/consultations/2619862/anonymisation-intro-and-first-chapter.pdf" .
 
 
-###  http://umaine.edu/oppo/core/v1#AuditingPractice
-oppo:AuditingPractice rdf:type owl:Class ;
+###  http://umaine.edu/oppo/core/v1#DataSecurityAuditingPractice
+oppo:DataSecurityAuditingPractice rdf:type owl:Class ;
                       rdfs:subClassOf oppo:DataSecurityPractice ;
                       rdfs:label "data security auditing practice"@en ;
                       skos:definition "a practice to inspect if the organization is followeing proper safeguard mecanisms to protect the collected data." .
@@ -382,8 +415,8 @@ oppo:AuthenticationMechanism rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#BiometricPersonalData
 oppo:BiometricPersonalData rdf:type owl:Class ;
-                           rdfs:subClassOf gdpr:HealthData ,
-                                           oppo:PersonalData ;
+                           rdfs:subClassOf oppo:PersonalData ,
+                                           gdpr:SpecialCategoryPersonalData ;
                            rdfs:label "biometric personal data"@en ;
                            skos:definition "Biometric is the measurement and statistical analysis of people's unique and behavioral characteristics."@en ;
                            skos:note "Please also see: https://www.techtarget.com/searchsecurity/definition/biometrics" .
@@ -399,11 +432,12 @@ oppo:BiometrybasedAuthenticationMechanism rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#CryptographicHashingMechanism
 oppo:CryptographicHashingMechanism rdf:type owl:Class ;
                                    rdfs:subClassOf oppo:HashingMechanism ;
-                                   rdfs:label "cryptographic hashing mechanism"@en .
+                                   rdfs:label "cryptographic hashing mechanism"@en ;
+                                   skos:definition "A hashing mechanism that uses a cryptographic hash function to transform data in a manner intended to prevent recovery of the original data."@en .
 
 
-###  http://umaine.edu/oppo/core/v1#DataAccessPractice
-oppo:DataAccessPractice rdf:type owl:Class ;
+###  http://umaine.edu/oppo/core/v1#DataSecurityAccessPractice
+oppo:DataSecurityAccessPractice rdf:type owl:Class ;
                         rdfs:subClassOf oppo:DataSecurityPractice ;
                         rdfs:label "data security access practice"@en ;
                         skos:definition "security practices that limit the access to data, thus prevent unauthorized access to the users' data." .
@@ -425,9 +459,10 @@ oppo:DataPractice rdf:type owl:Class ;
                                     owl:someValuesFrom oppo:SecurityMechanism
                                   ] ;
                   owl:disjointWith oppo:PrivacyPolicy ,
-                                   oppo:PrivacyRegulation ;
+                                   oppo:PrivacyRegulation ,
+                                   oppo:SecurityMechanism ;
                   rdfs:label "data practice"@en ;
-                  skos:definition "The process an organization follows to collect, process, share, or store the personal data." .
+                  skos:definition "An information content entity that describes a data practice stated in a privacy policy, such as how an organization stores, retains, modifies, or secures data."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#DataProviderRole
@@ -448,8 +483,8 @@ oppo:DataRecipientRole rdf:type owl:Class ;
                        skos:definition "Data provider can be any organization or individual who provides data to the organization." .
 
 
-###  http://umaine.edu/oppo/core/v1#DataRestorationPractice
-oppo:DataRestorationPractice rdf:type owl:Class ;
+###  http://umaine.edu/oppo/core/v1#DataSecurityRestorationPractice
+oppo:DataSecurityRestorationPractice rdf:type owl:Class ;
                              rdfs:subClassOf oppo:DataSecurityPractice ;
                              rdfs:label "data security restoration practice"@en ;
                              skos:definition "a practice that describes how a lost data can be recovered." .
@@ -469,6 +504,16 @@ oppo:DataStorageDurationPractice rdf:type owl:Class ;
                                                    owl:onProperty oppo:hasDurationDescription ;
                                                    owl:cardinality "1"^^xsd:nonNegativeInteger 
                                                  ] ;
+                                                owl:equivalentClass [
+                                 rdf:type owl:Class ;
+                                          owl:intersectionOf (
+                                            oppo:DataStoragePractice
+                                            [ rdf:type owl:Restriction ;
+                                              owl:onProperty oppo:hasDurationDescription ;
+                                              owl:someValuesFrom time:GeneralDurationDescription
+                                            ]
+                                )
+                            ] ;
                                  rdfs:label "data storage duration practice"@en ;
                                  skos:definition "The data practices that discusses about the duration of the storage of personal data." .
 
@@ -482,15 +527,29 @@ oppo:DataStorageErasurePractice rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#DataStorageLocationPractice
 oppo:DataStorageLocationPractice rdf:type owl:Class ;
-                                 rdfs:subClassOf oppo:DataStoragePractice ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty oppo:hasStorageEntity ;
-                                                   owl:someValuesFrom oppo:StorageEntity
-                                                 ] ,
-                                                 [ rdf:type owl:Restriction ;
-                                                   owl:onProperty oppo:hasStorageLocation ;
-                                                   owl:someValuesFrom oppo:SpatialEntity
-                                                 ] ;
+                                 rdfs:subClassOf oppo:DataStoragePractice ;
+                                                owl:equivalentClass [
+                                 rdf:type owl:Class ;
+                                                owl:intersectionOf (
+                                                  oppo:DataStoragePractice
+
+                                [ rdf:type owl:Class ;
+                                                owl:unionOf (
+
+                                [ rdf:type owl:Restriction ;
+                                                owl:onProperty oppo:hasStorageEntity ;
+                                                owl:someValuesFrom oppo:StorageEntity
+                                ]
+
+                                [ rdf:type owl:Restriction ;
+                                                owl:onProperty oppo:hasStorageLocation ;
+                                                owl:someValuesFrom oppo:SpatialEntity
+                                ]
+
+              )
+            ]
+        )
+    ] ;
                                  rdfs:label "data storage location practice"@en ;
                                  skos:definition "The data practices that discuss where and how the collected data is stored." .
 
@@ -498,14 +557,19 @@ oppo:DataStorageLocationPractice rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#DataStorageModificationPractice
 oppo:DataStorageModificationPractice rdf:type owl:Class ;
                                      rdfs:subClassOf oppo:DataStoragePractice ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty oppo:hasStorageEntity ;
-                                                       owl:someValuesFrom oppo:StorageEntity
-                                                     ] ,
-                                                     [ rdf:type owl:Restriction ;
-                                                       owl:onProperty oppo:hasStorageLocation ;
-                                                       owl:someValuesFrom oppo:SpatialEntity
-                                                     ] ,
+                                                      [ rdf:type owl:Restriction ;
+                                                      owl:onProperty oppo:actsOn ;
+                                                      owl:someValuesFrom obo:IAO_0000027
+                                                      ] ,
+                                                    # [ rdf:type owl:Restriction ;
+                                                     #  owl:onProperty oppo:hasStorageEntity ;
+                                                      # owl:someValuesFrom oppo:StorageEntity
+                                                     #] ,
+                                                     #[ rdf:type owl:Restriction ;
+                                                      # owl:onProperty oppo:hasStorageLocation ;
+                                                      # owl:someValuesFrom oppo:SpatialEntity
+                                                     #] ,
+
                                                      [ rdf:type owl:Restriction ;
                                                        owl:onProperty oppo:hasResponseDelay ;
                                                       owl:cardinality "1"^^xsd:nonNegativeInteger
@@ -574,8 +638,8 @@ oppo:EndToEndEncryptionMechanism rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#EthnicPersonalData
 oppo:EthnicPersonalData rdf:type owl:Class ;
-                        rdfs:subClassOf gdpr:SensitiveData ,
-                                        oppo:PersonalData ;
+                        rdfs:subClassOf oppo:PersonalData ,
+                                        gdpr:SpecialCategoryPersonalData ;
                         rdfs:label "ethnic personal data"@en ;
                         skos:definition "Data that is associated with revealing an individual's racial or ethnic origin." ;
                         skos:note "https://grants.nih.gov/grants/guide/notice-files/not-od-15-089.html" .
@@ -583,8 +647,7 @@ oppo:EthnicPersonalData rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#FinancialPersonalData
 oppo:FinancialPersonalData rdf:type owl:Class ;
-                           rdfs:subClassOf gdpr:SensitiveData ,
-                                           oppo:PersonalData ;
+                           rdfs:subClassOf oppo:PersonalData ;
                            rdfs:label "financial personal data"@en ;
                            skos:definition "Any information that is related to an invidual's financial status" .
 
@@ -592,13 +655,14 @@ oppo:FinancialPersonalData rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#FirstPartyDataRecipientRole
 oppo:FirstPartyDataRecipientRole rdf:type owl:Class ;
                                  rdfs:subClassOf oppo:DataRecipientRole ;
-                                 rdfs:label "first party data recipient role"@en .
+                                 rdfs:label "first party data recipient role"@en ;
+                                 skos:definition "A data recipient role that is realized by an organization when it receives a data item directly from a user."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#GeneticPersonalData
 oppo:GeneticPersonalData rdf:type owl:Class ;
-                         rdfs:subClassOf gdpr:HealthData ,
-                                         oppo:PersonalData ;
+                         rdfs:subClassOf oppo:PersonalData ,
+                                         gdpr:SpecialCategoryPersonalData ;
                          rdfs:label "genetic personal data"@en ;
                          skos:definition "Data related to an invidual's genetic characteristics and tests (such as DNA, RNA, Genetic Disease )"@en .
 
@@ -612,7 +676,8 @@ oppo:HashingMechanism rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#HealthPersonalData
 oppo:HealthPersonalData rdf:type owl:Class ;
-                        rdfs:subClassOf oppo:PersonalData ;
+                        rdfs:subClassOf oppo:PersonalData,
+                                        gdpr:HealthData ;
                         rdfs:label "health personal data"@en ;
                         skos:definition "Any information that is associated to an invidual's health condition" .
 
@@ -621,13 +686,14 @@ oppo:HealthPersonalData rdf:type owl:Class ;
 oppo:IdentityPersonalData rdf:type owl:Class ;
                           rdfs:subClassOf oppo:PersonalData ;
                           rdfs:label "identity personal data"@en ;
-                          skos:note "Any information than can directly identify an individual" .
+                          skos:definition "Personal data that directly identifies an individual."@en ;
+                          skos:note "Any information that can directly identify an individual."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#IdeologicalPersonalData
 oppo:IdeologicalPersonalData rdf:type owl:Class ;
-                             rdfs:subClassOf gdpr:SensitiveData ,
-                                             oppo:PersonalData ;
+                             rdfs:subClassOf oppo:PersonalData ,
+                                             gdpr:SpecialCategoryPersonalData ;
                              rdfs:label "ideological personal data"@en ;
                              skos:definition "Any sort of information that reflects the belief of an individual (such as political, religious belief)"@en .
 
@@ -664,7 +730,8 @@ oppo:LegalPersonDataProviderRole rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#MinorDataSubjectRole
 oppo:MinorDataSubjectRole rdf:type owl:Class ;
                           rdfs:subClassOf oppo:DataSubjectRole ;
-                          rdfs:label "minor data subject role"@en .
+                          rdfs:label "minor data subject role"@en ;
+                          skos:definition "A data subject role that is borne by a natural person who is considered a minor under the applicable privacy regulation."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#OneFactorAuthenticationMechanism
@@ -692,6 +759,7 @@ oppo:PasswordbasedAuthenticationMechanism rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#PersonalData
 oppo:PersonalData rdf:type owl:Class ;
                   rdfs:subClassOf oppo:IndividualData ;
+                  owl:disjointWith oppo:AnonymizedData ;
                   rdfs:label "personal data"@en ;
                   skos:definition "Personal data is any data that can directly or indirectly identify an individual." ;
                   skos:note "https://gdpr-info.eu/art-4-gdpr/" .
@@ -723,8 +791,8 @@ oppo:PrivacyRegulation rdf:type owl:Class ;
                        skos:definition "A privacy regulation is law or set of rules that are required to be followed by any organization that collect, process, and share personal data about an individual." .
 
 
-###  http://umaine.edu/oppo/core/v1#Pseudonymization
-oppo:Pseudonymization rdf:type owl:Class ;
+###  http://umaine.edu/oppo/core/v1#PseudonymizationMechanism
+oppo:PseudonymizationMechanism rdf:type owl:Class ;
                       rdfs:subClassOf oppo:SecurityMechanism ;
                       rdfs:label "pseudonymization mechanism"@en ;
                       skos:definition "A securoty mechanism to replace personally identifiable information with pseudo or aritifical information." .
@@ -745,14 +813,14 @@ oppo:SecurityMechanism rdf:type owl:Class ;
                                          owl:onProperty oppo:appliesTo ;
                                          owl:someValuesFrom obo:IAO_0000027
                                        ] ;
-                       rdfs:label "securiy mechanism"@en ;
-                       skos:definition "According to the privacy regulations organization are required to follow certain security mechanisms such as authentication or encryption mechanism, while collecting, storing, and processing personal information." .
+                       rdfs:label "security mechanism"@en ;
+                       skos:definition "An information content entity that describes a security mechanism stated in a privacy policy, such as encryption, authentication, hashing, or pseudonymization."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#SexualPersonalData
 oppo:SexualPersonalData rdf:type owl:Class ;
-                        rdfs:subClassOf gdpr:SensitiveData ,
-                                        oppo:PersonalData ;
+                        rdfs:subClassOf oppo:PersonalData ,
+                                        gdpr:SpecialCategoryPersonalData ;
                         rdfs:label "sexual personal data"@en ;
                         skos:definition "Any data that is associated to the sexual identity of an individual." .
 
@@ -789,7 +857,8 @@ oppo:TechnicalPersonalData rdf:type owl:Class ;
 ###  http://umaine.edu/oppo/core/v1#ThirdPartyDataRecipientRole
 oppo:ThirdPartyDataRecipientRole rdf:type owl:Class ;
                                  rdfs:subClassOf oppo:DataRecipientRole ;
-                                 rdfs:label "third party data recipient role"@en .
+                                 rdfs:label "third party data recipient role"@en ;
+                                 skos:definition "A data recipient role that is realized by an organization when it receives a data item indirectly through another organization."@en .
 
 
 ###  http://umaine.edu/oppo/core/v1#TokenbasedAuthenticationMechanism
@@ -801,12 +870,7 @@ oppo:TokenbasedAuthenticationMechanism rdf:type owl:Class ;
 
 ###  http://umaine.edu/oppo/core/v1#TwoFactorAuthenticationMechanism
 oppo:TwoFactorAuthenticationMechanism rdf:type owl:Class ;
-                                      rdfs:subClassOf oppo:AuthenticationMechanism ,
-                                                      [ rdf:type owl:Restriction ;
-                                                        owl:onProperty oppo:hasSecurityMechanism ;
-                                                        owl:qualifiedCardinality "2"^^xsd:nonNegativeInteger ;
-                                                        owl:onClass oppo:OneFactorAuthenticationMechanism
-                                                      ] ;
+                                      rdfs:subClassOf oppo:AuthenticationMechanism ;
                                       rdfs:label "two factor authentication mechanism"@en ;
                                       skos:definition "Two Factor Authentication Mechanism entails, two steps of One Factor Authentication Mechanism (e.g., Password + Biometrics)" .
 
@@ -816,11 +880,11 @@ time:GeneralDurationDescription rdf:type owl:Class ;
                                 owl:disjointUnionOf ( oppo:DefiniteDurationDescription
                                                       oppo:IndefiniteDurationDescription
                                                     ) ;
-                                rdfs:label "Generalized Duration Description"@en .
+                                rdfs:label "General Duration Description"@en .
 
 
 ###  https://w3id.org/dpv/dpv-owl#Purpose
-dpvo:Purpose rdfs:subClassOf obo:BFO_0000016 .
+###dpvo:Purpose rdfs:subClassOf obo:BFO_0000016. ## removed it
 
 
 #################################################################

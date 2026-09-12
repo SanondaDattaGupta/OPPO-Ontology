@@ -29,11 +29,10 @@
     <Prefix name="skos" IRI="http://www.w3.org/2004/02/skos/core#"/>
     <Prefix name="time" IRI="http://www.w3.org/2006/time#"/>
     <Prefix name="terms" IRI="http://purl.org/dc/terms/"/>
-    <Import>http://purl.obolibrary.org/obo/omrse/releases/2022-12-21/omrse.owl</Import>
+    <Import>https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/dpvo-ontology.ttl</Import>
     <Import>http://purl.obolibrary.org/obo/bfo/2019-08-26/bfo.owl</Import>
-    <Import>https://w3id.org/dpv/dpv-owl</Import>
-    <Import>http://purl.obolibrary.org/obo/iao/2022-11-07/iao.owl</Import>
-    <Import>http://purl.obolibrary.org/obo/obi/2023-03-10/obi.owl</Import>
+    <Import>https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-OMRSE-ontology.ttl</Import>
+    <Import>https://raw.githubusercontent.com/SanondaDattaGupta/OPPO-Ontology/main/Ontology/OPPO-IAO-Ontology.ttl</Import>
     <Import>http://www.w3.org/2006/time</Import>
     <Annotation>
         <AnnotationProperty abbreviatedIRI="terms:creator"/>
@@ -60,13 +59,55 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">1.0.0</Literal>
     </Annotation>
     <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000002"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000003"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000004"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000006"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000011"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000015"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000016"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000017"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000020"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000023"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000029"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:BFO_0000035"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000040"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000140"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="obo:IAO_0000030"/>
@@ -75,7 +116,25 @@
         <Class abbreviatedIRI="obo:IAO_0000178"/>
     </Declaration>
     <Declaration>
+        <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
+    </Declaration>
+    <Declaration>
         <Class abbreviatedIRI="obo:OBI_0000245"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMRSE_00000023"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMRSE_00000038"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMRSE_00000048"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMRSE_00000051"/>
+    </Declaration>
+    <Declaration>
+        <Class abbreviatedIRI="obo:OMRSE_00002072"/>
     </Declaration>
     <Declaration>
         <Class abbreviatedIRI="gdpr:GDPRMinorDataSubject"/>
@@ -617,6 +676,9 @@
     <Declaration>
         <AnnotationProperty abbreviatedIRI="skos:definition"/>
     </Declaration>
+    <Declaration>
+        <AnnotationProperty abbreviatedIRI="skos:note"/>
+    </Declaration>
     <EquivalentClasses>
         <Class IRI="DataStorageDurationPractice"/>
         <ObjectIntersectionOf>
@@ -669,20 +731,48 @@
         <Class abbreviatedIRI="obo:BFO_0000003"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000016"/>
+        <Class abbreviatedIRI="obo:BFO_0000017"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000017"/>
+        <Class abbreviatedIRI="obo:BFO_0000020"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:BFO_0000020"/>
         <Class abbreviatedIRI="obo:BFO_0000002"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000023"/>
+        <Class abbreviatedIRI="obo:BFO_0000017"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:BFO_0000029"/>
         <Class IRI="SpatialEntity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+        <Class abbreviatedIRI="obo:BFO_0000002"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:BFO_0000035"/>
         <Class abbreviatedIRI="obo:BFO_0000003"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000040"/>
+        <Class abbreviatedIRI="obo:BFO_0000004"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:BFO_0000140"/>
         <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+        <Class abbreviatedIRI="obo:BFO_0000004"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:IAO_0000027"/>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:IAO_0000027"/>
@@ -699,11 +789,19 @@
         </ObjectSomeValuesFrom>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:IAO_0000030"/>
+        <Class abbreviatedIRI="obo:BFO_0000031"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:IAO_0000178"/>
         <Class abbreviatedIRI="obo:BFO_0000040"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:NCBITaxon_9606"/>
+        <Class abbreviatedIRI="obo:BFO_0000040"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OBI_0000245"/>
         <Class abbreviatedIRI="obo:BFO_0000040"/>
     </SubClassOf>
     <SubClassOf>
@@ -718,8 +816,16 @@
         <Class abbreviatedIRI="obo:BFO_0000040"/>
     </SubClassOf>
     <SubClassOf>
+        <Class abbreviatedIRI="obo:OMRSE_00000038"/>
+        <Class abbreviatedIRI="obo:OMRSE_00002072"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class abbreviatedIRI="obo:OMRSE_00000048"/>
         <Class abbreviatedIRI="obo:BFO_0000023"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class abbreviatedIRI="obo:OMRSE_00000051"/>
+        <Class abbreviatedIRI="obo:OMRSE_00000048"/>
     </SubClassOf>
     <SubClassOf>
         <Class abbreviatedIRI="obo:OMRSE_00002072"/>
@@ -1087,8 +1193,20 @@
         <Class IRI="AuthenticationMechanism"/>
     </SubClassOf>
     <DisjointClasses>
+        <Class abbreviatedIRI="obo:BFO_0000002"/>
+        <Class abbreviatedIRI="obo:BFO_0000003"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class abbreviatedIRI="obo:BFO_0000040"/>
+        <Class abbreviatedIRI="obo:BFO_0000141"/>
+    </DisjointClasses>
+    <DisjointClasses>
         <Class abbreviatedIRI="obo:IAO_0000027"/>
         <Class IRI="DataPractice"/>
+    </DisjointClasses>
+    <DisjointClasses>
+        <Class IRI="AggregatedData"/>
+        <Class IRI="IndividualData"/>
     </DisjointClasses>
     <DisjointClasses>
         <Class IRI="AnonymizedData"/>
@@ -2072,6 +2190,11 @@
     </DataPropertyRange>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000004</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">independent continuant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:BFO_0000011</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">spatiotemporal region</Literal>
     </AnnotationAssertion>
@@ -2082,8 +2205,23 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000016</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">disposition</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000017</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">realizable entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:BFO_0000020</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">specifically dependent continuant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000023</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">role</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2092,13 +2230,38 @@
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000031</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">generically dependent continuant</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:BFO_0000035</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">process boundary</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000040</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">material entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:BFO_0000140</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">continuant fiat boundary</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:BFO_0000141</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">immaterial entity</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0000027</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">data item</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:IAO_0000030</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">information content entity</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2111,9 +2274,136 @@
         <Literal datatypeIRI="&rdf;PlainLiteral">homo sapiens</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000111"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000112"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">PMID: 16353909.AAPS J. 2005 Sep 22;7(2):E274-80. Review. The joint food and agriculture organization of the United Nations/World Health Organization Expert Committee on Food Additives and its role in the evaluation of the safety of veterinary drug residues in foods.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000114"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <AbbreviatedIRI>obo:IAO_0000122</AbbreviatedIRI>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000115"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">An entity that can bear roles, has members, and has a set of organization rules. Members of organizations are either organizations themselves or individual people. Members can bear specific organization member roles that are determined in the organization rules. The organization rules also determine how decisions are made on behalf of the organization by the organization members.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BP: The definition summarizes long email discussions on the OBI developer, roles, biomaterial and denrie branches. It leaves open if an organization is a material entity or a dependent continuant, as no consensus was reached on that.  The current placement as material is therefore temporary, in order to move forward with development. Here is the entire email summary, on which the definition is based:
+
+1) there are organization_member_roles (president, treasurer, branch
+editor), with individual persons as bearers
+
+2) there are organization_roles (employer, owner, vendor, patent holder)
+
+3) an organization has a charter / rules / bylaws, which specify what roles
+there are, how they should be realized, and how to modify the
+charter/rules/bylaws themselves.
+
+It is debatable what the organization itself is (some kind of dependent
+continuant or an aggregate of people). This also determines who/what the
+bearer of organization_roles&apos; are. My personal favorite is still to define
+organization as a kind of &apos;legal entity&apos;, but thinking it through leads to
+all kinds of questions that are clearly outside the scope of OBI.
+
+Interestingly enough, it does not seem to matter much where we place
+organization itself, as long as we can subclass it (University, Corporation,
+Government Agency, Hospital), instantiate it (Affymetrix, NCBI, NIH, ISO,
+W3C, University of Oklahoma), and have it play roles.
+
+This leads to my proposal: We define organization through the statements 1 -
+3 above, but without an &apos;is a&apos; statement for now. We can leave it in its
+current place in the is_a hierarchy (material entity) or move it up to
+&apos;continuant&apos;. We leave further clarifications to BFO, and close this issue
+for now.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000116"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">BP: The definition summarizes long email discussions on the OBI developer, roles, biomaterial and denrie branches. It leaves open if an organization is a material entity or a dependent continuant, as no consensus was reached on that.  The current placement as material is therefore temporary, in order to move forward with development. Here is the entire email summary, on which the definition is based:
+
+1) there are organization_member_roles (president, treasurer, branch
+editor), with individual persons as bearers
+
+2) there are organization_roles (employer, owner, vendor, patent holder)
+
+3) an organization has a charter / rules / bylaws, which specify what roles
+there are, how they should be realized, and how to modify the
+charter/rules/bylaws themselves.
+
+It is debatable what the organization itself is (some kind of dependent
+continuant or an aggregate of people). This also determines who/what the
+bearer of organization_roles&apos; are. My personal favorite is still to define
+organization as a kind of &apos;legal entity&apos;, but thinking it through leads to
+all kinds of questions that are clearly outside the scope of OBI.
+
+Interestingly enough, it does not seem to matter much where we place
+organization itself, as long as we can subclass it (University, Corporation,
+Government Agency, Hospital), instantiate it (Affymetrix, NCBI, NIH, ISO,
+W3C, University of Oklahoma), and have it play roles.
+
+This leads to my proposal: We define organization through the statements 1 -
+3 above, but without an &apos;is a&apos; statement for now. We can leave it in its
+current place in the is_a hierarchy (material entity) or move it up to
+&apos;continuant&apos;. We leave further clarifications to BFO, and close this issue
+for now.</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PERSON: Alan Ruttenberg</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PERSON: Bjoern Peters</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PERSON: Philippe Rocca-Serra</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000117"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">PERSON: Susanna Sansone</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="obo:IAO_0000119"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">GROUP: OBI</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OBI_0000245</AbbreviatedIRI>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">organization</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>obo:OMRSE_00000023</AbbreviatedIRI>
         <Literal datatypeIRI="&rdf;PlainLiteral">collection of humans</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OMRSE_00000038</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">legal person role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OMRSE_00000048</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">material entity role</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+        <AbbreviatedIRI>obo:OMRSE_00000051</AbbreviatedIRI>
+        <Literal datatypeIRI="&rdf;PlainLiteral">organization role</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2128,7 +2418,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <AbbreviatedIRI>gdpr:HealthData</AbbreviatedIRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral"> GDPR Health Data</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">GDPR Health Data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
@@ -2673,7 +2963,7 @@
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="rdfs:label"/>
         <IRI>StatisticalData</IRI>
-        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">Statistical Data</Literal>
+        <Literal xml:lang="en" datatypeIRI="&rdf;PlainLiteral">statistical data</Literal>
     </AnnotationAssertion>
     <AnnotationAssertion>
         <AnnotationProperty abbreviatedIRI="skos:definition"/>
