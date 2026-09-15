@@ -1,0 +1,227 @@
+@prefix : <http://umaine.edu/oppo/dataset2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix skos: <http://www.w3.org/2004/02/skos/core#> .
+@prefix time: <http://www.w3.org/2006/time#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix dpvo: <https://w3id.org/dpv/dpv-owl#> .
+@prefix dpv: <https://w3id.org/dpv#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+@prefix oppo: <http://umaine.edu/oppo/core/v1#> .
+
+@base <http://umaine.edu/oppo/dataset2#> .
+
+<http://umaine.edu/oppo/dataset2#> rdf:type owl:Ontology ;
+                                      owl:imports <http://www.w3.org/2006/time> .
+
+# Definition of Signal
+# Signal is an organization that acts in a first-party data recipient role.
+
+:Signal oppo:actsIn oppo:FirstPartyDataRecipientRole .
+
+# Signal is an organization that has a privacy policy.
+# Through the range of hasPolicy, automated reasoning should infer
+# that SignalPolicy is an instance of PrivacyPolicy.
+
+:Signal oppo:hasPolicy :SignalPolicy .
+
+
+## Data is about the user.
+# Through isAbout, the ontology should infer that SignalUser plays
+# a DataSubjectRole and, through the OPPO/OMRSE hierarchy,
+# a LegalPersonRole.
+
+
+
+# "You register a phone number when you create a Signal account."
+
+oppo:Phone oppo:isAbout :SignalUser ;
+           oppo:isProvidedBy :SignalUser .
+
+
+
+# "You may optionally add other information to your account, such as a profile name and profile picture."
+
+oppo:Name oppo:isAbout :SignalUser ;
+          oppo:isProvidedBy :SignalUser .
+
+oppo:Image oppo:isAbout :SignalUser ;
+           oppo:isProvidedBy :SignalUser .
+
+# "This information is end-to-end encrypted."
+# Refers to the profile name and profile picture.
+
+:SignalProfileEncryptionPractice
+    rdf:type oppo:DataSecurityPractice ;
+    oppo:actsOn oppo:Name ,
+                oppo:Image ;
+    oppo:hasSecurityMechanism :SignalProfileE2EE .
+
+:SignalProfileE2EE
+    rdf:type oppo:EndToEndEncryptionMechanism ;
+    oppo:appliesTo oppo:Name ,
+                   oppo:Image .
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalProfileEncryptionPractice .
+
+
+# "Signal queues end-to-end encrypted messages on its servers for delivery
+# to devices that are temporarily offline."
+
+:SignalPolicy oppo:hasDataPractice :SignalMessageServerStorage .
+
+:SignalMessageServerStorage
+    rdf:type oppo:DataStorageLocationPractice ;
+    oppo:actsOn oppo:PrivateChat ;
+    oppo:hasStorageEntity :SignalServers .
+
+:SignalServers rdf:type oppo:StorageEntity .
+
+:SignalPolicy oppo:hasDataPractice :SignalMessageSecurityPractice .
+
+:SignalMessageSecurityPractice
+    rdf:type oppo:DataSecurityPractice ;
+    oppo:actsOn oppo:PrivateChat ;
+    oppo:hasSecurityMechanism :SignalMessageE2EE .
+
+:SignalMessageE2EE
+    rdf:type oppo:EndToEndEncryptionMechanism ;
+    oppo:appliesTo oppo:PrivateChat .
+
+#"Your message history is stored on your own devices."
+
+oppo:PrivateChat oppo:isAbout :SignalUser .
+oppo:PrivateChat oppo:isProvidedBy :SignalUser .
+
+:SignalPolicy oppo:hasDataPractice :SignalMessageDeviceStorage .
+
+:SignalMessageDeviceStorage
+rdf:type oppo:DataStorageLocationPractice ;
+    oppo:actsOn oppo:PrivateChat ;
+    oppo:hasStorageEntity :SignalUserDevice .
+
+:SignalUserDevice rdf:type oppo:StorageEntity .
+
+
+#"Additional technical information is stored on our servers, including randomly generated authentication tokens, keys, push tokens, and other material that is necessary to establish calls and transmit messages. Signal limits this additional technical information to the minimum required to operate the Services."
+
+
+:SignalAuthenticationToken rdf:type oppo:TechnicalPersonalData .
+
+:SignalKey rdf:type oppo:TechnicalPersonalData .
+
+:SignalPushToken rdf:type oppo:TechnicalPersonalData .
+
+
+:SignalTechnicalInformationStorage
+    rdf:type oppo:DataStorageLocationPractice ;
+    oppo:actsOn :SignalAuthenticationToken ,
+                :SignalKey ,
+                :SignalPushToken ;
+    oppo:hasStorageEntity :SignalServers .
+
+
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalTechnicalInformationStorage .
+
+
+
+# "Information from the contacts on your device may be cryptographically hashed and transmitted to the server in order to determine which of your contacts are registered."
+
+:SignalContactInformation
+    rdf:type oppo:IdentityPersonalData ;
+    oppo:isProvidedBy :SignalUser .
+
+
+:SignalContactHashingPractice
+    rdf:type oppo:DataSecurityPractice ;
+    oppo:actsOn :SignalContactInformation ;
+    oppo:hasSecurityMechanism :SignalContactHashingMechanism .
+
+:SignalContactHashingMechanism
+    rdf:type oppo:CryptographicHashingMechanism ;
+    oppo:appliesTo :SignalContactInformation .
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalContactHashingPractice .
+
+
+:SignalContactDiscoveryPurpose
+    rdf:type dpvo:Purpose ;
+    rdfs:label "Determine which contacts are registered Signal users"@en .
+
+
+:SignalContactDiscoveryPractice
+    rdf:type oppo:DataPractice ;
+    oppo:actsOn :SignalContactInformation ;
+    oppo:hasPurpose :SignalContactDiscoveryPurpose .
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalContactDiscoveryPractice .
+
+# "If you contact Signal User Support, any personal data you may share with us is kept only for the purposes of researching the issue and contacting you about your case."
+
+# The policy does not specify types of personal data, so represent the stated generic personal data rather than inventing Name, Email, Phone, etc.
+
+:SignalSupportPersonalData
+    rdf:type oppo:PersonalData ;
+    oppo:isAbout :SignalUser ;
+    oppo:isProvidedBy :SignalUser .
+
+
+# Policy-described practice concerning the support data.
+
+:SignalSupportDataPractice
+    rdf:type oppo:DataPractice ;
+    oppo:actsOn :SignalSupportPersonalData .
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalSupportDataPractice .
+
+
+:SignalSupportIssueResearchPurpose
+    rdf:type dpvo:Purpose ;
+    rdfs:label "Researching the user's support issue"@en .
+
+
+:SignalSupportContactPurpose
+    rdf:type dpvo:Purpose ;
+    rdfs:label "Contacting the user about their support case"@en .
+
+
+:SignalSupportDataPractice
+    oppo:hasPurpose :SignalSupportIssueResearchPurpose ,
+                    :SignalSupportContactPurpose .
+
+
+# "You can manage your personal information in Signal's application Settings. For example, you can update your profile information."
+
+# The profile information already mapped from the Account Information paragraph is: oppo:Name and oppo:Image
+
+:SignalProfileRectificationPractice
+    rdf:type oppo:DataStorageRectificationPractice ;
+    oppo:actsOn oppo:Name ,
+                oppo:Image ;
+    oppo:hasRequestType "Signal application Settings"^^xsd:string .
+
+:SignalPolicy
+    oppo:hasDataPractice :SignalProfileRectificationPractice .
+
+
+# Do NOT invent a response delay because this passage does not
+# state how long Signal takes to process the update.
+#
+# Do NOT invent a response type because this passage does not
+# explicitly describe one.
+
+
+# "choose to enable additional privacy features like a Registration Lock PIN."
+
+:SignalThirdPartyProvider
+    oppo:actsIn oppo:ThirdPartyDataRecipientRole .
+
