@@ -595,8 +595,27 @@ ORDER BY ?OSN ?Data ?Purpose
 ```
 
 
+#What personal data does the OSN describe as storing on its servers?
 
+```PREFIX oppo: <http://umaine.edu/oppo/core/v1#>
+PREFIX rdf:  <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
 
+SELECT DISTINCT ?OSN ?Policy ?StorageEntity ?Data
+WHERE {
+    ?OSN oppo:actsIn oppo:FirstPartyDataRecipientRole ;
+         oppo:hasPolicy ?Policy .
+
+    ?Policy oppo:hasDataPractice ?Practice .
+
+    ?Practice oppo:hasStorageEntity ?StorageEntity ;
+              oppo:actsOn ?Data .
+
+    ?Data rdf:type ?DataType .
+    ?DataType rdfs:subClassOf* oppo:PersonalData .
+}
+ORDER BY ?OSN ?StorageEntity ?Data
+```
 
 
 
